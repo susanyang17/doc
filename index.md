@@ -1,32 +1,18 @@
-## Welcome to GitHub Pages
+# Welcome to Keikai Doc
+[Keikai](https://keikai.io/) works as a spreadsheet engine of your web application. This project demonstrates how you can build an application in Keikai's Java client API with several examples.
 
-You can use the [editor on GitHub](https://github.com/hawkchen/doc/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# How to Try Keikai with Chrome
+Just 3 steps:
+1. [start Keikai server](#Start-Keikai-Server)
+2. [start an application server](#Start-an-application-server)
+3. visit [http://localhost:8080](http://localhost:8080) or URLs below with Chrome:
+* [http://localhost:8080/tutorial/app](http://localhost:8080/tutorial/app) 
+* [http://localhost:8080/tutorial/workflow](http://localhost:8080/tutorial/workflow) 
+* [http://localhost:8080/tutorial/editor](http://localhost:8080/tutorial/editor)
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
