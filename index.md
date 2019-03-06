@@ -13,6 +13,18 @@ Just 3 steps:
 
 
 
+```
+    @Listen("onClick = #showStyle")
+    public void showCellStyle() throws InterruptedException, ExecutionException {
+        for (int j = 0; j < 1000; j++) {
+            String[] values = new String[1000];
+            for (int i = 0; i < 1000; i++) {
+                values[i] = j + "," + i;
+            }
+            spreadsheet.getRange(j, 0, 1, 1000).setValues(values);
+        }
+    }
+```
 
 ### Jekyll Themes
 
