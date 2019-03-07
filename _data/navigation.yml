@@ -1,3 +1,5 @@
 main:
   - title: "Installation Guide"
     url: /docs/installation-guide/
+  - title: "Developer Reference"
+    url: /docs/dev-ref/
