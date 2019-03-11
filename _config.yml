@@ -7,5 +7,17 @@ title: "Keikai Documentation"
 
 search: true
 
+defaults:
+  - scope:
+      path: "docs/dev-ref"
+    values:
+      layout: single
+      comments: true
+      sidebar:
+        nav: "devRef"
+      toc: true
+      classes: wide
+
+
 #repository: "username/repo-name"
 #logo: "/assets/images/88x88.png"

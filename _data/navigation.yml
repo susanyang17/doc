@@ -4,4 +4,16 @@ main:
   - title: "Tutorial"
     url: /docs/tutorial/
   - title: "Developer Reference"
-    url: /docs/dev-ref/
+    url: /docs/dev-ref/component-ui-customization/
+
+devRef:
+  - title: "Component UI Customization"
+    url: /docs/dev-ref/component-ui-customization/
+  - title: "Features and Usages"
+    url: /docs/dev-ref/features-usages/
+  - title: "API Usages"
+    url: /docs/dev-ref/api-usages/
+  - title: "Handle Events"
+    url: /docs/dev-ref/handle-events/
+  - title: "FAQ"
+    url: /docs/dev-ref/faq/
