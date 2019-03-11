@@ -1,4 +1,5 @@
 ---
+layout: splash
 feature_row:
   - image_path: /assets/images/demo.png
     title: "Try Demo"

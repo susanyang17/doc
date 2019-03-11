@@ -3,7 +3,6 @@ layout: single
 title: "Installation Guide"
 permalink: /docs/installation-guide/
 excerpt: "How to install and run Keikai engine"
-toc: true
 classes: wide
 ---
 
