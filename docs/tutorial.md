@@ -5,8 +5,6 @@ permalink: /docs/tutorial/
 excerpt: "Understand tutorial project"
 toc: true
 classes: wide
-
-imageUrl: "assets/images/tutorial/"
 ---
 
 <!--

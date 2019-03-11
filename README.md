@@ -1,3 +1,6 @@
+# Document Folder Structure
+all documents are under `/docs/`
+* `/dev-ref`: Developer Reference
 
 # Preview at Local
 `bundle install`
