@@ -2,12 +2,25 @@ remote_theme: "mmistakes/minimal-mistakes@4.15.2"
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache  #required by minimal-mistakes
-minimal_mistakes_skin: "dark"
+  - jekyll-paginate
+minimal_mistakes_skin: "dirt"
 title: "Keikai Documentation"
 
-search: true
+search                    : true
+search_full_content       : true
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-116749276-1"
+    anonymize_ip: true
 
 defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: single
+      share: true
   - scope:
       path: "docs/dev-ref"
     values:
