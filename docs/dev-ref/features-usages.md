@@ -1,5 +1,6 @@
 ---
 title: "Features and Usages"
+permalink: /docs/dev-ref/features-usages/
 ---
 
 # copy & paste
