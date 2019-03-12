@@ -1,6 +1,6 @@
 ---
-title: "Component UI Customization"
-permalink: /docs/dev-ref/component-ui-customization/
+title: "Component UI Configurations"
+permalink: /docs/dev-ref/ui-configurations/
 ---
 
 
