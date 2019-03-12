@@ -7,7 +7,7 @@ main:
     url: /docs/dev-ref/ui-configurations/
 
 devRef:
-  - title: "Component UI Customization"
+  - title: "UI Configurations"
     url: /docs/dev-ref/ui-configurations/
   - title: "Features and Usages"
     url: /docs/dev-ref/features-usages/
@@ -15,6 +15,13 @@ devRef:
     url: /docs/dev-ref/api-usages/
   - title: "Handle Events"
     url: /docs/dev-ref/handle-events/
+
+  - title: Customization
+    children:
+      - title: "UI Controls"
+        url: /docs/dev-ref/ui-controls
+      - title: "Dialogs"
+        url: /docs/dev-ref/dialogs    
   - title: "FAQ"
     url: /docs/dev-ref/faq/
 
