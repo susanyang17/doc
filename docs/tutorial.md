@@ -5,6 +5,8 @@ permalink: /docs/tutorial/
 excerpt: "Understand tutorial project"
 toc: true
 classes: wide
+sidebar:
+    nav: "tutorial"
 ---
 
 <!--

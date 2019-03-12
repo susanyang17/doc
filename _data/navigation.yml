@@ -4,11 +4,11 @@ main:
   - title: "Tutorial"
     url: /docs/tutorial/
   - title: "Developer Reference"
-    url: /docs/dev-ref/component-ui-customization/
+    url: /docs/dev-ref/ui-configurations/
 
 devRef:
   - title: "Component UI Customization"
-    url: /docs/dev-ref/component-ui-customization/
+    url: /docs/dev-ref/ui-configurations/
   - title: "Features and Usages"
     url: /docs/dev-ref/features-usages/
   - title: "API Usages"
@@ -17,3 +17,9 @@ devRef:
     url: /docs/dev-ref/handle-events/
   - title: "FAQ"
     url: /docs/dev-ref/faq/
+
+tutorial:
+  - title: "Installation Guide"
+    url: /docs/installation-guide/
+  - title: "Tutorial"
+    url: /docs/tutorial/  
