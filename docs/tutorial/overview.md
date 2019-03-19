@@ -1,0 +1,57 @@
+
+# Keikai - Spreadsheet for Big Data
+Keikai is a web spreadsheet designed for big data. With frame-based rendering and super light-weight data structure, it brings true Excel functionalities into your web application swiftly. Finally, there is a good reason for your business users to move on from Excel!
+
+![]({{ site.baseurl }}/assets/images/tutorial/architecture.png)
+
+Keikai works in a client-server architecture. A Keikai UI client running in your browser renders sheets with canvases and fires user events to Keikai server. You can create your own web application that controls Keikai to fulfill your business needs with Keikai Java client.
+
+This introductory article demonstrates how you can start up a Keikai spreadsheet and manipulate cells with Java client API to implement your application logic .
+
+
+
+# Installation
+Before using Keikai, you need to install and start Keikai engine. 
+
+## Download Keikai engine
+
+* [Windows 64-bit](https://keikai.io/download/?dl=JHSxw%2FX9s3wAuWyq6%2Bmw4Q%3D%3D%3A0FQRpIhVVPppGO9vG671GehNe1yTcwxarCA99Q%2B83dEAwyWY4%2FonBzqKiAIAhs4r)
+
+* [Linux 64-bit](https://keikai.io/download/?dl=pMI%2BjAR4PXdQWWiCdBtUYg%3D%3D%3ATkQt2WMxQcErY8bN1ktPM69YduxD9wZt8mGdJVLuRFQI6yTij33s3DdWSp1vJDyZ)
+
+* [Mac OS 64-bit](https://keikai.io/download/?dl=%2FEh7vutQMg8o0Amrlg9STA%3D%3D%3AY5IPQ%2FuSliTsxC8ezw%2F%2FqsecJf0bYtTpFG7udz34lshXwgd3rvX8C66%2B8d0dRrIP)
+
+[Contact us](https://keikai.io/#contact) if you have problems to download.
+
+## Extract the zip
+We suggest you extract Keikai engine on the same machine as your application server at first to avoid problems. Later, you can move it to another place.
+
+Just unzip the downloaded zip file, you complete the installation.
+
+
+## Run Keikai Engine
+Assume you extract the zip to a folder `[KEIKAI-ENGINE]`
+1. go to `[KEIKAI-ENGINE]/keikai` folder
+2. run the executable command:
+
+* Mac/Linux
+`./keikai`
+* Windows
+`keikai.bat`
+
+After executing the command, you should see some messages like:
+```
+1:8888:2018-06-05 09:52:18.059549Z:keikai_dart_server:keikai_server:0
+INFO: Keikai version: 1.0.0-beta.14@jhsioate
+...
+INFO: Rikulo Stream Server 1.7.0 starting on 0.0.0.0:8888
+...
+```
+
+Then Keikai server should start up successfully at `localhost:8888
+
+# Run your 1st Keikai Spreadsheet
+To quickly get a feeling about how Keikai works, just check [Keikai tutorial project](https://github.com/keikai/keikai-tutorial). There are two demos in the tutorial project, an **Online Editor Demo** and a **Budget Summary Application Demo**. Follow the instructions in Readme to set them up in your local environment and play them in your browser.
+
+# Prerequisite
+To better understand this article and how tutorial project works, we assume you have basic konwledge of Java EE web components (JSP and servlet) and HTML.

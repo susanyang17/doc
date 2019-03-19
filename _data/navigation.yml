@@ -1,6 +1,6 @@
 main:
   - title: "Tutorial"
-    url: /docs/tutorial/tutorial
+    url: /docs/tutorial/overview
   - title: "Developer Reference"
     url: /docs/dev-ref/ui-configurations/
 
@@ -24,7 +24,10 @@ devRef:
     url: /docs/dev-ref/faq/
 
 tutorial:
-  - title: "Installation Guide"
-    url: /docs/tutorial/installation-guide
   - title: "Tutorial"
-    url: /docs/tutorial/tutorial  
+    url: /docs/tutorial/overview
+    children:
+      - title: Overview
+        url: /docs/tutorial/overview
+      - title: Display Your First Spreadsheet
+        url: /docs/tutorial/displaySpreadsheet
