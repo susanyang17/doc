@@ -1,10 +1,8 @@
 ---
-layout: single
-title: "Installation Guide"
-permalink: /docs/tutorial/installation-guide
-excerpt: "How to install and run Keikai engine"
-classes: wide
+title: "Download and Installation"
 ---
+
+Before using Keikai, you need to install and start Keikai engine. 
 
 # Download Keikai engine
 
