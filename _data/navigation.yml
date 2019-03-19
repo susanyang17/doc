@@ -1,8 +1,6 @@
 main:
-  - title: "Installation Guide"
-    url: /docs/installation-guide/
   - title: "Tutorial"
-    url: /docs/tutorial/
+    url: /docs/tutorial/tutorial
   - title: "Developer Reference"
     url: /docs/dev-ref/ui-configurations/
 
@@ -27,6 +25,6 @@ devRef:
 
 tutorial:
   - title: "Installation Guide"
-    url: /docs/installation-guide/
+    url: /docs/tutorial/installation-guide
   - title: "Tutorial"
-    url: /docs/tutorial/  
+    url: /docs/tutorial/tutorial  

@@ -4,7 +4,7 @@ plugins:
   - jekyll-include-cache  #required by minimal-mistakes
   - jekyll-paginate
 minimal_mistakes_skin: "dirt"
-title: "Keikai Documentation"
+title: ""
 
 search                    : true
 search_full_content       : true
@@ -35,6 +35,11 @@ defaults:
         nav: "devRef"
       toc: true
       classes: wide
+  - scope:
+      path: "docs/tutorial"
+    values:
+      sidebar:
+        nav: "tutorial"
 
 
 #repository: "username/repo-name"

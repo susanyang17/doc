@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Tutorial"
-permalink: /docs/tutorial/
+permalink: /docs/tutorial/tutorial
 excerpt: "Understand tutorial project"
 toc: true
 classes: wide
