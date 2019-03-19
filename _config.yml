@@ -25,16 +25,15 @@ defaults:
       path: "docs"
     values:
       layout: single
+      classes: wide
+      toc: true
+      comments: true
       share: true
   - scope:
       path: "docs/dev-ref"
     values:
-      layout: single
-      comments: true
       sidebar:
         nav: "devRef"
-      toc: true
-      classes: wide
   - scope:
       path: "docs/tutorial"
     values:
