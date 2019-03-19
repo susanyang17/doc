@@ -1,8 +1,8 @@
 main:
   - title: "Tutorial"
     url: /docs/tutorial/overview
-  - title: "Developer Reference"
-    url: /docs/dev-ref/ui-configurations/
+#  - title: "Developer Reference"
+#    url: /docs/dev-ref/ui-configurations/
 
 devRef:
   - title: "UI Configurations"
