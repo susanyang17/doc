@@ -40,6 +40,11 @@ defaults:
       sidebar:
         nav: "tutorial"
 
-
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "keikai-doc"
+# disqus admin is hawkchen@potix.com
+    
 #repository: "username/repo-name"
 #logo: "/assets/images/88x88.png"
