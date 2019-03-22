@@ -6,7 +6,7 @@ permalink: /docs/dev-ref/ui-configurations/
 
 Keikai UI is configurable through a data attribute:
 
-![](/assets/images/keikaiUI.png)
+![](/assets/images/UI.png)
 
 * `data-show-context-menu`
 * `data-show-toolbar`
