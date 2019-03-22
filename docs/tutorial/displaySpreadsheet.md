@@ -1,6 +1,6 @@
 
 # Display Your First Spreadsheet
-To make things simple, we are running our 1st Keikai in a JSP page. First, put a `<div>` as a container, an anchor element, which Keikai renders a spreadsheet at. It can be any place you like on the page. Then specify `id` attribute so that you can pass it to Keikai to identify the anchor element.
+To make things simple, we plan to run our 1st Keikai in a JSP page. First, put a `<div>` as an anchor element, which Keikai renders a spreadsheet at. It can be any place you like on the page. Then specify `id` attribute so that you can pass it to Keikai engine to identify the anchor element.
 
 **editor.jsp**
 
@@ -20,7 +20,7 @@ The page also needs to load Keikai client JavaScript. The script URL is dynamica
 Now the page is ready.
 
 ## Obtain a Spreadsheet
-The next step is to connect to Keikai server and get Keikai client JavaScript URL. Then write that JavaScript URL into the JSP I just created. To do so, I create a servlet to accept a request first and forward the request to the JSP with a Keikai JavaScript URL as an attribute.
+The next step is to connect to Keikai engine and get Keikai client JavaScript URL. Then write that JavaScript URL into the JSP I just created. To do so, I create a servlet to accept a request first and forward the request to the JSP with a Keikai JavaScript URL as an attribute.
 
 The servlet calls `MyEditor`, which implements all my application logic, to get Keikai JavaScript URL.
 
@@ -28,7 +28,7 @@ The servlet calls `MyEditor`, which implements all my application logic, to get 
 
 This can be done in 2 steps:
 
-1. Connect to Keikai server to get a `Spreadsheet` object with `Keikai.newClient()`
+1. Connect to Keikai engine to get a `Spreadsheet` object with `Keikai.newClient()`
 
 2. Get Keikai client JavaScript URL with `Spreadsheet.getURI(anchorElementID)`
 

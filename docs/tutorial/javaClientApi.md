@@ -87,7 +87,7 @@ range.getRangeValue().getCellValue().getDateValue();
 ```
 
 ### Get Multiple Cell Values at Once
-From the architecture above, you can know that each method calling of Keikai Java client requires to communicate with Keikai server via the network. To have better performance and shorter network transmission time, it's better to get multiple values at once than one cell by one cell.
+From the architecture above, you can know that each method calling of Keikai Java client requires to communicate with Keikai engine via the network. To have better performance and shorter network transmission time, it's better to get multiple values at once than one cell by one cell.
 
 
 ```java

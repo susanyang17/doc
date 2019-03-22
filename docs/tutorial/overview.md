@@ -4,9 +4,13 @@ Keikai is a component that can empower your web application with spreadsheet fea
 
 ![]({{ site.baseurl }}/assets/images/tutorial/architecture.png)
 
-Keikai works in a client-server architecture. A Keikai UI client running in your browser renders sheets with canvases and fires user events to Keikai server. You can create your own web application that controls Keikai to fulfill your business needs with Keikai Java client.
+Keikai works in a client-server architecture. A Keikai UI client running in your browser renders sheets with canvases and fires user events to Keikai engine. You can create your own web application that controls Keikai to fulfill your business needs with Keikai Java client.
 
 This introductory article demonstrates how you can start up a Keikai spreadsheet and manipulate cells with Java client API to implement your application logic .
+
+
+# [Demo](http://keikai.io/demo/)
+A demo is worth a thousand words, you can immediately experience Kaikai with our [Demo](http://keikai.io/demo/).
 
 
 # Prerequisite
