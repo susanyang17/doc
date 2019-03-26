@@ -24,9 +24,9 @@ The current supported hotkeys are:
 
 
 ## Load an xlsx File
-When visiting a page with Keikai spreadsheet in your browser, it gives you a blank sheet. If you wish to load your existing Excel file or template for further editing, it can be easily done by clicking the upload button in the toolbar.
+When visiting a page with Keikai spreadsheet in your browser, it gives you a blank sheet. If you wish to load your existing Excel file or template for further editing, it can be easily done by clicking the upload button on the toolbar.
 
 ## Upload
-The easiest way to import a file is to click the upload button in the toolbar to upload an xlsx file. Note that xlsx is the only format that Keikai accepts.
+The easiest way to import a file is to click the upload button on the toolbar to upload an xlsx file. Note that xlsx is the only format that Keikai accepts.
 
 ![]({{ site.baseurl }}/assets/images/tutorial/upload-book.png)
