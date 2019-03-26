@@ -1,6 +1,6 @@
 
 # Display Your First Spreadsheet
-To make things simple, we plan to run our 1st Keikai in a JSP page. First, put a `<div>` as an anchor element, which Keikai renders a spreadsheet at. It can be any place you like on the page. Then specify `id` attribute so that you can pass it to Keikai engine to identify the anchor element.
+To make things simple, we are running our 1st Keikai in a JSP page. First, put a `<div>` as an anchor element, which Keikai renders a spreadsheet at. It can be any place you like on the page. Then specify `id` attribute so that you can pass it to Keikai engine to identify the anchor element.
 
 **editor.jsp**
 
