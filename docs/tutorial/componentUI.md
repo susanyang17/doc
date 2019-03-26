@@ -1,6 +1,6 @@
 
 # Use Keikai
-You can manipulate Keikai in two ways – via spreadsheet UI (with a browser) or via spreadsheet Java API.
+You can manipulate Keikai in two ways – via spreadsheet UI (with a browser) or via spreadsheet Java API. In this section we will be talking about using spreadsheet UI.
 
 ## Spreadsheet UI
 Using Keikai spreadsheet with your browser is just like using Excel or Google Sheet. From top to bottom, there is a toolbar, a formula bar, a sheet, and a worksheet tab. Anyone can pick it up easily and start editing in the way he or she is used to, without having to read a user manual.
@@ -23,10 +23,10 @@ The current supported hotkeys are:
 * **Ctrl + Up/Down/Left/Right**  | Move the Focus to the Edge
 
 
-# Load an xlsx File
-When visiting a page with Keikai spreadsheet in your browser, it gives you a blank sheet. You probably like to load your existing Excel file or template for further editing. It can be easily done by a upload button of toolbar.
+## Load an xlsx File
+When visiting a page with Keikai spreadsheet in your browser, it gives you a blank sheet. If you wish to load your existing Excel file or template for further editing, it can be easily done by clicking the upload button in the toolbar.
 
 ## Upload
-The easiest way to import a file is to click the upload button on the toolbar to upload an xlsx file. Note that xlsx is the only format that Keikai accepts.
+The easiest way to import a file is to click the upload button in the toolbar to upload an xlsx file. Note that xlsx is the only format that Keikai accepts.
 
 ![]({{ site.baseurl }}/assets/images/tutorial/upload-book.png)
