@@ -1,4 +1,6 @@
 # Work with a Database
+In addition to importing & exporting xlsx files, with Keikai you can populate data from database and save it back.
+
 In the Budget Summary Application Demo of tutorial project, we demonstrated a simple idea to work with a database. Keikai allows you to use any preferred database, but you need to implement a persistence layer to communicate with your database by yourself. Then retrieve or save data via the persistence layer.
 
 Take Budget Summary Application Demo as an example, there are several classes:
