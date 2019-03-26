@@ -4,15 +4,16 @@ title: "Download and Installation"
 
 Before using Keikai, you need to install and start Keikai engine. 
 
-# [Download Keikai Engine](keikai.io/download)
+# Download Keikai Engine
+[Download Keikai Engine](https://keikai.io/download) according to the OS of the computer you are installing Keikai Engine.
 
 [Contact us](https://keikai.io/#contact) if you have problems to download.
 
 
 # Extract the zip
-We suggest you extract Keikai engine on the same machine as your application server at first to avoid problems. Later, you can move it to another place.
+For simplicity, we suggest you to install and extract Keikai engine on the same machine as the one you are running your application server. That way you can quickly get your first application up and running.
 
-Just unzip the downloaded zip file, you complete the installation.
+Just unzip the downloaded zip file, and the installation of Keikai engine is completed.
 
 
 # Run Keikai Engine
