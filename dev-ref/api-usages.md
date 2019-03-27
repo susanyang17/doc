@@ -1,6 +1,5 @@
 ---
 title: "API Usage"
-permalink: /docs/dev-ref/api-usages/
 ---
 
 # disable a feature

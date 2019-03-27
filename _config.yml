@@ -22,7 +22,7 @@ analytics:
 
 defaults:
   - scope:
-      path: "docs"
+      path: ""
     values:
       layout: single
       classes: wide
@@ -30,12 +30,12 @@ defaults:
       comments: true
       share: true
   - scope:
-      path: "docs/dev-ref"
+      path: "dev-ref"
     values:
       sidebar:
         nav: "devRef"
   - scope:
-      path: "docs/tutorial"
+      path: "tutorial"
     values:
       sidebar:
         nav: "tutorial"

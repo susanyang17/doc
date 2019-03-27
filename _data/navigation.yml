@@ -1,49 +1,51 @@
 main:
   - title: "Tutorial"
-    url: /docs/tutorial/overview
+    url: /tutorial/overview
   - title: "Developer Reference"
-    url: /docs/dev-ref/ui-configurations/
+    url: /dev-ref/ui-configurations/
 
+tutorial:
+  - title: "Tutorial"
+    url: /tutorial/overview
+    children:
+      - title: Overview
+        url: /tutorial/overview
+      - title: Download and Installation
+        url: /tutorial/installation
+      - title: Run Your First Keikai Application
+        url: /tutorial/runFirst
+      - title: Display Your First Spreadsheet
+        url: /tutorial/displaySpreadsheet
+      - title: Component UI
+        url: /tutorial/componentUI
+      - title: Java Client API Basic
+        url: /tutorial/javaClientApi
+      - title: Data Validation & Freeze
+        url: /tutorial/validationFreeze
+      - title: Implement Your Business Logic
+        url: /tutorial/eventListener
+      - title: Customize Toolbar
+        url: /tutorial/toolbar                        
+      - title: Work with a Database
+        url: /tutorial/database       
+
+        
 devRef:
   - title: "UI Configurations"
-    url: /docs/dev-ref/ui-configurations/
+    url: /dev-ref/ui-configurations/
   - title: "Features and Usages"
-    url: /docs/dev-ref/features-usages/
+    url: /dev-ref/features-usages/
   - title: "API Usages"
-    url: /docs/dev-ref/api-usages/
+    url: /dev-ref/api-usages/
   - title: "Handle Events"
-    url: /docs/dev-ref/handle-events/
+    url: /dev-ref/handle-events/
 
   - title: Customization
     children:
       - title: "UI Controls"
-        url: /docs/dev-ref/ui-controls
+        url: /dev-ref/ui-controls
       - title: "Dialogs"
-        url: /docs/dev-ref/dialogs    
+        url: /dev-ref/dialogs    
   - title: "FAQ"
-    url: /docs/dev-ref/faq/
-
-tutorial:
-  - title: "Tutorial"
-    url: /docs/tutorial/overview
-    children:
-      - title: Overview
-        url: /docs/tutorial/overview
-      - title: Download and Installation
-        url: /docs/tutorial/installation
-      - title: Run Your First Keikai Application
-        url: /docs/tutorial/runFirst
-      - title: Display Your First Spreadsheet
-        url: /docs/tutorial/displaySpreadsheet
-      - title: Component UI
-        url: /docs/tutorial/componentUI
-      - title: Java Client API Basic
-        url: /docs/tutorial/javaClientApi
-      - title: Data Validation & Freeze
-        url: /docs/tutorial/validationFreeze
-      - title: Implement Your Business Logic
-        url: /docs/tutorial/eventListener
-      - title: Customize Toolbar
-        url: /docs/tutorial/toolbar                        
-      - title: Work with a Database
-        url: /docs/tutorial/database                
+    url: /dev-ref/faq/
+         

@@ -1,6 +1,5 @@
 ---
 title: "Component UI Configurations"
-permalink: /docs/dev-ref/ui-configurations/
 ---
 
 

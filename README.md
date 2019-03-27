@@ -1,5 +1,5 @@
 # Document Folder Structure
-all documents are under `/docs/`
+* `tutorial`: tutorial
 * `dev-ref`: Developer Reference
 
 # Preview at Local
