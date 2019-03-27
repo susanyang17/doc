@@ -32,14 +32,13 @@ tutorial:
         
 devRef:
   - title: "UI Configurations"
-    url: /dev-ref/ui-configurations/
+    url: /dev-ref/ui-configurations
   - title: "Features and Usages"
-    url: /dev-ref/features-usages/
+    url: /dev-ref/features-usages
   - title: "API Usages"
-    url: /dev-ref/api-usages/
+    url: /dev-ref/api-usages
   - title: "Handle Events"
-    url: /dev-ref/handle-events/
-
+    url: /dev-ref/handle-events
   - title: Customization
     children:
       - title: "UI Controls"
@@ -47,5 +46,5 @@ devRef:
       - title: "Dialogs"
         url: /dev-ref/dialogs    
   - title: "FAQ"
-    url: /dev-ref/faq/
+    url: /dev-ref/faq
          
