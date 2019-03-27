@@ -1,5 +1,9 @@
+---
+title: Add Event Listeners
+toc: false
+---
 
-# Add Event Listeners
+
 If you plan to create an application based on Keikai or integrate Keikai with your existing system, you definitely need to implement your application logic according to user actions. When a user interacts with Keikai spreadsheet, Keikai will send events to the server and invoke the corresponding event listeners you added.
 
 For instance, if you need to perform some batch check when a user clicks a cell, you can add a listener like:

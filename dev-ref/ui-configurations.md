@@ -5,7 +5,7 @@ title: "Component UI Configurations"
 
 Keikai UI is configurable through a data attribute:
 
-![](/assets/images/UI.png)
+![](/assets/images/tutorial/UI.png)
 
 * `data-show-context-menu`
 * `data-show-toolbar`

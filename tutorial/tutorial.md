@@ -143,7 +143,7 @@ When visiting a page with Keikai spreadsheet in your browser, it gives you a bla
 ## Upload
 The easiest way to import a file is to click the upload button on the toolbar to upload an xlsx file. Note that xlsx is the only format that Keikai accepts.
 
-![]({{ site.baseurl }}/assets/images/tutorial/upload-book.png)
+![]({{ site.baseurl }}/assets/images/tutorial/upload-book.png){: .align-center}
 
 ## Import
 Another way is to import a file with the API of `Spreadsheet` below:
