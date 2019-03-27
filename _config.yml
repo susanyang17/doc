@@ -1,10 +1,11 @@
-remote_theme: "mmistakes/minimal-mistakes@4.15.2"
+remote_theme: "hawkchen/minimal-mistakes@dev"
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache  #required by minimal-mistakes
   - jekyll-paginate
 minimal_mistakes_skin: "dirt"
-title: ""
+title: "KEIKAI"
+name: "Potix Corporation"
 
 search                    : true
 search_full_content       : true
