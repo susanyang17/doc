@@ -2,7 +2,7 @@ main:
   - title: "Tutorial"
     url: /tutorial/overview
   - title: "Developer Reference"
-    url: /dev-ref/ui-configurations/
+    url: /dev-ref/ui-configurations
 
 tutorial:
   - title: "Tutorial"
