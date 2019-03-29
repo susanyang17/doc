@@ -5,6 +5,7 @@ plugins:
   - jekyll-paginate
 minimal_mistakes_skin: "dirt"
 title: "KEIKAI"
+title_link: "https://keikai.io"
 name: "Potix Corporation"
 
 search                    : true
