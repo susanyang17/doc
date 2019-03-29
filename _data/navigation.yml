@@ -39,12 +39,12 @@ devRef:
     url: /dev-ref/api-usages
   - title: "Handle Events"
     url: /dev-ref/handle-events
-  - title: Customization
-    children:
-      - title: "UI Controls"
-        url: /dev-ref/ui-controls
-      - title: "Dialogs"
-        url: /dev-ref/dialogs    
+#  - title: Customization
+#    children:
+      # - title: "UI Controls"
+      #   url: /dev-ref/ui-controls
+      # - title: "Dialogs"
+      #   url: /dev-ref/dialogs    
   - title: "FAQ"
     url: /dev-ref/faq
          

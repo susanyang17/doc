@@ -2,7 +2,7 @@
 title: "Features and Usages"
 ---
 
-# copy & paste
+# Copy & Paste
 Keikai currently doesn't support to paste content copied from an external application (e.g. Excel, text editor) via UI below:
 * "Paste" button on the toolbar
 * "paste" item in the context menu
@@ -25,5 +25,5 @@ Because a browser needs user-granted permission to access system clipboard.
 * Up/Down/Left/Right         | Move Focus
 * Shift + Up/Down/Left/Right | Update Selection
 * Ctrl + Up/Down/Left/Right | Move the Focus to the Edge
-* PageUp / PageDown
+* PageUp / PageDown |
 
