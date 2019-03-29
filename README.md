@@ -1,14 +1,20 @@
+# Keikai Document Website
+
 # Document Folder Structure
 * `tutorial`: tutorial
 * `dev-ref`: Developer Reference
 
 # Preview at Local
+install necessary gem
 `bundle install`
+
+start a local web server
 `bundle exec jekyll serve`
 
 Ref: [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
 
-# Applied Theme: [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
+
+# Base Theme: [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 from: https://jekyllthemes.io/
 
 
