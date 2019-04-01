@@ -1,7 +1,3 @@
----
-title: "Keikai Tutorial"
----
-
 # Keikai - Spreadsheet for Your Web Application
 Keikai is a component that can empower your web application with spreadsheet features. With frame-based rendering and super light-weight data structure, it brings true Excel functionalities into your web application swiftly. Finally, there is a good reason for your business users to move on from Excel!
 
