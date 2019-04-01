@@ -1,4 +1,5 @@
 ---
+title: 'Keikai Tutorial'
 permalink: /tutorial
 ---
 
