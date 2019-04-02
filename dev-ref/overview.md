@@ -1,4 +1,4 @@
-# Developer Reference
+# Keikai Developer Reference
 
 This documentation introduces you all knowledges you need to develop with Keikai including features, API usage guidelines, and code examples.
 

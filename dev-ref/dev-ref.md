@@ -1,5 +1,5 @@
 ---
-title: Developer Reference
+title: Keikai Developer Reference
 permalink: /dev-ref
 ---
 
