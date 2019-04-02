@@ -1,12 +1,12 @@
 main:
   - title: "Tutorial"
-    url: /tutorial/overview
+    url: /tutorial
   - title: "Developer Reference"
-    url: /dev-ref/overview
+    url: /dev-ref
 
 tutorial:
   - title: "Tutorial"
-    url: /tutorial/overview
+    url: /tutorial
     children:
       - title: Overview
         url: /tutorial/overview

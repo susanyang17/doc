@@ -1,4 +1,5 @@
 ---
+title: Developer Reference
 permalink: /dev-ref
 ---
 

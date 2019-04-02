@@ -17,6 +17,8 @@ Ref: [Setting up your GitHub Pages site locally with Jekyll](https://help.github
 # Base Theme: [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 from: https://jekyllthemes.io/
 
+# Font source
+[Google font](https://fonts.google.com)
 
 # Apply Jekyll Remote Theme
 
