@@ -1,7 +1,8 @@
 # Keikai Document Website
 
-> Website: https://keikai.io 
-> Demo: https://keikai.io/demo
+> Website: https://keikai.io  
+> Demo: https://keikai.io/demo  
+> Blog: https://keikai.io/blog
 
 # Document Folder Structure
 * `tutorial`: tutorial
