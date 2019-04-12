@@ -1,5 +1,8 @@
 # Keikai Document Website
 
+> Website: https://keikai.io 
+> Demo: https://keikai.io/demo
+
 # Document Folder Structure
 * `tutorial`: tutorial
 * `dev-ref`: Developer Reference
