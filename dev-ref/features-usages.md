@@ -35,3 +35,26 @@ Currently, the supported UI language are:
 * English
 * Tranditional Chinese
 
+# Supported Chart Type:
+* AreaChart
+* LineChart 
+* RadarChart
+* ScatterChart scatterchart.xlsx scatterLineChart.xlsx
+* PieChart
+* Pie3DChart 
+* DoughnutChart
+* BarChart
+* Bar3DChart 
+* BubbleChar bubblechart.xlsx
+<!-- https://github.com/zkoss/keikai/issues/901 -->
+
+
+# Exceeding Maximal Column Warning
+When you insert a column, if you see the alert:
+
+`This operation cannot work because it will push non-empty cells out of the worksheet.`
+
+That means there is data at the far right of your worksheet, and inserting columns will push the data out of the maximal column. Therefore, Keikai prevents you from inserting.
+
+**Solution:**
+Remove the data at the far right of your worksheet.
