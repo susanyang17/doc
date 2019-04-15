@@ -27,3 +27,11 @@ Because a browser needs user-granted permission to access system clipboard.
 * Ctrl + Up/Down/Left/Right | Move the Focus to the Edge
 * PageUp / PageDown |
 
+
+# Language
+Keikai will detect your browser's language setting, and its UI will display the corresponding language.
+
+Currently, the supported UI language are:
+* English
+* Tranditional Chinese
+
