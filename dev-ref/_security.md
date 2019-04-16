@@ -1,7 +1,7 @@
+# Secure Mode
 
-Keikai engine can run in a secure mode to prevent unauthorized connection. That means each browser should connect to keikai engine through java client (your web application)
+Keikai engine can run in a secure mode to prevent unauthorized connections. That means each browser should connect to keikai engine through java client (your web application).
 
-# How to enable secure mode:
 
 ## Run Keikai Engine in secure mode
 
@@ -23,3 +23,7 @@ String scriptUri = spreadsheet.getSecureURI((HttpServletRequest)Executions.getCu
         getSelf().getFellow("myss").getUuid());
 
 ```
+
+
+# Auto-close Spreadsheet Java Client
+Specify the `--close-session-on-ui-disconnected=true` when starting Keikai engine, and do NOT register any [UIActivity](https://keikai.io/javadoc/latest/index.html?io/keikai/client/api/ui/UIActivity.html) callback.
