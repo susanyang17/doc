@@ -3,7 +3,8 @@ title: "Handle Events"
 ---
 
 # Event Name - Event Class 
-Keikai passes different event objects for different events, the event constant and their related event class are:
+Keikai passes different event objects for different events, here we list all constants in `[Events](https://keikai.io/javadoc/latest/io/keikai/client/api/event/Events.html)` for each passed event class:
+
 ## CellMouseEvent
 * ON_CELL_CLICK 
 * ON_CELL_RIGHT_CLICK
@@ -13,6 +14,11 @@ Keikai passes different event objects for different events, the event constant a
 ## RangeSelectEvent
 * ON_MOVE_FOCUS
 * ON_SELECTION_CHANGE
+
+## RangeDragEvent 
+* ON_DRAG_FILL
+* ON_DRAG_FILL
+
 ## RangeKeyEvent
 * ON_KEY_DOWN
 * ON_KEY_UP
