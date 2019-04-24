@@ -18,7 +18,7 @@ Keikai passes different event objects for different events, here we list all con
 
 ## RangeDragEvent 
 * ON_DRAG_FILL
-* ON_DRAG_FILL
+* ON_DRAG_MOVE
 
 ## RangeKeyEvent
 * ON_KEY_DOWN
