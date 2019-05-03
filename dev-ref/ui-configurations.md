@@ -4,9 +4,14 @@ toc: false
 ---
 
 
-Keikai UI is configurable through a data attribute:
+Keikai UI has several parts:
 
 ![](/assets/images/tutorial/UI.png)
+
+
+# Configure by Data Attributes
+
+Their visibility are configurable through data attributes:
 
 * `data-show-context-menu`
 * `data-show-toolbar`
@@ -19,6 +24,8 @@ For example, to hide built-in context menu:
 ```xml
 <div id="spreadsheet" data-show-context-menu="false"/>
 ```
+
+
 
 # Configure by API
 
