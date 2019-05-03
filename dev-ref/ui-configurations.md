@@ -19,3 +19,10 @@ For example, to hide built-in context menu:
 ```xml
 <div id="spreadsheet" data-show-context-menu="false"/>
 ```
+
+# Configure by API
+
+```java
+spreadsheet.getUIService().showToolbar(false);
+```
+Check [UIService](https://keikai.io/javadoc/latest/io/keikai/client/api/UIService.html) for full method lists.
