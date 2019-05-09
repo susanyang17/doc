@@ -29,7 +29,7 @@ Because a browser needs user-granted permission to access system clipboard.
 
 
 # Language
-Keikai will detect your browser's language setting, and its UI will display the corresponding language.
+Keikai will detect your browser's language setting to display the corresponding language with its UI.
 
 Currently, the supported UI language are:
 * English

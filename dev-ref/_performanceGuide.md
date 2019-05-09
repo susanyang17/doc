@@ -69,3 +69,21 @@ server {
 
 # Filling lots of cells
 set number format first to stop smart input parsing.
+
+
+# Enforce re-calculating
+
+```java
+Settings clone = Settings.DEFAULT_SETTINGS.clone();
+ToolbarSettings toolbar = ToolbarSettings.DEFAULT.clone();
+toolbar.setOptions(UICommand.UPLOAD, "recalculate=true"); // recalculate all formula
+clone.set(Settings.Key.SPREADSHEET_CONFIG, Maps.toMap("toolbar", toolbar);
+
+Keikai.newClient(remoteServer, clone);
+```
+
+Or
+
+```
+spreadsheet.imports("bookName", file, true); // true => recalculate
+```
