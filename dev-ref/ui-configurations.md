@@ -32,4 +32,10 @@ For example, to hide built-in context menu:
 ```java
 spreadsheet.getUIService().showToolbar(false);
 ```
+
 Check [UIService](https://keikai.io/javadoc/latest/io/keikai/client/api/UIService.html) for full method lists.
+
+
+# Hide Protected Sheet Warning
+
+`spreadsheet.getUIService().setProtectedSheetWarningEnabled(false);`

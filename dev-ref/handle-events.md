@@ -2,6 +2,16 @@
 title: "Handle Events"
 ---
 
+# Event Listening
+When you interact with Keikai component in a browser, it will fire various events to your Java client if you register the corresponding event listener. This is the major way you implement your application/business logic. To register an event listener is simple like:
+
+```java
+spreadsheet.addEventListener(Events.ON_CELL_CLICK, (CellMouseEvent event) -> {
+    //implement the application/business logic here
+    ...
+});
+```
+
 # Event Name - Event Class 
 Keikai passes different event objects for different events, here we list all constants in [`Events`](https://keikai.io/javadoc/latest/io/keikai/client/api/event/Events.html) for each passed event class:
 
