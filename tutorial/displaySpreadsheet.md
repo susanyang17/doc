@@ -1,6 +1,6 @@
 
 # Display Your First Spreadsheet
-Starts from this section, we will explain the basics of how to develope a web application with Keikai based on tutorial project.
+Starts from this section, we will explain the basics of how to develope a web application with Keikai based on tutorial project. All JSP and Java files mentioned in this tutorial already exist under the folder `src/main/webapp` and `src/main/java` respectively.
 
 To make things simple, we are running our 1st Keikai in a JSP page. First, put a `<div>` as an anchor element, which Keikai renders a spreadsheet at. It can be any place you like on the page. Then specify `id` attribute so that you can pass it to Keikai engine to identify the anchor element.
 
@@ -64,6 +64,8 @@ This can be done in 2 steps:
 ```
 
 In order to make `${keikaiJs}` resolve to Keikai JavaScript URL, you need to store `keikaiJs` as an attribute by calling `setAttribute()`.
+
+**EditorServlet.java**
 
 ```java
 request.setAttribute(Configuration.KEIKAI_JS, keikaiJs);

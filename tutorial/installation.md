@@ -38,4 +38,7 @@ INFO: Rikulo Stream Server 1.7.0 starting on 0.0.0.0:8888
 ...
 ```
 
-Then Keikai server should start up successfully at `localhost:8888
+Then Keikai server should start up successfully at `localhost:8888`
+
+## Shutdown Keikai Engine
+Press `Ctrl+c`.

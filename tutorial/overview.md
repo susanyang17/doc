@@ -33,4 +33,4 @@ A demo is worth a thousand words, you can immediately experience Kaikai with our
 
 
 # Prerequisite
-To better understand this article and how tutorial project works, we assume you have basic konwledge of Java EE web components (JSP and servlet) and HTML.
+To better understand this article and how tutorial project works, we assume you have basic knowledge of Java EE web components (JSP and servlet) and HTML.

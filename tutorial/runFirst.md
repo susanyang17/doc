@@ -17,3 +17,5 @@ You can run this project on a built-in jetty server with Maven wrapper without i
 `mvnw.cmd jetty:run-forked`
 
 Then visit [http://localhost:8080](http://localhost:8080)
+
+Press `Ctrl+c` to stop the jetty.
