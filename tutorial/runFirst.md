@@ -18,4 +18,4 @@ You can run this project on a built-in jetty server with Maven wrapper without i
 
 Then visit [http://localhost:8080](http://localhost:8080)
 
-Press `Ctrl+c` to stop the jetty.
+(You can press `Ctrl+c` to stop the jetty.)

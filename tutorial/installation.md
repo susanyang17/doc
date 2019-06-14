@@ -31,14 +31,14 @@ Assume you extract the zip to a folder `[KEIKAI-ENGINE]`
 
 After executing the command, you should see some messages like:
 ```
-1:8888:2018-06-05 09:52:18.059549Z:keikai_dart_server:keikai_server:0
-INFO: Keikai version: 1.0.0-beta@jhsioate
 ...
-INFO: Rikulo Stream Server 1.7.0 starting on 0.0.0.0:8888
+INFO: Keikai version: 1.0.0-beta.20@jvbp5h5y
+...
+INFO: Starting Keikai engine on http://localhost:8888
 ...
 ```
 
 Then Keikai server should start up successfully at `localhost:8888`
 
-## Shutdown Keikai Engine
-Press `Ctrl+c`.
+
+(If you need to shutdown Keikai Engine, just press `Ctrl+c`.)
