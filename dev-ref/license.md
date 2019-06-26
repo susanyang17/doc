@@ -22,13 +22,14 @@ Besides, you should see a evaluation mark at the right-bottom corner of each she
 ## Install License file
 
 * Default Path
+
 put the license file under `keikai/license`
 
 * Custom Path
 
 specify the license folder when run the keikai engine.
 
-`./keikai --lic-dir=FullPath`
+`./keikai --lic-dir=AbsolutePath`
 
 
 If you install a license file successfully, you should see the your license information like the one below when you start a Keikai engine:
@@ -53,10 +54,10 @@ At this state, you should create a new Java client with the corresponding API ke
 Settings settings = Settings.DEFAULT_SETTINGS.clone();
 settings.set(Settings.Key.API_KEY, "abcdefghiojklmnop");
 
-spreadsheet = Keikai.newClient(keikaiEngineAddress, getSettings());
+spreadsheet = Keikai.newClient(keikaiEngineAddress, settings);
 ```
 
-If you connect the engine without a valid key (or without key), you will see the error message:
+If you connect the engine without a valid key (or without key), you will see the error message in your application server console:
 
 ```
 java.lang.RuntimeException: io.keikai.client.kms.KMSException: The API key has invalid. Please contact us at info@keikai.io to obtain a valid API key.
