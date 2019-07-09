@@ -47,8 +47,6 @@ devRef:
         url: /dev-ref/form-controls
       # - title: "Dialogs"
       #   url: /dev-ref/dialogs    
-  - title: "License"    
-    url: /dev-ref/license
   - title: "FAQ"
     url: /dev-ref/faq
          

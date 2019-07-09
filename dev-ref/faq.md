@@ -125,3 +125,6 @@ You need to specify the target context path:
 No. Even Microsoft Excel online doesn't support running VB macro (Please see [Editing files with VBA](https://www.microsoft.com/en-us/microsoft-365/blog/2014/04/14/weve-updated-excel-online-whats-new-in-april-2014/) or [here](https://social.technet.microsoft.com/Forums/office/en-US/7c46823c-2581-47a6-baac-66fb99ac3ea8/does-office-365-online-version-supports-vbavisual-basic-for-applications?forum=Office2016ITPro)). 
 
 If you need do something similar, you need to port your VB macro to Java within [event listeners](/dev-ref/handle-events).
+
+
+{% include_relative license.md %}

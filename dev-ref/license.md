@@ -1,6 +1,3 @@
----
-title: "License an Engine"
----
 
 # Evaluation Engine
 When starting up a Keikai engine under this state, there is a limited trial time message:
