@@ -25,9 +25,7 @@ Then the engine will exit.
 
 
 # Licensed Engine
-**Each machine requires one license** no matter how many engines you run. 
-
-If you run 2 engines on the same machine, you just need to install the license into the 2 engines. If you run 2 engines on 2 different machines, you need to accquire 2 different licenses for 2 machines.
+**Each machine requires one license**. If you run 2 engines on 2 different machines, you need to accquire 2 different licenses for 2 machines.
 
 ## Install a License File
 
