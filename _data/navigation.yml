@@ -45,8 +45,8 @@ devRef:
     children:
       - title: "Form Controls"
         url: /dev-ref/form-controls
-      # - title: "Dialogs"
-      #   url: /dev-ref/dialogs    
+      - title: "Dialogs"
+        url: /dev-ref/dialogs    
   - title: "FAQ"
     url: /dev-ref/faq
          
