@@ -17,8 +17,8 @@ Just unzip the downloaded zip file, and the installation of Keikai engine is com
 
 
 # Run Keikai Engine
-Assume you extract the zip to a folder `[KEIKAI-ENGINE]`
-1. go to `[KEIKAI-ENGINE]/keikai` folder
+Assume you extract the zip to a folder `[keikai-version-os-x64]`
+1. launch Command Prompt and switch to `[keikai-version-os-x64]/keikai` folder
 2. run the executable command:
 
 * Mac/Linux
@@ -38,7 +38,7 @@ INFO: Starting Keikai engine on http://localhost:8888
 ...
 ```
 
-Then Keikai server should start up successfully at `localhost:8888`
-
+It means Keikai server has started up successfully at `localhost:8888`
+You can now leave this window as is, and prepare to run your Java Client Application.
 
 (If you need to shutdown Keikai Engine, just press `Ctrl+c`.)
