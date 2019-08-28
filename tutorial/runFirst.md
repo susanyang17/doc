@@ -5,7 +5,9 @@ toc: false
 
 Now that the Keikai engine is up and running, we can run tutorial project. After extracting Keikai engine, there should be a folder `keikai-tutorial` which is a clone from [Keikai tutorial project](https://github.com/keikai/keikai-tutorial). There are several demos in the tutorial project.
 
-You can run this project on a built-in jetty server with Maven wrapper without installing anything in advance (the wrapper will download and install required files for you). Just run the following command in your command line interface:
+We have packaged this project containing a built-in jetty server with Maven wrapper so that you can run it without having to install anything in advance (the wrapper will download and install required files for you, so be sure that you are connected to the internet). 
+
+Just switch to the keikai-tutorial folder and run the following command in your command line interface:
 
 ##  Linux / Mac
 
@@ -16,6 +18,6 @@ You can run this project on a built-in jetty server with Maven wrapper without i
 
 `mvnw.cmd jetty:run-forked`
 
-Then visit [http://localhost:8080/tutorial/](http://localhost:8080/tutorial/)
+After it finishes, visit [http://localhost:8080/tutorial/](http://localhost:8080/tutorial/) with your browser.
 
 (You can press `Ctrl+c` to stop the jetty.)
