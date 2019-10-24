@@ -1,52 +1,21 @@
 main:
   - title: "Tutorial"
     url: /tutorial
-  - title: "Developer Reference"
-    url: /dev-ref
+#  - title: "Developer Reference"
+#    url: /dev-ref
 
 tutorial:
   - title: "Tutorial"
     url: /tutorial
     children:
-      - title: Overview
-        url: /tutorial/overview
-      - title: Download and Installation
-        url: /tutorial/installation
-      - title: Run Your First Keikai Application
-        url: /tutorial/runFirst
-      - title: Display Your First Spreadsheet
-        url: /tutorial/displaySpreadsheet
-      - title: Component UI
-        url: /tutorial/componentUI
-      - title: Java Client API Basic
-        url: /tutorial/javaClientApi
-      - title: Data Validation & Freeze
-        url: /tutorial/validationFreeze
-      - title: Implement Your Business Logic
-        url: /tutorial/eventListener
-      - title: Customize Toolbar
-        url: /tutorial/toolbar                        
-      - title: Work with a Database
-        url: /tutorial/database       
+      - title: "Work with Database"
+        url: /tutorial/database
 
         
-devRef:
-  - title: "Overview"
-    url: /dev-ref/overview  
-  - title: "UI Configurations"
-    url: /dev-ref/ui-configurations
-  - title: "Features and Usages"
-    url: /dev-ref/features-usages
-  - title: "API Usages"
-    url: /dev-ref/api-usages
-  - title: "Handle Events"
-    url: /dev-ref/handle-events
-  - title: Customization
-    children:
-      - title: "Form Controls"
-        url: /dev-ref/form-controls
-      - title: "Dialogs"
-        url: /dev-ref/dialogs    
-  - title: "FAQ"
-    url: /dev-ref/faq
-         
+# devRef:
+#  - title: Customization
+#    children:
+#      - title: "Form Controls"
+#        url: /dev-ref/form-controls
+#      - title: "Dialogs"
+#        url: /dev-ref/dialogs             
