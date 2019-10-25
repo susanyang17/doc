@@ -8,6 +8,10 @@ tutorial:
   - title: "Tutorial"
     url: /tutorial
     children:
+#      - title: "Features and Usages"
+ #       url: /tutorial/features
+      - title: "Create First Keikai"
+        url: /tutorial/first
       - title: "Work with Database"
         url: /tutorial/database
 
