@@ -1,10 +1,10 @@
 # Work with Database
-One common use case is to load/save spreadsheet data from/to your database. There are 2 ways to interact with a database:
+One common use case is to load spreadsheet data from your database and save it back after editing. There are 2 ways to interact with a database:
 1. Import/Export an xlsx file from/to your database: <br/>
-**Import**: please reference the previous section [Online Editor](##Online Editor) where you can import xlsx file via the API. <br/>
+**Import**: please reference the previous section [Online Editor](https://doc.keikai.io/tutorial/first) where you can import xlsx file via the API. <br/>
 **Export**: All information of a book model can be exported to an .xlsx file. You can store the file in a [BLOB](https://en.wikipedia.org/wiki/Binary_large_object) field of a table in a database.
 2. Populate/Store cell data from/to your database: <br/>
-**Populate data into spreadsheet**: When displaying data from the database, you can publish data into cells with `Range` setter methods into Keikai with predefined style.<br/>
+**Populate data into spreadsheet**: When displaying data from the database, you can publish data with `Range` setter methods into Keikai cells.<br/>
 **Store data into database**: Extract cell data or formulas you need with `Range` getter method and insert them into a corresponding database table. 
 
 The example we introduce below demonstrates the 2nd way: using `Range` API to save the cell data back to the database and publish a table's data to cells. The architecture is as follows:
