@@ -4,18 +4,16 @@ permalink: /tutorial
 ---
 
 # Overview
- [Keikai](https://keikai.io/) is an extensible, customizable, and integrable Java AJAX web spreadsheet component that delivers Excel-like experience for your Java web application. It has UI similar to Excel including a toolbar, formula bar, and sheet tabs and provides mostly-common features such as editing text and styles, merging, sorting cells and inserting, deleting, and freezing rows and columns. Keikai not only supports over 75% of Excel formulas and you can even add your own ones. 
+ [Keikai](https://keikai.io/) is an embeddable Java Web spreadsheet component that delivers Excel-like functionalities to your Web application. It has an UI similar to Excel including a main sheet canvas, a toolbar, a formula bar, and sheet tabs and provides commonly used features such as editing text and styles, merging and sorting cells; and inserting, deleting, and freezing rows and columns. In addition Keikai provides built-in Excel formulas and allows you to plugin your own functions.
 
-You can import your xlsx file into Keikai and edit the file with your browser. Unlike other online spreadsheet such as Google Sheets or Microsoft Office online, you can integrate Keikai with your enterprise back-end systems seamlessly and create collaborative and dynamic enterprise applications at minimal cost. You can call versatile Java APIs to control and configure Keikai. Besides, you can listen to events triggered by user actions like clicking a cell, or selecting a sheet, then implement your application logic in an event listener. 
-
-This tutorial introduce you how to use Keikai with several basic examples including setup and API usage.
+You can import your xlsx file into Keikai and edit the file within your browser. You can also populate data from your database or data source to Keikai and save it back to DB after editing. You can call versatile Java APIs to control and configure Keikai and seamlessly integrate it with your backend system. Besides, you can listen to events triggered by user actions like clicking a cell or selecting a sheet, and then implement your application logic in an event listener.
 
 # Quick Start
-Just clone [tutorial project](https://github.com/keikai/keikai-tutorial) and follow the instructions in readme.md to start up the project with jetty. Then you can start to experience Keikai with your browser.
-
+Just clone the [tutorial project](https://github.com/keikai/keikai-tutorial) and follow the instructions in readme.md to start up the project with Jetty. Then you can start to experience Keikai in your browser.
+Here we introduce two typical use cases: Online Editor and Work with Database.
 
 # Setup with Maven
-If you want to create your own Maven project, you need to add the repository:
+If you wish to create your own Maven project instead of using the tutorial project, add the following repository:
 
 ```xml
 <repository>
