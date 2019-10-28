@@ -17,15 +17,9 @@ Keikai is based on [ZK UI framework](http://www.zkoss.org), and it provide [a po
 
 Here we load an Excel file "demo_sample.xlsx" programmatically by specifying the `src` attribute. 
 
-Then visit the page URL (http://localhost:8080/tutorial/editor.zul) with your browser. You will see the specified xlsx file loaded with toolbar, formula bar, sheet bar and context menu.
+Then visit the page URL (http://localhost:8080/tutorial/editor.zul) with your browser. You will see the specified xlsx file(3) loaded with toolbar(1), formula bar(2), sheet bar(5) and context menu(4).
 
 
 ![](/assets/images/tutorial/keikaiUi.png)
-
-1. Toolbar
-2. Formula bar
-3. Current Sheet
-4. Context menu
-5. Sheet bar
 
 Keikai has a familiar spreadsheet UI interface, end users can edit the spreadsheet like changing cell content, font, color, format, formulas, ... in the way they already know.
