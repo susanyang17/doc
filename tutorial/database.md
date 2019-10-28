@@ -1,13 +1,13 @@
 # Work with Database
-There are 2 ways to interact with a database:
+One common use case is to load/save spreadsheet data from/to your database. There are 2 ways to interact with a database:
 1. Import/Export an xlsx file from/to your database: <br/>
-**Import**: please reference the previous section [Online Spreadsheet Editor](##Online Spreadsheet Editor) where you can import xlsx file via the UI or API. <br/>
+**Import**: please reference the previous section [Online Editor](##Online Editor) where you can import xlsx file via the API. <br/>
 **Export**: All information of a book model can be exported to an .xlsx file. You can store the file in a [BLOB](https://en.wikipedia.org/wiki/Binary_large_object) field of a table in a database.
 2. Populate/Store cell data from/to your database: <br/>
 **Populate data into spreadsheet**: When displaying data from the database, you can publish data into cells with `Range` setter methods into Keikai with predefined style.<br/>
-**Store data into database**: Extract cell data or formulas you are interested with `Range` getter method and insert them into a corresponding database table. 
+**Store data into database**: Extract cell data or formulas you need with `Range` getter method and insert them into a corresponding database table. 
 
-The example we introduce here demonstrates the 2nd way: using `Range` API to save the cell data back to the database and publish a table's data to cells. The architecture is as follows:
+The example we introduce below demonstrates the 2nd way: using `Range` API to save the cell data back to the database and publish a table's data to cells. The architecture is as follows:
 
 ![](/assets/images/tutorial/database.png)
 
@@ -30,13 +30,15 @@ Ranges.range(spreadsheet.getSelectedSheet(),  3, 3);
 Ranges.range(spreadsheet.getSelectedSheet(), "A1:B4");
 Ranges.range(spreadsheet.getSelectedSheet(), 0, 0, 3, 1);
 ```
-Getting a `Range` for 1 cell requires a sheet, row index, and column index as a coordinate, and multiple cells requires starting and end row/column index.
+Getting a `Range` for one cell requires a sheet, row index, and column index as the coordinate, and multiple cells requires starting and end row/column index.
 
-Then, you can call `Range`'s method to performe an action like `setValue()` or `getValue()`.
+With all these information, you can call `Range`'s method to performe an action like `setValue()` or `getValue()`.
 
 
 # Background
-Assume you need to display a database table with an xlsx template. In the screenshot of this example, on the right hand side is the database table. On the left hand side, it's Keikai that loads the data from the table into an xlsx template:
+Assume you wish to display a database table in a predefined format. This can be done by preparing an Excel template, load the template into Keikai, and then populate the data from database to the template.
+
+Refer to the following screenshot, on the right hand side there is a database table. On the left hand side, it's Keikai that loads the data from the table into an xlsx template:
 
 ![](/assets/images/tutorial/databaseExample.png)
 
@@ -45,9 +47,9 @@ An end user can:
 * reload the data from the database
 
 ## Persistence Layer Classes
-To make thing easy to understand, create a class `MyDataService` to handle query and update for the (simulated) database. It can query a collection of `Trade` for us to populate into Keikai and save `Trade` into the database.
+To make thing easy to understand, we create a class `MyDataService` to handle query and update for the (simulated) database. It can query a collection of `Trade` for us to populate into Keikai and save `Trade` into the database.
 
-In your real application, you can implement your own persistence layer classes according to your preference. Keikai doens't limit you how you implement it, you could use Hibernate or JDBC.
+In your real application, you can implement your own persistence layer classes according to your preference. There's no limitation here, you can use Hibernate or JDBC or any Java solutions you like.
 
 
 # Build the UI
@@ -55,7 +57,7 @@ We build the page above in ([database.zul](https://github.com/keikai/keikai-tuto
 
 
 # Controller
-Keikai supports the well-known pattern, [MVC (Model-View-Controller)](https://martinfowler.com/eaaDev/uiArchs.html#ModelViewController), and it plays **View**. The domain data from the database is referred to as **Model**. We have to create a **Controller** to control Keikai. The controller for Keikai is a Java class that extends `SelectorComposer`, and it interacts with the database via `MyDataService`. 
+Keikai supports the well-known pattern, [MVC (Model-View-Controller)](https://martinfowler.com/eaaDev/uiArchs.html#ModelViewController), and it plays as the role of **View**. The domain data from the database is referred to as **Model**. We have to create a **Controller** to control Keikai. The controller for Keikai is a Java class that extends `SelectorComposer`, and it interacts with the database via `MyDataService`. 
 
 ```java
 public class DatabaseComposer extends SelectorComposer<Component> {
@@ -66,12 +68,12 @@ public class DatabaseComposer extends SelectorComposer<Component> {
  ...   
 }
 ```
-* With [`@Wire`](https://www.zkoss.org/wiki/ZK%20Developer's%20Reference/MVC/Controller/Wire%20Components) on a member field, underlying ZK framework can inject `Spreadsheet` object created according to the zul. You don't need to create by yourself.
+* With [`@Wire`](https://www.zkoss.org/wiki/ZK%20Developer's%20Reference/MVC/Controller/Wire%20Components) on a member field, the underlying ZK framework can inject `Spreadsheet` object created according to the zul. You don't need to create it by yourself.
 
 ## Apply on the page
 We need to link `DatabaseComposer` with the previous page, so that the controller can listen to events and controll components via API. 
 
-Specify the full-qualified class name at `apply` attribute, then Keikai will instatiate it automaticaly when you visit the page. The controller can contoller the root component, `<hlayout>`. and all its child components (those inner tags).
+Specify the full-qualified class name at `apply` attribute, then Keikai will instatiate it automaticaly when you visit the page. The controller can contoller the root component, `<hlayout>`, and all its children components (those inner tags).
 
 ```xml
 <hlayout width="100%" vflex="1" apply="io.keikai.tutorial.database.DatabaseComposer">
@@ -82,7 +84,7 @@ Specify the full-qualified class name at `apply` attribute, then Keikai will ins
 
 
 ## Listen Events
-There are 2 buttons on the page we need to listen to their click event and implement the related application logic. Specify 2 buttons' id so that you can easily listen to events of them.
+There are 2 buttons on the page that we need to listen to their click event and implement related application logic. Specify 2 buttons' id so that you can easily listen to events of them.
 
 ```xml
 <button id="save" label="Save to Database" />
@@ -107,7 +109,7 @@ public void save(){
     ...
 }
 ```
-Then, you can implement related application logic in each listener.
+Then, you can implement related application logic in each listener according to your requirements.
 
 
 ## Populate Data into Cells
@@ -131,7 +133,7 @@ private void load(Trade trade, int row) {
 
 
 ## Save Data into a Table
-Before you save a `Trade`, you need to extract user input from cells with getter. You still need a `Range` but call getter this time like:
+Before you save a `Trade`, you need to extract user input from cells with getter. You still need a `Range` but you will call getter this time like:
 
 ```java
 private Trade extract(int row ){
@@ -152,5 +154,5 @@ private int extractInt(Range cell){
 
 
 # Summary
-* Keikai provides API to allow to you handle data transfermation between spreadsheet and a database.
-* Keikai doesn't limit you which Java framework/library to communicate with a database.
+* This example demonstrates how you can use Keikai API to load data from the database to a spreadsheet and save it back.
+* You can use any Java framework/library to communicate with the database, it is not limited by Keikai. 
