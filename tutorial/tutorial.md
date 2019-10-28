@@ -10,7 +10,7 @@ You can import your xlsx file into Keikai and edit the file within your browser.
 
 # Quick Start
 Just clone the [tutorial project](https://github.com/keikai/keikai-tutorial) and follow the instructions in readme.md to start up the project with Jetty. Then you can start to experience Keikai in your browser.
-Here we introduce two typical use cases: Online Editor and Work with Database.
+We take the tutorial project to introduce the most common use cases: [Online Editor](https://docs.keikai.io/tutorial/editor) and [Work with Database](https://docs.keikai.io/tutorial/database).
 
 # Setup with Maven
 If you wish to create your own Maven project instead of using the tutorial project, add the following repository:
