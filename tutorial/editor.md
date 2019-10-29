@@ -3,7 +3,6 @@ title: 'Online Editor'
 toc: false
 ---
 
-# Online Editor
 First we talk about displaying a Keikai spreadsheet in your browser for viewing and editing.
 
 Keikai is based on [ZK UI framework](http://www.zkoss.org), and it provide [a powerful, XML format UI language](https://www.zkoss.org/wiki/ZK_Developer%27s_Reference/UI_Composing/ZUML). You can easily create a Keikai spreadsheet by the `spreadsheet` XML tag. This can be done by specifying:
