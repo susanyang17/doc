@@ -1,4 +1,8 @@
-# Work with Database
+---
+title: 'Work with Database'
+toc: false
+---
+
 One common use case is to load spreadsheet data from your database and save it back after editing. There are 2 ways to interact with a database:
 1. Import/Export an xlsx file from/to your database: <br/>
 **Import**: please reference the previous section [Online Editor](https://doc.keikai.io/tutorial/editor) where you can import xlsx file via the API. <br/>
