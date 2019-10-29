@@ -8,6 +8,8 @@ permalink: /tutorial
 
 You can import your xlsx file into Keikai and edit the file within your browser. You can also populate data from your database or data source to Keikai and save it back to DB after editing. You can call versatile Java APIs to control and configure Keikai and seamlessly integrate it with your backend system. Besides, you can listen to events triggered by user actions like clicking a cell or selecting a sheet, and then implement your application logic in an event listener.
 
+Keikai is the easiest way to bring in spreadsheet power to your Web applications!
+
 # Quick Start
 Just clone the [tutorial project](https://github.com/keikai/keikai-tutorial) and follow the instructions in readme.md to start up the project with Jetty. Then you can start to experience Keikai in your browser.
 We take the tutorial project to introduce the most common use cases: [Online Editor](https://docs.keikai.io/tutorial/editor) and [Work with Database](https://docs.keikai.io/tutorial/database).
