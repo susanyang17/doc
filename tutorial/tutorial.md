@@ -12,7 +12,7 @@ Keikai is the easiest way to bring in spreadsheet power to your Web applications
 
 # Quick Start
 Just clone the [tutorial project](https://github.com/keikai/keikai-tutorial) and follow the instructions in readme.md to start up the project with Jetty. Then you can start to experience Keikai in your browser.
-We take the tutorial project to introduce the most common use cases: [Online Editor](https://docs.keikai.io/tutorial/editor) and [Work with Database](https://docs.keikai.io/tutorial/database).
+We take the tutorial project to introduce the most common use cases: [Online Editor](https://doc.keikai.io/tutorial/editor) and [Work with Database](https://doc.keikai.io/tutorial/database).
 
 # Setup with Maven
 If you wish to create your own Maven project instead of using the tutorial project, add the following repository:
