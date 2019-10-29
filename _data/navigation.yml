@@ -10,6 +10,8 @@ tutorial:
     children:
 #      - title: "Features and Usages"
  #       url: /tutorial/features
+       - title: "Overview"
+        url: /tutorial
       - title: "Online Editor"
         url: /tutorial/editor
       - title: "Work with Database"
