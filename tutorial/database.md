@@ -1,7 +1,7 @@
 # Work with Database
 One common use case is to load spreadsheet data from your database and save it back after editing. There are 2 ways to interact with a database:
 1. Import/Export an xlsx file from/to your database: <br/>
-**Import**: please reference the previous section [Online Editor](https://doc.keikai.io/tutorial/first) where you can import xlsx file via the API. <br/>
+**Import**: please reference the previous section [Online Editor](https://doc.keikai.io/tutorial/editor) where you can import xlsx file via the API. <br/>
 **Export**: All information of a book model can be exported to an .xlsx file. You can store the file in a [BLOB](https://en.wikipedia.org/wiki/Binary_large_object) field of a table in a database.
 2. Populate/Store cell data from/to your database: <br/>
 **Populate data into spreadsheet**: When displaying data from the database, you can publish data with `Range` setter methods into Keikai cells.<br/>
@@ -152,7 +152,3 @@ private int extractInt(Range cell){
 ```
 * Beware - if a cell is blank, `getYYYValue()` of `CellData` returns null.
 
-
-# Summary
-* This example demonstrates how you can use Keikai API to load data from the database to a spreadsheet and save it back.
-* You can use any Java framework/library to communicate with the database, it is not limited by Keikai. 
