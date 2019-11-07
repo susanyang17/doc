@@ -11,8 +11,10 @@ You can import your xlsx file into Keikai and edit the file within your browser.
 Keikai is the easiest way to bring in spreadsheet power to your Web applications!
 
 # Quick Start
-Just clone the [tutorial project](https://github.com/keikai/keikai-tutorial) and follow the instructions in readme.md to start up the project with Jetty. Then you can start to experience Keikai in your browser.
-We take the tutorial project to introduce the most common use cases: [Online Editor](https://doc.keikai.io/tutorial/editor) and [Work with Database](https://doc.keikai.io/tutorial/database).
+If you are new to Keikai, follow this section to get started. 
+
+Just clone the [tutorial project](https://github.com/keikai/keikai-tutorial) and follow the instructions in [readme.md] (https://github.com/keikai/keikai-tutorial/blob/master/readme.md) to start up the project with Jetty. Depending on your OS and whether you have Maven installed or not, the commands varies. After it is successfully started, you can start to experience Keikai in your browser.
+We take the tutorial project to introduce the two most common use cases: [Online Editor](https://doc.keikai.io/tutorial/editor) and [Work with Database](https://doc.keikai.io/tutorial/database).
 
 # Setup with Maven
 If you wish to create your own Maven project instead of using the tutorial project, add the following repository:
