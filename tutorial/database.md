@@ -63,7 +63,7 @@ We build the page above in ([database.zul](https://github.com/keikai/keikai-tuto
 # Controller
 Keikai supports the well-known pattern, [MVC (Model-View-Controller)](https://martinfowler.com/eaaDev/uiArchs.html#ModelViewController), and it plays as the role of **View**. The domain data from the database is referred to as **Model**. We have to create a **Controller** to control Keikai. The controller for Keikai is a Java class that extends `SelectorComposer`, and it interacts with the database via `MyDataService`. 
 
-```java
+{% highlight java linenos %}
 public class DatabaseComposer extends SelectorComposer<Component> {
 
     private MyDataService dataService = new MyDataService();
@@ -71,8 +71,9 @@ public class DatabaseComposer extends SelectorComposer<Component> {
     private Spreadsheet ss;
  ...   
 }
-```
-* With [`@Wire`](https://www.zkoss.org/wiki/ZK%20Developer's%20Reference/MVC/Controller/Wire%20Components) on a member field, the underlying ZK framework can inject `Spreadsheet` object created according to the zul. You don't need to create it by yourself.
+{% endhighlight %}
+
+* line 4: With [`@Wire`](https://www.zkoss.org/wiki/ZK%20Developer's%20Reference/MVC/Controller/Wire%20Components) on a member field, the underlying ZK framework can inject `Spreadsheet` object created according to the zul. You don't need to create it by yourself.
 
 ## Apply on the page
 We need to link `DatabaseComposer` with the previous page, so that the controller can listen to events and controll components via API. 
@@ -139,7 +140,7 @@ private void load(Trade trade, int row) {
 ## Save Data into a Table
 Before you save a `Trade`, you need to extract user input from cells with getter. You still need a `Range` but you will call getter this time like:
 
-```java
+{% highlight java linenos %}
 private Trade extract(int row ){
     Sheet sheet = ss.getSelectedSheet();
     Trade trade = new Trade(extractInt(Ranges.range(sheet, row, ID)));
@@ -153,6 +154,6 @@ private int extractInt(Range cell){
     CellData cellData = cell.getCellData();
     return cellData.getDoubleValue() == null ? 0 : cellData.getDoubleValue().intValue();
 }
-```
-* Beware - if a cell is blank, `getYYYValue()` of `CellData` returns null.
+{% endhighlight %}
+* line 12: Beware - if a cell is blank, `CellData::getDoubleValue()` returns null.
 
