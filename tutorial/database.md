@@ -1,6 +1,5 @@
 ---
 title: 'Work with Database'
-toc: false
 ---
 
 One common use case is to load spreadsheet data from your database and save it back after editing. There are 2 ways to interact with a database:
