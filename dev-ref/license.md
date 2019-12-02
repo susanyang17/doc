@@ -1,88 +1,69 @@
+Only ZSS EE requires a license file. You can choose one of the following
+ways to put a license file:
 
-# Evaluation Engine
-When starting up a Keikai engine under this state, there is a limited trial time message:
+# Default License Loading Path
 
-```
-INFO: This is an evaluation copy of Keikai 1.0.0@jvw6wenz. 
-Your trial will end at "2019/08/19 00:00:00", if you wish to continue using Keikai please contact us at info@keikai.io.
-1:8888:2019-06-26 06:49:44.009437Z:stream:4
+ZSS loads a license file from the default path:
 
-```
+**`WEB-INF/classes/metainfo/zss/license/`**
 
-Besides, you should see a evaluation mark at the right-bottom corner of each sheet:
+Create the path above if it does not exist, and put the license key into
+the path. This is the simplest way if you just have one zss-based web
+application.
 
-![]({{ site.baseurl }}/assets/images/evaluationMark.png)
+# Specify an Absolute Path with a Library Property
 
-## Expired Engine
-If you start an engine whose trial period expired,  you will see the messsage below: 
+Some application servers like Weblogic could fail to locate the license
+file in the default path. Then you can specify the absolute path of the
+license with the following library property in `zk.xml` and copy your
+ZSS license file there.
 
-```
-INFO: This is an evaluation copy of Keikai 1.0.0-beta.11@jqlrv3br. 
-The trial period has expired, please contact us at info@keikai.io for assistance.
-```
-
-Then the engine will exit.
-
-
-# Licensed Engine
-**Each machine requires one license**. If you run 2 engines on 2 different machines, you need to accquire 2 different licenses for 2 machines.
-
-## Install a License File
-
-* Default Path
-
-put the license file under a specific folder in Keikai engine:  `keikai/license`
-
-* Custom Path
-
-specify the license folder when running a Keikai engine.
-
-`./keikai --lic-dir=AbsolutePath`
-
-
-If you install a license file successfully, you should see the your license information like the one below when you start a Keikai engine:
-
-```
-Keikai Engine Installed Licenses: 1
-
-*** Potix Corporation License Information (0) ***
-
-  Licensed Company: Test Compnay
-  Certificate Number: 123456789       
-  Licensed Product: keikai component
-  Maximum Licensed Number: 1 installation
-  API Key: abcdefghiojklmnop
-  Extended Trial until Oct. 10, 2029
+``` xml
+<library-property>
+    <name>org.zkoss.zssex.rt.Runtime.directory</name>
+    <value>c:/systemAbsolutePath/my-licenses/</value>
+</library-property>
 ```
 
-## Java Client Requires an API key
-In your license information, you can see there is an API key printed:
-```
-API Key: abcdefghiojklmnop
-```
+It's also a way that multiple ZSS-bases applications can load the same
+license file.
 
-To connect to a licensed engine, you should create a Java client with the matched API key:
+# Specify the Path in a System Property
 
-```java
-Settings settings = Settings.DEFAULT_SETTINGS.clone();
-settings.set(Settings.Key.API_KEY, "abcdefghiojklmnop");
+Because
+\[<https://www.zkoss.org/javadoc/latest/zk/org/zkoss/lang/Library.html#getProperty(java.lang.String>)
+<https://www.zkoss.org/javadoc/latest/zk/org/zkoss/lang/Library.html#getProperty(java.lang.String>)
+`Library.getProperty()`\] will look for a system property if no
+corresponding property defined in `zk.xml`, you can also pass the
+license file path to ZSS via a system property.
 
-spreadsheet = Keikai.newClient(keikaiEngineAddress, settings);
-```
+For example in a Tomcat, you can add a `setenv.sh` (or `setenv.bat`)
+that contains
 
-If you connect the engine without a valid key (or without key), you will see the error message in your application server console and browser:
-
-```
-io.keikai.client.kms.KMSException: The API key is invalid. 
-Please contact us at info@keikai.io to obtain a valid API key.
-Caused by null
+``` text
+export CATALINA_OPTS="$CATALINA_OPTS -Dorg.zkoss.zssex.rt.Runtime.directory=/absolutePathToYourLicenseFilePath/"
 ```
 
-## Inconsistent License File
-Each license file is generated for a specific machine. If you install the license file to another machine, you will see the error below when you start the engine:
+Tomcat `catalina.sh` will invoke this script if exists.
 
-```
-WARNING: The license issued to "MyCompanyName" with "a-long-keikai-engine-serial-number" has a wrong Keikai engine serial number. 
-Please contact info@keikai.io to obtain a valid license.
-License file: license\Keikai_License_Signature_For_MyCompany.19062615
+Refer to your application server's documentation to set a system
+property. In conclusion, you can pass the path in any way that can be
+retrieved by Java's `System.getProperty()`, e.g. a system variable in
+Windows.
+
+# License Information
+
+If the license is loaded successfully, you should see a license
+information like below printed in your application server's console when
+the server starts like:
+
+``` text
+*** Potix Corporation License Information ***
+
+     Licensed Company: my company
+     Certificate Number: 123456       
+     Licensed Product: keikai spreadsheet EE
+     ...
+
+     To renew, obtain more licenses, or if you require help, please contact info@zkoss.org.
 ```

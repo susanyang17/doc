@@ -1,130 +1,190 @@
----
-title: "Frequently Asked Questions"
----
+# Does ZSS support user permission control?
 
-# Wrong version between Keikai client and engine
-When you visit a page with Keikai, if you see the error:
+  -   
+    We provide API for you to build your owned permission control. User
+    permission feature involves authentication and authorization which
+    is out of ZSS function's scope. Since ZSS cannot identify a user, it
+    cannot assign a user with corresponding permissions. But you can
+    easily integrate existing framework like Spring Security and
+    implement your user permission features with ZSS. Please refer to
+    the following sections:
+      - Hide the toolbar and the context menu to prevent editing. Please
+        refer to [keikai spreadsheet Essentials/Working with
+        Spreadsheet/Control
+        Components](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Control_Components "wikilink").
+      - Disable available functions for different users. Please refer to
+        [keikai spreadsheet Essentials/Working with
+        Spreadsheet/Advanced/Disable
+        Functions](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Advanced/Disable_Functions "wikilink").
+      - Protect sheets and set available actions. Refer to
+        <javadoc directory='zss' method='protectSheet(java.lang.String , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean allowSorting, boolean , boolean , boolean , boolean )'>org.zkoss.zss.api.Range</javadoc>
 
-![](/assets/images/inconsistentVersion.png)
+You can see an example at
+<http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Use_Case/User_Permission>.
 
-That means the version of Keikai Java client is inconsistent with the engine. The message also tells you both the client and engine version you use. You need to make both version consistent, so you can either:
-* [Contact us](https://keikai.io/#contact) to download another version of Keikai engine
-* Change Keikai client version to match engine's
+# How do I save the content of ZSS or even save it to a database?
 
-## How to change the Keikai client version:
-Just modify the version string in the corresponding file depending on which tool you run this project. 
+To save the content of ZSS, we recommend to export it as an Excel file
+instead of saving it rows by rows. It is also the way we implement the
+"Save" function in zssapp. After exporting, you can save the file into a
+BLOB type column of a database.
 
-### Maven
-pom.xml
+:\* How to export: [ Export to
+Excel](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Handling_Data_Model/Export_to_Excel "wikilink")
 
-`<version>*-Eval</version>`
+:\* Integrate custom saving process to ZSS toolbar's Save button: [
+Toolbar
+Customization](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Advanced/Toolbar_Customization#Save_Book "wikilink")
 
-### Gradle
+# After exporting to a PDF file, the PDF shows unexpected fonts or has missing characters
 
-build.gradle
+There are many reasons, but we list the most possible ones:
 
-`compile "io.keikai:keikai-java-client:*-Eval"`
+:\* You choose a wrong encoding for some characters.
 
- 
- 
-# Import Larger Files
-Importing larger files require a larger heap size. Here are peak heap size consumed by an application server. Please reference it to specify your server's heap size.
+  -   
+    For example, you apply "Calibri" on a Chinese character. You can
+    resolve it by applying the correct font.
+      - The computer of your PDF viewer software doesn't install
+        corresponding fonts.
+    For ZSS doesn't embed fonts into a exported PDF file, your computer
+    should install the corresponding fonts to display the file
+    correctly. You can test it by opening the PDF file in another
+    computer or different OS. Please check installed fonts on your
+    computer. Installing missing fonts can solve this problem.
 
-| File size | Number of Cells| Peak Heap Size| 
-| --------- | -------------- | ------------------ |
-| 10 MB     | 1.4 millions  | 1.5G  |
-| 20 MB     | 2.9 millions  | 1.9G  |
-| 40 MB     | 8.7 millions  | 2.5G  |
+The ZSS bundled iText will find fonts from the following paths. Please
+check the fonts you apply are available in these paths: **Won't scan its
+subdirectories**
 
-If you wish to try importing large files, please increase your heap size accordingly. 
-You can increase the heap size with JVM arguments:
+`   c:/windows/fonts`  
+`   c:/winnt/fonts`  
+`   d:/windows/fonts`  
+`   d:/winnt/fonts`  
+`   /Library/Fonts`  
+`   /System/Library/Fonts`
 
-## Gradle
-`gradle appRun -Dorg.gradle.jvmargs=-Xmx4g`
+**Will scan its subdirectories**
 
+`   /usr/share/X11/fonts`  
+`   /usr/X/lib/X11/fonts`  
+`   /usr/openwin/lib/X11/fonts    `  
+`   /usr/share/fonts`  
+`   /usr/X11R6/lib/X11/fonts`
 
-## maven
-modify the configurations of jetty-maven-plugin in pom.xml
-```
-<jvmArgs>-Xmx4096m</jvmArgs>
-```
-please refer to https://www.eclipse.org/jetty/documentation/9.4.x/jetty-maven-plugin.html
+Extracted from FontFactoryImp com.lowagie.text.FontFactoryImp.
 
+:\* The server to export a PDF doesn't install corresponding fonts.
 
+  -   
+    It might happen when you export a PDF on a Linux server without
+    Microsoft fonts installed. (Unbuntu should install the package
+    `ttf-mscorefonts-installer`, "installer for Microsoft TrueType core
+    fonts"). You will find the exported PDF's size is smaller than the
+    one exported correctly. Install the corresponding fonts can solve
+    this issue.
 
-# Start Keikai engine with different port and address
-`./keikai  -—port=9999 -—address=192.168.1.1`
+# How do I know my file can be loaded correctly by ZSS?
 
-* For complete options, you can check with the command:
-`./keikai --help`
+In general, those functions we implement with the toolbar are supported.
+However, the best way is to upload your files to the
+<http://www.zkoss.org/download/zkspreadsheet>. It's a ready-to-use web
+application based on ZSS component. You just run the war with a Java
+application server, then you can upload files via the menu, File / Open
+/ Upload.
 
+# Does ZSS support VB macro?
 
+No. Even
+<https://www.microsoft.com/en-us/microsoft-365/blog/2014/04/14/weve-updated-excel-online-whats-new-in-april-2014/>
+(or
+<https://social.technet.microsoft.com/Forums/office/en-US/7c46823c-2581-47a6-baac-66fb99ac3ea8>).
+The macro in a file will be lost after being imported since ZSS doesn't
+keep the macro information.
 
-# Connect to a Different Keikai engine Address
-By default, this project connects to a Keikai engine at `localhost:8888`. If you wish to connect to a different address, please append a query string with the `server` key:
- 
- `http://localhost:8080/tutorial/editor?server=10.1.1.1:8888`
+If you need something similar, you can port your macro to Java within a
+controller to achieve the same function.
 
+# How to validate an XLSX format Excel file
 
+Validate it with
+<https://www.microsoft.com/en-us/download/details.aspx?id=30425>.
 
-# How to start the tutorial project with gradle
-##  Linux / Mac
+# Run out of heap when exporting / importing a large file
 
-### Gradle wrapper
-`./gradlew appRun`
+You might encounter an error like `java.lang.OutOfMemoryError: Java heap
+space` when exporting / importing a large file, since it consumes more
+memory at that process. Please increase your JVM heap size. (You can
+refer to
+<https://docs.oracle.com/cd/E15523_01/web.1111/e13814/jvm_tuning.htm#PERFM164>)
 
-## Window
+# What is the maximal rows and columns ZSS supports?
 
-### Gradle wrapper
-`gradlew appRun`
+  - The max column is **16384** (2^14)
+  - the max row is **1048576** (2^20)
 
-# Maximal column/row of a sheet
-Just like [Excel](https://support.office.com/en-us/article/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3):
-* Maximal column number: 16,384 (XFD)
-* Maximal row number: 1,048,576
+ZSS renders cells on demand instead of rendering all cells at once in a
+browser, but it loads a file's whole content into the memory. So the
+bigger memory your server has, the more rows and columns ZSS can load.
 
+Even if you have sufficient memory, loading time could be an issue.
+Because loading time grows linearly with cell number. Under our test
+machine, loading 1 million cells with texts takes 65 seconds, loading 2
+million cells takes 139 seconds and loading 4 million cells takes 315
+seconds. As the cell number grows, the time could be too long to be
+acceptable by users. You can measure the loading time on your machine
+first.
 
-# How to debug
+# Does ZSS support form control like the menu in Excel, **Developer \> Form Controls**?
 
-## Range API runtime error
-Since Keikai client API actually sends a command to a Keikai engine to execute operations remotely instead of executing it locally. So such the error caused by setter API can't show a line number of your program. For example, if you call a Keikai java client API, and it produces an error. Please scoll down to check the last error stack trace:
+No. But there are several alternatives:
 
-```
-socketPool-2-eventThread-1] ERROR io.keikai.client.kms.KMSClient - Remote server runtime error: ca3q13499ub36:["{"winId":"ca3q13499ub36","cmd":"Range.setValue","data":{"sheetId":"*nuv0HGJiwkBd4.XeDZOOTXPp","range":"a1a","bookName":"Book1.xlsx","value":"a1s"}}"]
-Bad state: No element
-#0      ...
-```
-Then You can check `"cmd":"Range.setValue"`, `"range":"a1a"` in that Json data, that means you the error is caused by `Range.setValue()` and the range is `a1a`. So you can search you code with the detail and found the root cause:
+  - Use ZK menu.
 
-setting value on a non-existed cell: `spreadsheet.getRange("a1a").setValue("123");`
+Please refer to the menu on top of ZSS at
+<http://zssdemo.zkoss.org/zssdemo/excel_like>
 
+  - Create a custom context menu.
 
-# Session Timeout
-Keikai keeps sending requests to an application server to avoid session timeout.
+Please refer to
+<https://www.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Advanced/Custom_Context_Menu>
 
-If there is a proxy server between your application and browsers, and you see such message:
-```
-The action you request is no longer available.
-This is normally caused by timeout.
-You have to reload the page and try again.
-```
+  - Insert special symbols in cells to simulate a checkbox, button.
 
-Open developer tool to check if there is an error similar like:
-`POST http://localhost:8080/appContextPath/kk 404 (Not Found)`
+You can insert icon-like symbols in a cell, so users think that cell is
+a button like below: ![ center](Zss-essentials-symbol.png " center")
+Then you can determine these cells in an event listener and perform your
+business logic.
 
-That's because the proxy maps [path-a] to [path-b] so that keikai keep-alive request doesn't send to the correct path. Then finally a session expires.
+  - Data validation can produce a dropdown list
 
-You need to specify the target context path:
-```java
-        Settings settings = Settings.DEFAULT_SETTINGS.clone();
-        settings.set(Settings.Key.CONTEXT_PATH, "TheRealApplicationContentPath");
-        Keikai.newClient(keikaiServerAddress, settings);
-```
+Please refer to
+<https://www.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Features_and_Usages#Data_Validation>
 
-# Support to Run VB macro?
-No. Even Microsoft Excel online doesn't support running VB macro (Please see [Editing files with VBA](https://www.microsoft.com/en-us/microsoft-365/blog/2014/04/14/weve-updated-excel-online-whats-new-in-april-2014/) or [here](https://social.technet.microsoft.com/Forums/office/en-US/7c46823c-2581-47a6-baac-66fb99ac3ea8/does-office-365-online-version-supports-vbavisual-basic-for-applications?forum=Office2016ITPro)). 
+  - Show a component on a cell with a popup.
 
-If you need do something similar, you need to port your VB macro to Java within [event listeners](/dev-ref/handle-events).
+![ center](Zss-essentials-popup.png " center")
 
+# Unable to get property 'appendCell' of undefined or null reference in IE
 
-{% include_relative license.md %}
+If you visit with IE11 and see such error message in developer tool's
+console. This is mostly caused by compatibility mode. Please turn it off
+and reload the page again since ZK/ZSS don't support such mode.
+
+# See Errors When Copying Massive Cells
+
+## Request Parameter Over a Server's Limit
+
+You might see similar errors at your server console when copying massive
+cells, for example, in Tomcat:
+
+`25-Jun-2018 12:14:26.420 INFO [http-nio-8080-exec-8]
+org.apache.tomcat.util.http.Parameters.processParameters More than the
+maximum number of request parameters (GET plus POST) for a single
+request ([10,000]) were detected. Any parameters beyond this limit have
+been ignored. To change this limit, set the maxParameterCount attribute
+on the Connector.` `Note: further occurrences of this error will be
+logged at DEBUG level.`
+
+You need to increase the limit of `maxParameterCount` of
+<https://tomcat.apache.org/tomcat-7.0-doc/config/http.html>.
