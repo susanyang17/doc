@@ -18,8 +18,13 @@ tutorial:
         url: /tutorial/database
 
         
-# devRef:
-#  - title: Customization
+devRef:
+ - title: Introduction
+ - url: /dev-ref/Introduction
+ - title: Download Example Source Code
+ - url: /dev-ref/Download_Example_Source_Code
+ - title: Features and Usages
+ - url: /dev-ref/Features_and_Usages
 #    children:
 #      - title: "Form Controls"
 #        url: /dev-ref/form-controls

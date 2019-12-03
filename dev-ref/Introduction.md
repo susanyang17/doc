@@ -30,10 +30,12 @@ plug-ins are required.
 
 # Architecture
 
-**Overview** ![ center](/assets/images/dev-ref/essentials-app-architecture.png " center")
+**Overview** 
 
-**More Inner Details** ![ center | 900px](/assets/images/dev-ref/essentials-architecture.png
-" center | 900px")
+![](/assets/images/dev-ref/Essentials-app-architecture.png)
+
+**More Inner Details** 
+![](/assets/images/dev-ref/essentials-architecture.png)
 
 Keikai spreadsheet component consists of three major parts -- the
 client-side UI , the server-side component, and the book data model with
@@ -54,14 +56,8 @@ tag. Please refer to [ Using Spreadsheet in
 JSF](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSF "wikilink")
 for details.
 
-# Difference from 2.5.0
 
-In 3.0.0, we have made some significant changes including new APIs for
-accessing book model, event name change, and the new way to customize
-toolbar handling. For complete details, please refer to
-<http://books.zkoss.org/wiki/Small_Talks/2013/August/ZK_Spreadsheet_3.0.0_RC:Upgrade_Notes>.
-
-# Difference from 3.0.0
+# Difference from ZSS 3.9
 
 In 3.5.0, we introduce a brand new model implementation. This
 enhancement doesn't change the way you use the Spreadsheet's public API
