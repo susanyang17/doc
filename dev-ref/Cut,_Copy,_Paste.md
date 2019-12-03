@@ -1,7 +1,7 @@
 # Overview
 
 To copy a range of cells, you should use
-<javadoc directory="zss">org.zkoss.zss.api.Ranges</javadoc> to select
+<javadoc directory="keikai">io.keikai.api.Ranges</javadoc> to select
 them and call `paste(Range)` with another `Range` object for destination
 like:
 
@@ -26,7 +26,7 @@ There is also a `pasteSpecial()` to do special pasting like pasting
 value only or pasting formula only.
 
 With the help of
-<javadoc directory="zss">org.zkoss.zss.api.CellOperationUtil</javadoc>,
+<javadoc directory="keikai">io.keikai.api.CellOperationUtil</javadoc>,
 we can easily perform copying and cutting, and it also provides methods
 for "paste special" such as `pasteValue()`, or `pasteFormula()`. These
 methods all require 2 `Range` objects as arguments. One is source and

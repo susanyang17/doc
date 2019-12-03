@@ -22,7 +22,7 @@ The result:
 
 ## Set Rich Text via API
 
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> API allows
+<javadoc directory="keikai">io.keikaige</javadoc> API allows
 you to get or set rich text in HTML format of a cell:
 
 ``` java
@@ -46,7 +46,7 @@ change the text and see the update.
 ``` xml
 
     <window hflex="1" vflex="1"
-        apply="org.zkoss.zss.essential.RichTextEditComposer">
+        apply="io.keikaial.RichTextEditComposer">
         <hlayout hflex="1" vflex="1">
             <spreadsheet id="ss" hflex="1" vflex="1" src="/WEB-INF/books/richTextEdit.xlsx"
                 showContextMenu="true" showToolbar="true"

@@ -17,7 +17,7 @@ configuration, it affects to all charts of the whole application.
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.chart.title.font</name>
+    <name>io.keikai.chart.title.font</name>
     <value>sansserif, italic, 30</value>
 </library-property>
 ```
@@ -36,19 +36,19 @@ Available property names:
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>org.zkoss.zss.chart.title.font</p></td>
+<td><p>io.keikai.chart.title.font</p></td>
 <td><center>
 <p>title font</p>
 </center></td>
 </tr>
 <tr class="even">
-<td><p>org.zkoss.zss.chart.legend.font</p></td>
+<td><p>io.keikai.chart.legend.font</p></td>
 <td><center>
 <p>legend font</p>
 </center></td>
 </tr>
 <tr class="odd">
-<td><p>org.zkoss.zss.chart.xAxisTick.font</p></td>
+<td><p>io.keikai.chart.xAxisTick.font</p></td>
 <td><center>
 <p>x axis tick font</p>
 </center></td>
@@ -69,7 +69,7 @@ Value's format:
 
 ## Color Picker
 
-Users can set a library property, `org.zkoss.zss.useColorPickerEx`, in
+Users can set a library property, `io.keikai.useColorPickerEx`, in
 `zk.xml` to specify which color picker used in the whole application.
 This property only works under Spreadsheet EE. The default value is
 **`true`**, and Spreadsheet uses ColorPicker of EE. If it's `false`,
@@ -85,7 +85,7 @@ center](zss-essentials-configuration-colorPickerCE.png " center")
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.colorPickerExUsed</name>
+    <name>io.keikai.colorPickerExUsed</name>
     <value>false</value>
 </library-property>
 ```
@@ -116,7 +116,7 @@ registered.
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.theme.preferred</name>
+    <name>io.keikai.theme.preferred</name>
     <value>classic</value>
 </library-property>
 ```
@@ -133,7 +133,7 @@ re-evaluate formulas at loading.
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.import.cache</name>
+    <name>io.keikai.import.cache</name>
     <value>true</value> <!-- turn the import cache on; default is false if not specified -->
 </library-property>
 ```
@@ -165,7 +165,7 @@ property to `false`.
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.ui.keepCellSelection</name>
+    <name>io.keikai.ui.keepCellSelection</name>
     <value>false</value> <!-- turn the keep-cell-selection off; default is true if not specified -->
 </library-property>
 ```

@@ -8,28 +8,28 @@ There are 4 events related to a header:
 
 This event is fired when a user left clicks on Spreadsheet's header.
 When a corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.HeaderMouseEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.HeaderMouseEvent</javadoc>
 object is passed as an argument.
 
 ## onHeaderDoubleClick
 
 This event is fired when a user double clicks on Spreadsheet header.
 When a corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.HeaderMouseEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.HeaderMouseEvent</javadoc>
 object is passed as an argument.
 
 ## onHeaderRightClick
 
 This event is fired when a user right clicks on Spreadsheet header. When
 a corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.HeaderMouseEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.HeaderMouseEvent</javadoc>
 object is passed as an argument.
 
 ## onHeaderUpdate
 
 This event is fired when a user resize a row (or column) header. When a
 corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.HeaderUpdateEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.HeaderUpdateEvent</javadoc>
 object is passed as an argument.
 
 # Popup Menu Example
@@ -47,7 +47,7 @@ onHeaderRightClick event.
 
 ``` xml
     <window title="ZSS Mouse Events" border="normal" width="100%"
-        height="100%" apply="org.zkoss.zss.essential.events.MouseEventsComposer">
+        height="100%" apply="io.keikai.essential.events.MouseEventsComposer">
         <spreadsheet width="600px" height="300px" 
             maxVisibleRows="100" maxVisibleColumns="40" 
         showFormulabar="true" showToolbar="true" src="/WEB-INF/books/blank.xlsx" >
@@ -98,7 +98,7 @@ public class MouseEventsComposer extends SelectorComposer<Component> {
 
   - Line 8: Annotate event listener to list onHeaderRightClick event.
   - Line 11: The `getType()` returns an enumeration
-    <javadoc>org.zkoss.zss.ui.event.HeaderType</javadoc> that can tell
+    <javadoc>io.keikai.ui.event.HeaderType</javadoc> that can tell
     you which header is clicked.
   - Line 13, 16: Show up custom menus at the position where a user right
     clicks.

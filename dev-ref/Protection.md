@@ -61,7 +61,7 @@ public class ProtectionComposer extends SelectorComposer<Component>{
   - Line 18: Get protection status of the selected sheet.
   - Line 19: Disable protection of the selected sheet.
   - Line 21-23: Enable protection of the selected sheet, refer to
-    <javadoc directory="zss" class="true"  method="protectSheet(java.lang.String, boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean)">org.zkoss.zss.api.Range</javadoc>.
+    <javadoc directory="keikai" class="true"  method="protectSheet(java.lang.String, boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean,boolean)">io.keikai.Range</javadoc>.
   - Line 30: Update protection status text in the panel when selecting a
     sheet.
 

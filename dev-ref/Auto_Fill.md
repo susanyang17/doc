@@ -25,7 +25,7 @@ type will fill cells with style only. The `VALUE` type will fill cells
 with data only (no style).
 
 The utility class
-<javadoc directory="zss">org.zkoss.zss.api.CellOperationUtil</javadoc>
+<javadoc directory="keikai">io.keikai.api.CellOperationUtil</javadoc>
 also allows you to perform "auto fill" programmatically. You should
 prepare 2 Range objects, one is for source, and another is for
 destination. Then the method can fill cells from source to destination

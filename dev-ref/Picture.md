@@ -1,7 +1,7 @@
 # Overview
 
 We can add, move, and delete a picture of a Spreadsheet with
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> API:
+<javadoc directory="keikai">io.keikai.Range</javadoc> API:
 
 ``` java
 public Picture addPicture(SheetAnchor anchor,byte[] image,Format format);
@@ -13,16 +13,16 @@ public void deletePicture(Picture picture);
 
 A picture is a simple object that you can only get its ID and position.
 Current supported picture formats are listed in
-<javadoc directory="zss">org.zkoss.zss.api.model.Picture.Format</javadoc>
+<javadoc directory="keikai">io.keikai.model.Picture.Format</javadoc>
 which include `EMF, WMF, PICT, JPEG, PNG`, and `DIB`.
 
-The <javadoc directory="zss">SheetAnchor</javadoc> represents a
+The <javadoc directory="keikai">SheetAnchor</javadoc> represents a
 picture's position on a sheet. When adding or moving a picture, you must
 provide one `SheetAnchor` to assign a picture's position. You can create
 a `SheetAnchor` by passing 4 index numbers, left top corner's and right
 bottom's row and column of an image. After you add a picture, you will
 get the newly-created
-<javadoc directory="zss">org.zkoss.zss.api.model.Picture</javadoc>
+<javadoc directory="keikai">io.keikai.model.Picture</javadoc>
 object. You had better store it somewhere you can retrieve it back later
 if you plan to delete or move it. Otherwise, you can only get them from
 a `Sheet` method:
@@ -42,7 +42,7 @@ AImage image = new AImage(WebApps.getCurrent().getResource("/zklogo.png"));
 ```
 
 Then, you can pass `AImage` to
-<javadoc directory="zss">org.zkoss.zss.api.SheetOperationUtil</javadoc>
+<javadoc directory="keikai">io.keikai.SheetOperationUtil</javadoc>
 to add a picture:
 
 ``` java

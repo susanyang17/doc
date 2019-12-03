@@ -60,10 +60,10 @@ resolver](ZK_Developer%27s_Reference/UI_Composing/ZUML/EL_Expressions#System-lev
 which can be available in all pages.)
 
 ``` xml
-<?variable-resolver class="org.zkoss.zss.essential.advanced.MyBeanResolver"?>
+<?variable-resolver class="io.keikai.essential.advanced.MyBeanResolver"?>
 <zk>
     <window hflex="1" vflex="1" 
-        apply="org.zkoss.zss.essential.advanced.RefBeanComposer">
+        apply="io.keikai.essential.advanced.RefBeanComposer">
         <hlayout hflex="1" vflex="1">
             <spreadsheet id="ss" src="/WEB-INF/books/bean.xlsx" 
                 maxrows="200" maxcolumns="40"

@@ -15,7 +15,7 @@ action handlers and register them in Spreadsheet.
 **Steps to implement logic for a toolbar button**
 
 1.  Create a class to implement
-    <javadoc directory="zss">org.zkoss.zss.ui.UserActionHandler</javadoc>.
+    <javadoc directory="keikai">io.keikai.ui.UserActionHandler</javadoc>.
       -   
         There are some methods you have to implement - `isEnabled()` and
         `process()`. The `isEnabled()` which returns the enabled state
@@ -27,7 +27,7 @@ action handlers and register them in Spreadsheet.
         disabled. The `process()` is the method you should write your
         own logic to handle the user action.
 2.  Register our custom handlers via
-    <javadoc directory="zss">org.zkoss.zss.ui.UserActionManager</javadoc>.
+    <javadoc directory="keikai">io.keikai.ui.UserActionManager</javadoc>.
       -   
         After creating a `UserActionHandler`, you must hook it before it
         can be executed. We provide 2 ways to register a handler.
@@ -75,12 +75,12 @@ public class NewBookHandler implements UserActionHandler {
     Model](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Spreadsheet_Data_Model#Load_A_Book_Model "wikilink").
   - Line 15: Change Spreadsheet's book model with newly-loaded book. We
     can get
-    <javadoc directory="zss">org.zkoss.zss.ui.Spreadsheet</javadoc>,
-    <javadoc directory="zss">org.zkoss.zss.api.model.Book</javadoc>,
+    <javadoc directory="keikai">io.keikai.ui.Spreadsheet</javadoc>,
+    <javadoc directory="keikai">io.keikai.api.model.Book</javadoc>,
     <javadoc >org.zkoss.zk.ui.event.Event</javadoc>, selection
-    (<javadoc directory="zss">org.zkoss.zss.api.AreaRef</javadoc>), and
+    (<javadoc directory="keikai">io.keikai.api.AreaRef</javadoc>), and
     action from
-    <javadoc directory="zss">org.zkoss.zss.ui.UserActionContext</javadoc>.
+    <javadoc directory="keikai">io.keikai.ui.UserActionContext</javadoc>.
   - Line 19: In most cases, you should return `true` if you have handled
     the action.
 
@@ -116,12 +116,12 @@ public class SaveBookHandler implements UserActionHandler {
   - Line 5: Only when Spreadsheet has loaded a book, this handler is
     enabled.
   - Line 11: We can get
-    <javadoc directory="zss">org.zkoss.zss.ui.Spreadsheet</javadoc>,
-    <javadoc directory="zss">org.zkoss.zss.api.model.Book</javadoc>,
+    <javadoc directory="keikai">io.keikai.ui.Spreadsheet</javadoc>,
+    <javadoc directory="keikai">io.keikai.api.model.Book</javadoc>,
     <javadoc >org.zkoss.zk.ui.event.Event</javadoc>, selection
-    (<javadoc directory="zss">org.zkoss.zss.api.AreaRef</javadoc>), and
+    (<javadoc directory="keikai">io.keikai.api.AreaRef</javadoc>), and
     action from
-    <javadoc directory="zss">org.zkoss.zss.ui.UserActionContext</javadoc>.
+    <javadoc directory="keikai">io.keikai.ui.UserActionContext</javadoc>.
   - Line 12: We just save back to original Excel file in our example for
     simplicity. Regarding how to implement the saving, you can refer to
     [ Export to
@@ -166,11 +166,11 @@ public class CustomHandlerComposer extends SelectorComposer<Component> {
   - Line 13: Use `UserActionManager` to register our user action
     handlers.
   - Line 14: The first parameter is **category name**. Toolbar button
-    belongs to <javadoc directory="zss" method="AUXACTION" >
-    org.zkoss.zss.ui.impl.DefaultUserActionManagerCtrl.Category</javadoc>.
+    belongs to <javadoc directory="keikai" method="AUXACTION" >
+    io.keikai.ui.impl.DefaultUserActionManagerCtrl.Category</javadoc>.
   - Line 15: The second parameter is **action name**. Each toolbar
     button corresponds to one action which is defined in
-    <javadoc directory="zss">org.zkoss.zss.ui.AuxAction</javadoc>.
+    <javadoc directory="keikai">io.keikai.ui.AuxAction</javadoc>.
 
 After completing above step, run `customHandler.zul` and you can see
 those buttons we registered handlers for are now enabled.
@@ -181,7 +181,7 @@ those buttons we registered handlers for are now enabled.
 
 There are 2 ways to hook up your user action handlers:
 
-  - <javadoc directory="zss" method="registerHandler(java.lang.String, java.lang.String, org.zkoss.zss.ui.UserActionHandler)">org.zkoss.zss.ui.impl.DefaultUserActionManagerCtrl</javadoc>
+  - <javadoc directory="keikai" method="registerHandler(java.lang.String, java.lang.String, io.keikai.ui.UserActionHandler)">io.keikai.ui.impl.DefaultUserActionManagerCtrl</javadoc>
       -   
         This method appends your handler after existing handlers, and
         those handlers are invoked in order. It's used to add customized
@@ -189,7 +189,7 @@ There are 2 ways to hook up your user action handlers:
 
 <!-- end list -->
 
-  - <javadoc  directory="zss" method="setHandler(java.lang.String, java.lang.String, org.zkoss.zss.ui.UserActionHandler)">org.zkoss.zss.ui.impl.DefaultUserActionManagerCtrl</javadoc>
+  - <javadoc  directory="keikai" method="setHandler(java.lang.String, java.lang.String, io.keikai.ui.UserActionHandler)">io.keikai.ui.impl.DefaultUserActionManagerCtrl</javadoc>
       -   
         This method replaces existing handlers with yours, and only your
         handler is left and invoked. It can be used to override existing

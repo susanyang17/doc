@@ -3,7 +3,7 @@ Excel file then we can open the file with Microsoft Excel. Besides,
 exporting to a file is also the only way to persist a book model
 completely and then import it in the future. The following codes
 demonstrate how to export a book model to a temporary file with
-<javadoc directory="zss">org.zkoss.zss.api.Exporter</javadoc> and make
+<javadoc directory="keikai">io.keikai.api.Exporter</javadoc> and make
 users download it in a browser:
 
 ``` java

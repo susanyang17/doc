@@ -135,12 +135,12 @@ two kind of project respectively.
 
         <!-- ZK -->
         <dependency>
-            <groupId>org.zkoss.zss</groupId>
+            <groupId>io.keikai</groupId>
             <artifactId>zssex</artifactId>
             <version>${zss.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.zkoss.zss</groupId>
+            <groupId>io.keikai</groupId>
             <artifactId>zssjsf</artifactId>
             <version>${zss.version}</version>
         </dependency> 

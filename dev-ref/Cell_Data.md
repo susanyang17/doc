@@ -5,8 +5,8 @@ another is "style" which will be described in next section. In this
 section, we are going to introduce the "data" part. It stores the text
 you actually enter in a cell and the value being evaluated. To get
 "data" information, you must get
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> first. Then,
-get <javadoc directory="zss">org.zkoss.zss.api.model.CellData</javadoc>
+<javadoc directory="keikai">io.keikai.api.Range</javadoc> first. Then,
+get <javadoc directory="keikai">io.keikai.api.model.CellData</javadoc>
 to obtain various data of a cell including its text, type, and value.
 
 ``` java
@@ -42,7 +42,7 @@ String stringValue = cellData.getStringValue();
 ```
 
   - Line 6: You may catch
-    <javadoc directory="zss">org.zkoss.zss.api.IllegalFormulaException</javadoc>
+    <javadoc directory="keikai">io.keikai.api.IllegalFormulaException</javadoc>
     (unchecked exception) to handle the case that users enter a formula
     with illegal format.
 
@@ -63,7 +63,7 @@ number.
 ``` xml
 
     <window hflex="1" vflex="1"
-        apply="org.zkoss.zss.essential.CellDataComposer">
+        apply="io.keikai.essential.CellDataComposer">
         <hlayout hflex="1" vflex="1">
             <spreadsheet id="ss" hflex="1" vflex="1"
                 showFormulabar="true" showContextMenu="true" showToolbar="true"

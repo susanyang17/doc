@@ -38,7 +38,7 @@ public class EventsComposer extends SelectorComposer<Component>{
 
   - Line 4: Apply `@Listen` to listen an event with the syntax `[EVENT
     NAME] = [COMPONENT SELECTOR]`. All event name can be found in
-    <javadoc directory="zss">org.zkoss.zss.ui.event.Events</javadoc>.
+    <javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>.
     The "\#ss" is the component selector which means the component with
     id "ss" on the ZUL page. (SelectorComposer supports various selector
     syntax that let you select components easily. Please refer to [ZK
@@ -63,15 +63,15 @@ the property `ctrlKeys`, please refer to [ZK Developer%27s Reference/UI
 Patterns/Keystroke
 Handling](ZK_Developer%27s_Reference/UI_Patterns/Keystroke_Handling "wikilink").
 When the corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.KeyEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.KeyEvent</javadoc>
 object is passed as an argument.
 
 # Overrideing Existing Shortcut Keys
 
 Every shortcut key has a corresponding
-<javadoc directory='zss'>org.zkoss.zss.ui.UserActionHandler</javadoc> to
+<javadoc directory='zss'>io.keikai.ui.UserActionHandler</javadoc> to
 perform its function like <javadoc directory='zss'>
-org.zkoss.zss.ui.impl.ua.CopyHandler</javadoc>. Implementing your key
+io.keikai.ui.impl.ua.CopyHandler</javadoc>. Implementing your key
 event listener cannot override existing shortcut keys' function because
 the listener is executed after UserActionHandler. Therefore, to override
 it you need to hook up your own UserActionHandler like:

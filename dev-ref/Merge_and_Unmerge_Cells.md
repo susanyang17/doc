@@ -16,11 +16,11 @@ CellRegion region = range.getMergedRegion();
 ```
 
 We still can use
-<javadoc directory="zss">org.zkoss.zss.api.CellOperationUtil</javadoc>
+<javadoc directory="keikai">io.keikai.api.CellOperationUtil</javadoc>
 to achieve this and it provides 3 APIs for 4 actions corresponding to
 merge function of Spreadsheet's toolbar including "Merge & Center",
 "Merge Across", "Merge Cells", and "Unmerge". Each method requires a
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> to represent
+<javadoc directory="keikai">io.keikai.api.Range</javadoc> to represent
 the target cells you are going to merge. The usages are showed as
 follows:
 

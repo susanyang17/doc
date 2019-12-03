@@ -17,7 +17,7 @@
         Spreadsheet/Advanced/Disable
         Functions](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Advanced/Disable_Functions "wikilink").
       - Protect sheets and set available actions. Refer to
-        <javadoc directory='zss' method='protectSheet(java.lang.String , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean allowSorting, boolean , boolean , boolean , boolean )'>org.zkoss.zss.api.Range</javadoc>
+        <javadoc directory='zss' method='protectSheet(java.lang.String , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean , boolean allowSorting, boolean , boolean , boolean , boolean )'>io.keikai.api.Range</javadoc>
 
 You can see an example at
 <http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Use_Case/User_Permission>.

@@ -20,7 +20,7 @@ only.
 **Extracted from customContext.zul**
 
 ``` xml
-    <window apply="org.zkoss.zss.essential.advanced.customization.CustomContextMenuComposer"
+    <window apply="io.keikai.essential.advanced.customization.CustomContextMenuComposer"
         width="100%" height="100%">
         <spreadsheet id="ss" width="100%" height="100%" showFormulabar="true"
             showContextMenu="false" showToolbar="true" showSheetbar="true" maxVisibleRows="100"
@@ -48,16 +48,16 @@ Menupopup is the most suitable component to build a context menu.
 # Show Custom Context Menu
 
 We can listen
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellMouseEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellMouseEvent</javadoc>
 to open our Menupopup.
 
 ``` java
-package org.zkoss.zss.essential.advanced.customization;
+package io.keikai.essential.advanced.customization;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.*;
-import org.zkoss.zss.ui.event.CellMouseEvent;
+import io.keikai.ui.event.CellMouseEvent;
 import org.zkoss.zul.Menupopup;
 
 public class CustomContextMenuComposer extends SelectorComposer<Component> {
@@ -84,7 +84,7 @@ composer which makes a system in good modularity and clear separation of
 responsibility.
 
 ``` xml
-        <div apply="org.zkoss.zss.essential.advanced.customization.MyContextMenuComposer">
+        <div apply="io.keikai.essential.advanced.customization.MyContextMenuComposer">
             <menupopup id="myContext">
                 <menuitem id="display" label="Display Information" />
                 <menuitem id="open" label="Open Dialog" />
@@ -101,15 +101,15 @@ The event listener displays the cell address of the cell a user right
 clicks on.
 
 ``` java
-package org.zkoss.zss.essential.advanced.customization;
+package io.keikai.essential.advanced.customization;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.*;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.*;
 import org.zkoss.zk.ui.util.Clients;
-import org.zkoss.zss.ui.Spreadsheet;
-import org.zkoss.zss.ui.event.CellMouseEvent;
+import io.keikai.ui.Spreadsheet;
+import io.keikai.ui.event.CellMouseEvent;
 import org.zkoss.zul.*;
 
 /**
@@ -142,7 +142,7 @@ public class MyContextMenuComposer extends SelectorComposer<Component> {
 Although we hide the built-in context menu, you might want to reuse some
 items on it. The example code below demonstrates how to reuse "Clear"
 menu ite by passing an
-<javadoc directory='zss'>org.zkoss.zss.ui.event.AuxActionEvent</javadoc>.
+<javadoc directory='zss'>io.keikai.ui.event.AuxActionEvent</javadoc>.
 
 ``` java
     @Listen("onClick = #clear")
@@ -156,5 +156,5 @@ menu ite by passing an
 ```
 
   - Line 5: Each menu item has a corresponding constant in
-    <javadoc directory='zss'>org.zkoss.zss.ui.AuxAction</javadoc>. Pass
+    <javadoc directory='zss'>io.keikai.ui.AuxAction</javadoc>. Pass
     the one you want to invoke.

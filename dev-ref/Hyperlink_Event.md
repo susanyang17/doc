@@ -7,7 +7,7 @@ There is only one hyperlink event that keikai spreadsheet supports.
 This event is fired when a user clicks a hyperlink in a cell. A browser
 will open the specified hyperlink and send the event to a server. When a
 corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellHyperlinkEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellHyperlinkEvent</javadoc>
 object is passed as an argument.
 
 # Event Monitor Example

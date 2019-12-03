@@ -70,13 +70,13 @@ If your function needs to accept a range of cells with numeric value or
 variable number of numeric arguments, you should follow the steps below:
 
 1.  Create a class `MyNumericFunction` inherited from
-    <javadoc directory="zss">org.zkoss.poi.ss.formula.functions.MultiOperandNumericFunction</javadoc>
+    <javadoc directory="keikai">org.zkoss.poi.ss.formula.functions.MultiOperandNumericFunction</javadoc>
     and override its `evaluate(double[])`.
       -   
         `MultiOperandNumericFunction` can evaluate various arguments to
         double including a range of cells, string, and boolean etc. You
         can benefit from this behavior instead of handling various
-        <javadoc directory="zss">org.zkoss.poi.ss.formula.eval.ValueEval</javadoc>
+        <javadoc directory="keikai">org.zkoss.poi.ss.formula.eval.ValueEval</javadoc>
         by yourself.
 2.  Create a public static method with specific signature:
       - `public static ValueEval yourFunctionName(ValueEval[] , int ,
@@ -127,7 +127,7 @@ public class MySubtotal extends MultiOperandNumericFunction{
     `evaluate(double[])`. It can save your effort to deal with each
     argument. If you encounter a situation that you don't expect, please
     throw
-    <javadoc directory="zss">org.zkoss.poi.ss.formula.eval.EvaluationException</javadoc>.
+    <javadoc directory="keikai">org.zkoss.poi.ss.formula.eval.EvaluationException</javadoc>.
     Because Spreadsheet can handle the exception gracefully.
 
 Then, create a static method with previously-mentioned signature and
@@ -243,15 +243,15 @@ public class MyCustomFunctions {
     signature because Spreadsheet recognizes your function method by the
     signature.
   - Line 19:
-    <javadoc directory="zss">org.zkoss.poi.ss.formula.TwoDEval</javadoc>
+    <javadoc directory="keikai">org.zkoss.poi.ss.formula.TwoDEval</javadoc>
     is a common interface that represents a range of cells. Process it
     to make your function accepts an argument like A1:B2. In our
     example, we just get each text cell of it and ignore others.
   - Line 34:
-    <javadoc directory="zss">org.zkoss.poi.ss.formula.eval.RefEval</javadoc>
+    <javadoc directory="keikai">org.zkoss.poi.ss.formula.eval.RefEval</javadoc>
     represents an evaluation of a cell reference like "C18".
   - Line 41:
-    <javadoc directory="zss">org.zkoss.poi.ss.formula.eval.StringEval</javadoc>
+    <javadoc directory="keikai">org.zkoss.poi.ss.formula.eval.StringEval</javadoc>
     is the evaluation result of a string like "abc".
   - Line 53: We recommend you to throw an `EvaluationException` when you
     encounter an error condition. Because Spreadsheet will catch and
@@ -276,13 +276,13 @@ For our custom function, we can write:
 ``` xml
 
 <?xel-method prefix="zss" name="EXCHANGE"
-    class="org.zkoss.zss.essential.advanced.MyCustomFunctions"  
+    class="io.keikai.essential.advanced.MyCustomFunctions"  
     signature="double exchange(double,double)"?>
 <?xel-method prefix="zss" name="MYSUBTOTAL"
-    class="org.zkoss.zss.essential.advanced.MyCustomFunctions"  
+    class="io.keikai.essential.advanced.MyCustomFunctions"  
     signature="org.zkoss.poi.ss.formula.eval.ValueEval mySubtotal(org.zkoss.poi.ss.formula.eval.ValueEval[], int, int)"?>
 <?xel-method prefix="zss" name="CHAIN"
-    class="org.zkoss.zss.essential.advanced.MyCustomFunctions"  
+    class="io.keikai.essential.advanced.MyCustomFunctions"  
     signature="org.zkoss.poi.ss.formula.eval.ValueEval chain(org.zkoss.poi.ss.formula.eval.ValueEval[], int, int)"?>
 <?taglib uri="/WEB-INF/tld/function.tld" prefix="zss" ?>    
 <zk>
@@ -320,14 +320,14 @@ for details. We list our sample configuration here:
     </description>
     <import>
         <import-name>MyCustomFunctions</import-name>
-        <import-class>org.zkoss.zss.essential.advanced.MyCustomFunctions
+        <import-class>io.keikai.essential.advanced.MyCustomFunctions
         </import-class>
     </import>
  
     <function>
         <name>MYEXCHANGE</name>
         <function-class>
-        org.zkoss.zss.essential.advanced.MyCustomFunctions
+        io.keikai.essential.advanced.MyCustomFunctions
         </function-class>
         <function-signature>
         double exchange(double,double);
@@ -368,7 +368,7 @@ customized function will be invoked instead of built-in one.
 
 ``` xml
 <?xel-method prefix="zss" name="LEN"
-    class="org.zkoss.zss.essential.advanced.MyCustomFunctions"  
+    class="io.keikai.essential.advanced.MyCustomFunctions"  
     signature="org.zkoss.poi.ss.formula.eval.ValueEval myLen(org.zkoss.poi.ss.formula.eval.ValueEval[], int, int)"?>
 <zk>
     <window title="keikai spreadsheet" border="normal" height="100%">

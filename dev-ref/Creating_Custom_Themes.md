@@ -46,7 +46,7 @@ For example, assume the custom theme is named **darkstar**,
 
 ``` java numberLines
 package foo;
-import org.zkoss.zss.theme.SpreadsheetThemes;
+import io.keikai.theme.SpreadsheetThemes;
 
 public class DarkstarThemeWebAppInit implements WebAppInit {
     @Override
@@ -119,7 +119,7 @@ current theme setting could not be obtained from Cookies.
 **Programmatically:**
 
 ``` java
-Library.setProperty("org.zkoss.zss.theme.preferred", "custom");
+Library.setProperty("io.keikai.theme.preferred", "custom");
 Executions.sendRedirect(null);
 ```
 
@@ -127,7 +127,7 @@ Executions.sendRedirect(null);
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.theme.preferred</name>
+    <name>io.keikai.theme.preferred</name>
     <value>custom</value>
 </library-property>
 ```

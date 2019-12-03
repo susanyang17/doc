@@ -40,7 +40,7 @@ public class EventsComposer extends SelectorComposer<Component>{
 
   - Line 4: In `@Listen`, "onCellFocus" is the event name we want to
     listen (All event name can be found in
-    <javadoc directory="zss">org.zkoss.zss.ui.event.Events</javadoc>.)
+    <javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>.)
     and "\#ss" is the component selector. (`SelectorComposer` supports
     various selector syntax that let you select components easily.
     Please refer to [ZK Developer's Reference/MVC/Controller/Wire
@@ -51,4 +51,4 @@ public class EventsComposer extends SelectorComposer<Component>{
     for further processing.
 
 All ZSS events you can listen are listed in
-<javadoc directory="zss">org.zkoss.zss.ui.event.Events</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>

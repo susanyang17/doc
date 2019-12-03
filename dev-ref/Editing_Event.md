@@ -7,7 +7,7 @@ There are three editing events that keikai spreadsheet supports:
 This event is fired only once at the moment when a user presses the
 first key to start editing. When the corresponding event listener is
 invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.StartEditingEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.StartEditingEvent</javadoc>
 object is passed as an argument. This event allows you to cancel the
 edit action or change edit value.
 
@@ -16,7 +16,7 @@ edit action or change edit value.
 This event is fired when a user is editing a cell and it is similar to
 Textbox component's onChanging event. When the corresponding event
 listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.EditboxEditingEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.EditboxEditingEvent</javadoc>
 object is passed as an argument.
 
 ## onStopEditing
@@ -24,7 +24,7 @@ object is passed as an argument.
 This event is fired when a user has finished editing a cell. It is
 identified by the user hitting the enter key or clicking outside of the
 editing cell. When the corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.StopEditingEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.StopEditingEvent</javadoc>
 object is passed as an argument. This event allows you to cancel the
 edit action or change edit value.
 
@@ -100,7 +100,7 @@ public class EventsComposer extends SelectorComposer<Component>{
 
   - Line 4,15,25: Apply `@Listen` to listen an event with the syntax
     `[EVENT NAME] = [COMPONENT SELECTOR]`. All event name can be found
-    in <javadoc directory="zss">org.zkoss.zss.ui.event.Events</javadoc>.
+    in <javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>.
     The "\#ss" is the component selector which means the component with
     id "ss" on the ZUL page. (SelectorComposer supports various selector
     syntax that let you select components easily. Please refer to [ZK
@@ -113,7 +113,7 @@ public class EventsComposer extends SelectorComposer<Component>{
   - Line 7: The `getRow()` returns 0-based row index of the cell which
     is in editing and `getColumn()` returns column index. The cell A1's
     row and column index are both 0. We have not introduced
-    <javadoc directory="zss">org.zkoss.zss.api.Ranges</javadoc> formally
+    <javadoc directory="keikai">io.keikai.api.Ranges</javadoc> formally
     yet, but you just treat it as a utility class that can help you
     convert row and column index into a cell reference, e.g. A1.
   - Line 9: The `getEditingValue()` returns the value stored in
@@ -169,7 +169,7 @@ more cells directly or indirectly. Therefore, it is triggered by user
 editing or calling `Range` API. If you edit a cell, this event is fired
 after `onStopEditing` event. When the corresponding event listener is
 invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellAreaEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellAreaEvent</javadoc>
 object is passed as an argument. This event only tells you which range
 of cells change but doesn't tell you which part (value or style) the
 cells change.
@@ -203,10 +203,10 @@ public class EventsComposer extends SelectorComposer<Component>{
 
   - Line 4, 5: Specify onAfterCellChange in `@Listen` and apply it to a
     method. A
-    <javadoc directory="zss">org.zkoss.zss.ui.event.CellAreaEvent</javadoc>
+    <javadoc directory="keikai">io.keikai.ui.event.CellAreaEvent</javadoc>
     object is passed in when the method is invoked.
   - Line 9: `getArea()` return an
-    <javadoc directory='zss'>org.zkoss.zss.ui.Rect</javadoc> object to
+    <javadoc directory='zss'>io.keikai.ui.Rect</javadoc> object to
     indicate the area where the change event happens, but we need to
     convert the object to readable area reference like B2:B2 with a
     utility method of Ranges.

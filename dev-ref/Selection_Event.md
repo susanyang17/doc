@@ -8,7 +8,7 @@ The following events involve changing selected range of cells.
 
 This event is fired when a cell gets focused by mouse clicking or using
 key. When a corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellEvent</javadoc>
 object is passed as an argument.
 
 ## onCellSelection
@@ -17,14 +17,14 @@ This event is fired when a user selects a cell by clicking or a group of
 cells by dragging mouse. It is also fired if a user selects a row or a
 column by clicking their headers which means selecting the whole row (or
 column). When a corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellSelectionEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellSelectionEvent</javadoc>
 object is passed as an argument.
 
 ## onCellSelectionUpdate
 
 This event is fired when a user drags to move cells or drags the fill
 handle. When a corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellSelectionUpdateEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellSelectionUpdateEvent</javadoc>
 object is passed as an argument.
 
 There are two features, "auto fill" and "move cells' content", depend on
@@ -83,7 +83,7 @@ public class EventsComposer extends SelectorComposer<Component>{
 
   - Line 4, 13, 22: Apply `@Listen` to listen an event with the syntax
     `[EVENT NAME] = [COMPONENT SELECTOR]`. All event name can be found
-    in <javadoc directory="zss">org.zkoss.zss.ui.event.Events</javadoc>.
+    in <javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>.
     The "\#ss" is the component selector which means the component with
     id `ss` on the ZUL page. (SelectorComposer supports various selector
     syntax that let you select components easily. Please refer to [ZK

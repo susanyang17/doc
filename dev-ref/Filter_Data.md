@@ -2,8 +2,8 @@ Filter is a useful feature especially when you want to focus on a subset
 of data. It can filter out of those data you don't want displaying
 without removing them. Spreadsheet allows you to enable/disable filter
 and apply/reset criteria via API. You can use both
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> or
-<javadoc directory="zss">org.zkoss.zss.api.SheetOperationUtil</javadoc>
+<javadoc directory="keikai">io.keikai.api.Range</javadoc> or
+<javadoc directory="keikai">io.keikai.api.SheetOperationUtil</javadoc>
 to achieve these functions, but `SheetOperationUtil` checks sheet
 protection for you.
 

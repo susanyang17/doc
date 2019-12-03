@@ -4,12 +4,12 @@
 
 In addition to the Excel format, you can also export a book model as a
 PDF file with
-<javadoc directory="zss">org.zkoss.zss.api.Exporter</javadoc>
+<javadoc directory="keikai">io.keikai.api.Exporter</javadoc>
 
 **Example to export as a PDF**
 
 ``` java
-package org.zkoss.zss.essential;
+package io.keikai.essential;
 
 import java.io.*;
 
@@ -17,9 +17,9 @@ import org.zkoss.util.media.AMedia;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.*;
-import org.zkoss.zss.api.*;
-import org.zkoss.zss.api.model.Book;
-import org.zkoss.zss.ui.Spreadsheet;
+import io.keikai.api.*;
+import io.keikai.api.model.Book;
+import io.keikai.ui.Spreadsheet;
 import org.zkoss.zul.*;
 
 public class ExportPdfComposer extends SelectorComposer<Component> {
@@ -88,7 +88,7 @@ definition, JFreechart will be used to generate chart graphs. (Required)
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.chart.render.server.url</name>
+    <name>io.keikai.chart.render.server.url</name>
     <value>http://127.0.0.1:3003</value> http://127.0.0.1:3003</value>
 </library-property>
 ```
@@ -99,7 +99,7 @@ original, for example, 2 means double the resolution of the original.
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.chart.render.server.scale</name>
+    <name>io.keikai.chart.render.server.scale</name>
     <value>1</value>
 </library-property>
 ```
@@ -109,7 +109,7 @@ from export server. (Optional)
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zss.chart.render.server.timeout</name>
+    <name>io.keikai.chart.render.server.timeout</name>
     <value>10000</value>
 </library-property>
 ```

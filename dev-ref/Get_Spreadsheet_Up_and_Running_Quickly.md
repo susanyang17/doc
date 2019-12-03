@@ -119,14 +119,14 @@ users](ZK_Installation_Guide/Setting_up_IDE/Maven/Use_ZK_Maven_Artifacts/Resolvi
     
       -   
         If you use Open Source Edition (OSE), add the dependency
-        `org.zkoss.zss:zss`:
+        `io.keikai:zss`:
 
 <!-- end list -->
 
 ``` xml
 
         <dependency>
-            <groupId>org.zkoss.zss</groupId>
+            <groupId>io.keikai</groupId>
             <artifactId>zss</artifactId>
             <version>${zss.version}</version>
         </dependency>
@@ -140,14 +140,14 @@ users](ZK_Installation_Guide/Setting_up_IDE/Maven/Use_ZK_Maven_Artifacts/Resolvi
     
       -   
         If you use Enterprise Edition (EE Evaluation or EE for premium
-        users), you should add `org.zkoss.zss:zssex`.
+        users), you should add `io.keikai:zssex`.
 
 <!-- end list -->
 
 ``` xml
 
         <dependency>
-            <groupId>org.zkoss.zss</groupId>
+            <groupId>io.keikai</groupId>
             <artifactId>zssex</artifactId>
             <version>${zss.version}</version>
         </dependency>   
@@ -175,7 +175,7 @@ keikai spreadsheet.
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/POM/4.0.0 
         http://maven.apache.org/xsd/maven-4.0.0.xsd"> http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.zkoss.zss</groupId>
+    <groupId>io.keikai</groupId>
     <artifactId>sample</artifactId>
     <description>A project to demonstrate sample pom.xml.</description>
     <properties>
@@ -195,19 +195,19 @@ keikai spreadsheet.
     <dependencies>        
         <!-- Required if using keikai spreadsheet OSE -->
         <dependency>
-            <groupId>org.zkoss.zss</groupId>
+            <groupId>io.keikai</groupId>
             <artifactId>zss</artifactId>
             <version>${zss.version}</version>
         </dependency>
         <!-- Required if using keikai spreadsheet EE -->
         <dependency>
-            <groupId>org.zkoss.zss</groupId>
+            <groupId>io.keikai</groupId>
             <artifactId>zssex</artifactId>
             <version>${zss.version}</version>
         </dependency>
         <!-- [Optional] Using keikai spreadsheet PDF Exporter -->
         <dependency>
-            <groupId>org.zkoss.zss</groupId>
+            <groupId>io.keikai</groupId>
             <artifactId>zsspdf</artifactId>
             <version>${zss.version}</version>
         </dependency>

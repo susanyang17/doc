@@ -5,16 +5,16 @@ one, you can see the corresponding menu items are disabled (in grey
 color). ![ center](zss-essentials-disableFunctions.png " center")
 
 To achieve this, simply call
-<javadoc directory='zss' method="disableUserAction(org.zkoss.zss.ui.AuxAction, boolean)">org.zkoss.zss.ui.Spreadsheet</javadoc>
+<javadoc directory='zss' method="disableUserAction(io.keikai.ui.AuxAction, boolean)">io.keikai.ui.Spreadsheet</javadoc>
 
 ``` java
-package org.zkoss.zss.essential.advanced.customization;
+package io.keikai.essential.advanced.customization;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.CheckEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.*;
-import org.zkoss.zss.ui.*;
+import io.keikai.ui.*;
 
 /**
  * This class demonstrates how to disable functions.
@@ -37,5 +37,5 @@ public class DisableFunctionsComposer extends SelectorComposer<Component> {
 
 Except sheet operations, you can also disable functions on the toolbar
 and the context menu. Take a look at
-<javadoc directory='zss'>org.zkoss.zss.ui.AuxAction</javadoc> for a
+<javadoc directory='zss'>io.keikai.ui.AuxAction</javadoc> for a
 complete list of functions you can disable.

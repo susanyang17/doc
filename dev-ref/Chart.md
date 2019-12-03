@@ -1,6 +1,6 @@
 # Overview
 
-<javadoc directory="zss">org.zkoss.zss.api.model.Range</javadoc> API can
+<javadoc directory="keikai"ai">io.keikai.api.model.Range</javadoc> API can
 allow you to add, move, and delete a charts of a Spreadsheet:
 
 ``` java
@@ -13,19 +13,19 @@ public void moveChart(SheetAnchor anchor,Chart chart);
 ```
 
 A chart
-(<javadoc directory='zss'>org.zkoss.zss.api.model.Chart</javadoc>) is a
+(<javadoc directory='zss'>io.keikai.api.model.Chart</javadoc>) is a
 simple object that you can only get its ID and position. All chart types
-constant are listed in <javadoc directory="zss">
-org.zkoss.zss.api.model.Chart.Type</javadoc>. Most chart types are
+constant are listed in <javadoc directory="keikai"ai">
+io.keikai.api.model.Chart.Type</javadoc>. Most chart types are
 supported except `OF_PIE, RADAR, STOCK, SURFACE_3D`, and `SURFACE`.
-Supported grouping(<javadoc directory="zss">
-org.zkoss.zss.api.model.Chart.Grouping</javadoc>) are `STANDARD,
+Supported grouping(<javadoc directory="keikai"ai">
+io.keikai.api.model.Chart.Grouping</javadoc>) are `STANDARD,
 STACKED, PERCENT_STACKED` and, `CLUSTERED`. Supported legend
-positions(<javadoc directory="zss">
-org.zkoss.zss.api.model.Chart.LegendPosition</javadoc>) are `BOTTOM,
+positions(<javadoc directory="keikai"ai">
+io.keikai.api.model.Chart.LegendPosition</javadoc>) are `BOTTOM,
 LEFT, RIGHT, TOP`, and `TOP_RIGHT`. \[1\]
 
-The <javadoc directory="zss">org.zkoss.zss.api.SheetAnchor</javadoc>
+The <javadoc directory="keikai"ai">io.keikai.api.SheetAnchor</javadoc>
 represents a chart's position on a sheet. When adding or moving a chart,
 you must provide one `SheetAnchor` to assign a chart's position. You can
 create a `SheetAnchor` by passing 4 index numbers, left-top corner's and

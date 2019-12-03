@@ -132,7 +132,7 @@ data from a database at the beginning. Normally, this will generate lots
 of internal events and trigger formula dependency recalculation which is
 unnecessary before showing keikai spreadsheet to a browser. You can
 implement
-<javadoc directory="zss">org.zkoss.zss.api.PostImport</javadoc> and put
+<javadoc directory="keikai">io.keikai.api.PostImport</javadoc> and put
 your initialization logic in `process()`. Then ZSS will invoke
 `process()` right after the file importing and turn off those
 unnecessary update triggered by `Range` API. Therefore, it can speed up

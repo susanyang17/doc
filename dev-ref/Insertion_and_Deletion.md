@@ -8,10 +8,10 @@ In this usage, the `Range` object not only represents the position to
 insert cells but also how many cells to insert. For example, if you pass
 a Range that represents B1:C2, then `insert()` will insert 4 cells. The
 2nd argument
-(<javadoc directory="zss">org.zkoss.zss.api.Range.InsertShift
+(<javadoc directory="keikai">io.keikai.api.Range.InsertShift
 </javadoc>) controls the shift direction of original cells, and it could
 be `DEFAULT`, `RIGHT` or `DOWN`. The 3rd argument is of
-<javadoc directory="zss">org.zkoss.zss.api.Range.InsertCopyOrigin</javadoc>
+<javadoc directory="keikai">io.keikai.api.Range.InsertCopyOrigin</javadoc>
 that determines from which cells inserted cell should copy styles. It
 could be `FORMAT_LEFT_ABOVE, FORMAT_RIGHT_BELOW`, or `FORMAT_NONE`.
 
@@ -31,7 +31,7 @@ cells shift after deletion with 2nd argument (`DEFAULT, LEFT, UP`):
 range.delete(DeleteShift.LEFT);
 ```
 
-<javadoc directory="zss">org.zkoss.zss.api.CellOperationUtil</javadoc>
+<javadoc directory="keikai">io.keikai.api.CellOperationUtil</javadoc>
 also can help us to insert (or delete) cells, rows, and columns. To
 insert cells:
 

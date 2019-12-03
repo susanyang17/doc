@@ -20,7 +20,7 @@ ZSS license file there.
 
 ``` xml
 <library-property>
-    <name>org.zkoss.zssex.rt.Runtime.directory</name>
+    <name>io.keikait.Runtime.directory</name>
     <value>c:/systemAbsolutePath/my-licenses/</value>
 </library-property>
 ```
@@ -41,7 +41,7 @@ For example in a Tomcat, you can add a `setenv.sh` (or `setenv.bat`)
 that contains
 
 ``` text
-export CATALINA_OPTS="$CATALINA_OPTS -Dorg.zkoss.zssex.rt.Runtime.directory=/absolutePathToYourLicenseFilePath/"
+export CATALINA_OPTS="$CATALINA_OPTS -Dio.keikait.Runtime.directory=/absolutePathToYourLicenseFilePath/"
 ```
 
 Tomcat `catalina.sh` will invoke this script if exists.

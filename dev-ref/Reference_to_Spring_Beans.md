@@ -50,7 +50,7 @@ for detail.)
 <?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
 <zk>
     <window hflex="1" vflex="1" 
-        apply="org.zkoss.zss.essential.advanced.RefSpringBeanComposer">
+        apply="io.keikai.essential.advanced.RefSpringBeanComposer">
         <hlayout hflex="1" vflex="1">
             <spreadsheet id="ss" src="/WEB-INF/books/bean.xlsx" 
                 maxrows="200" maxcolumns="40"
@@ -100,7 +100,7 @@ for detail.)
 <?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
 <zk>
     <window hflex="1" vflex="1" 
-            apply="org.zkoss.zss.essential.advanced.RefSpringBeanComposer">
+            apply="io.keikai.essential.advanced.RefSpringBeanComposer">
         <hlayout hflex="1" vflex="1">
             <spreadsheet id="ss" src="/WEB-INF/books/bean.xlsx"
                 maxrows="200" maxcolumns="40"

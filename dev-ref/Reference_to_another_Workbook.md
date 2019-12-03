@@ -5,7 +5,7 @@ original book. It also can be used when you want to merge data from
 multiple books.
 
 Before using this feature, you should build a book series by
-<javadoc  directory="zss">org.zkoss.zss.api.BookSeriesBuilder</javadoc>
+<javadoc  directory="keikai">io.keikai.api.BookSeriesBuilder</javadoc>
 for all book models including source book and target one. Then, use the
 syntax below to reference cells inside book series:
 

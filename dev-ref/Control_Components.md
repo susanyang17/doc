@@ -100,7 +100,7 @@ dialog like "Format Cell". Specify `false` to remove this behavior.
 ```
 
 If you want to change the default value to `false`; you can do that by
-setting the library property *org.zkoss.zss.ui.keepCellSelection* to
+setting the library property *io.keikai.ui.keepCellSelection* to
 `false`[1](http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Configuration#Keep_Cell_Selection)
 <http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Configuration#Keep_Cell_Selection>\]
 
@@ -192,7 +192,7 @@ sheet.
 There are other properties inherited from parent component you can set,
 such as `width`, or `height`. For the complete list, please look for
 those inherited setter methods in the javadoc
-<javadoc directory="zss">org.zkoss.zss.ui.Spreadsheet</javadoc>.
+<javadoc directory="keikai">io.keikai.ui.Spreadsheet</javadoc>.
 
 Each **setter** means a corresponding **attribute**, for example:
 
@@ -235,7 +235,7 @@ Then we can apply this controller to a root component of a ZUL page.
 
 ``` xml
     <window title="My First keikai spreadsheet Application" 
-    apply="org.zkoss.zss.essential.MyComposer"
+    apply="io.keikai.essential.MyComposer"
         border="normal" height="100%" width="100%">
         <spreadsheet id="ss"src="/WEB-INF/books/startzss.xlsx"
                 height="100%"width="100%"

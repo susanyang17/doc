@@ -29,7 +29,7 @@ request when a user clicks a button in app4l.jsp.
 The `app4l.jsp` is the main page with the form for leave. The
 `ForLeaveServlet` is a servlet we implement for the example to handle
 AJAX requests from `app4l.jsp`.
-<javadoc directory="zss">org.zkoss.zss.jsp.JsonUpdateBridge</javadoc> is
+<javadoc directory="keikai">io.keikai.jsp.JsonUpdateBridge</javadoc> is
 a utility class that provides access to ZK desktop and starts an
 execution in a foreign AJAX channel. We should access components like
 spreadsheet in its `process()` method and it will generate a
@@ -67,7 +67,7 @@ write Spreadsheet JSP tag with a specified prefix.
 <body>
     <div>
         <zssjsp:spreadsheet id="myzss" 
-            bookProvider="org.zkoss.zss.jspdemo.DemoBookProvider"
+            bookProvider="io.keikai.jspdemo.DemoBookProvider"
             width="800px" height="500px" 
             maxrows="100" maxcolumns="20"
             showToolbar="true" showFormulabar="true" showContextMenu="true"/>
@@ -87,9 +87,9 @@ write Spreadsheet JSP tag with a specified prefix.
 
 The line 15 in the previous code sample, app4l.jsp, has a special
 attribute which contains a book provider class name
-`org.zkoss.zss.jspdemo.DemoBookProvider`. The class implements an
+`io.keikai.jspdemo.DemoBookProvider`. The class implements an
 interface,
-<javadoc directory="zss">org.zkoss.zss.jsp.BookProvider</javadoc>, which
+<javadoc directory="keikai">io.keikai.jsp.BookProvider</javadoc>, which
 is used to load a book model programmatically in JSP or in a servlet.
 This provider is called when creating a Spreadsheet in ZK context. The
 returned book model will be set to a Spreadsheet.
@@ -244,7 +244,7 @@ Inside `JsonUpdateBridge.process()`, you can use those APIs we mentioned
 in [ Handling Data
 Model](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Data_Model "wikilink")
 to implement your business logic. In our example, we use
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> to set cell
+<javadoc directory="keikai">io.keikai.api.Range</javadoc> to set cell
 edit text and get a value from the cells.
 
 ## Reset Cells

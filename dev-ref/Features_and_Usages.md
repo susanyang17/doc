@@ -191,7 +191,7 @@ which are all .
     target cells.
   - If you want to copy almost a whole sheet to another ZSS component,
     please call
-    <https://www.zkoss.org/javadoc/latest/zss/org/zkoss/zss/api/Range.html#cloneSheetFrom-java.lang.String-org.zkoss.zss.api.model.Sheet->.
+    <https://www.zkoss.org/javadoc/latest/zss/org/zkoss/zss/api/Range.html#cloneSheetFrom-java.lang.String-io.keikai.model.Sheet->.
     It can clone a sheet from another `Book` object.
 
 ### Between ZSS and Other Application like Excel

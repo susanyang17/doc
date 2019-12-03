@@ -75,11 +75,11 @@ application.
   - Line 16: keikai spreadsheet JSF component tag supports all the
     properties that are supported by Spreadsheet ZUL component tag.
   - Line 17: The `book` attribute is used to bind a
-    <javadoc directory="zss">org.zkoss.zss.api.model.Book</javadoc> to
+    <javadoc directory="keikai">io.keikai.api.model.Book</javadoc> to
     spreadsheet from a managed bean.
   - Line 18: The `actionBridge` attribute is only available on
     Spreadsheet JSF component which is used to set an
-    <javadoc directory="zss">org.zkoss.zss.jsf.ActionBridge</javadoc> to
+    <javadoc directory="keikai">io.keikai.jsf.ActionBridge</javadoc> to
     a managed bean. This object will be explained in next section.
   - Line 25, 29: We use JSF's AJAX tag to trigger event handler methods
     defined in our managed bean. The component ID in `execute` attribute
@@ -194,13 +194,13 @@ Inside `ActionBridge.execute()`, you can use those APIs we mentioned in
 [ Handling Data
 Model](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Data_Model "wikilink")
 to implement your business logic. In our example, we use
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> to set cell
+<javadoc directory="keikai">io.keikai.api.Range</javadoc> to set cell
 edit text and get value from cells.
 
 ## doReset()
 
 The usage of `ActionBridge` is to call its `execute()` with an
-<javadoc directory="zss">org.zkoss.zss.jsf.Action</javadoc> object and
+<javadoc directory="keikai">io.keikai.jsf.Action</javadoc> object and
 we implement our business logic in `Action`'s `execute()` method with
 those APIs mentioned in [ previous
 sections](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet "wikilink").

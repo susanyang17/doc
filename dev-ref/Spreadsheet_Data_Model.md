@@ -3,34 +3,34 @@
 When Spreadsheet loads an Excel file, the file is converted to
 Spreadsheet's data model (*book model*) stored in memory. The root of
 the data model is a book
-(<javadoc directory="zss">org.zkoss.zss.api.model.Book</javadoc>) and a
+(<javadoc directory="keikai">io.keikai.api.model.Book</javadoc>) and a
 book contains one or more sheets
-(<javadoc directory="zss">org.zkoss.zss.api.model.Sheet</javadoc>) which
+(<javadoc directory="keikai">io.keikai.api.model.Sheet</javadoc>) which
 may contain many cells
-(<javadoc directory="zss">org.zkoss.zss.api.model.CellData</javadoc>),
+(<javadoc directory="keikai">io.keikai.api.model.CellData</javadoc>),
 styles
-(<javadoc directory="zss">org.zkoss.zss.api.model.CellStyle</javadoc>,
-<javadoc directory="zss">org.zkoss.zss.api.model.Color</javadoc>), fonts
-(<javadoc directory="zss">org.zkoss.zss.api.model.Font</javadoc>),
+(<javadoc directory="keikai">io.keikai.api.model.CellStyle</javadoc>,
+<javadoc directory="keikai">io.keikai.api.model.Color</javadoc>), fonts
+(<javadoc directory="keikai">io.keikai.api.model.Font</javadoc>),
 charts
-(<javadoc directory="zss">org.zkoss.zss.api.model.Chart</javadoc>), and
+(<javadoc directory="keikai">io.keikai.api.model.Chart</javadoc>), and
 pictures
-(<javadoc directory="zss">org.zkoss.zss.api.model.Picture</javadoc>).
+(<javadoc directory="keikai">io.keikai.api.model.Picture</javadoc>).
 
 You can directly access model objects like `Book` or `Sheet`. However,
 you should modify data on cells (or rows and columns)via
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> interface,
+<javadoc directory="keikai">io.keikai.api.Range</javadoc> interface,
 then Spreadsheet will handle subsequent synchronization stuff for you,
 e.g. notify other referenced cells. A `Range` may represent a cell, a
 row, a column, or a selection of cells containing one or more contiguous
 blocks of cells, or a 3-D reference. \[1\] Because of underlying
 implementation is complicated, you only can obtain a `Range` object
 through a facade class named
-<javadoc directory="zss">org.zkoss.zss.api.Ranges</javadoc>.
+<javadoc directory="keikai">io.keikai.api.Ranges</javadoc>.
 
 In this section, we will introduce some commonly-used API with examples.
 For complete information, you can browse Javadoc under
-`org.zkoss.zss.api.*` and `org.zkoss.zss.api.model.*`. To understand
+`io.keikai.api.*` and `io.keikai.api.model.*`. To understand
 example codes, we assume you have known what is a composer and how it
 work with components. If you don't, please read [ZK Developer's
 Reference/MVC/Controller/Composer](ZK_Developer's_Reference/MVC/Controller/Composer "wikilink")
@@ -42,14 +42,14 @@ In most cases, we create a book model by loading an Excel file instead
 of creating it directly. Specifying an Excel file's path in Spreadsheet
 component's attribute is the simplest way, and Spreadsheet will import
 the file and construct a book model object. You can also use
-<javadoc  directory="zss">org.zkoss.zss.api.Importer</javadoc> to
+<javadoc  directory="keikai">io.keikai.api.Importer</javadoc> to
 construct a Book object by your own and provide it to one or more
 Spreadsheet components by `setBook()`. After Spreadsheet loads a book
 model, we can get it by `Spreadsheet.getBook()`.
 
 ## By Spreadsheet src Attribute
 
-The <javadoc directory="zss">org.zkoss.zss.ui.Spreadsheet</javadoc>'s
+The <javadoc directory="keikai">io.keikai.ui.Spreadsheet</javadoc>'s
 `setSrc(java.lang.String)` can be called to display an Excel file
 programmatically. Similar to `src` attribute, this method accepts
 relative file path.
@@ -92,7 +92,7 @@ In case your Excel file may not come from a static file path, importer
 interface along with `Spreadsheet.setBook()`can be used. Normally one
 would obtain Book instance by importing an Excel book file. Use
 `imports()` of
-<javadoc directory="zss">org.zkoss.zss.api.Importer</javadoc> to import
+<javadoc directory="keikai">io.keikai.api.Importer</javadoc> to import
 an Excel file. It returns `Book` instance which can be passed to
 `setBook(Book)` to display the imported Excel file.
 
@@ -134,7 +134,7 @@ currently-displayed sheet is the *selected sheet*. We can get selected
 sheet via `Spreadsheet.getSelectedSheet()` or set it via
 `Spreadsheet.setSelectedSheet()`.
 
-The `org.zkoss.zss.api.model.Sheet` allows us to get a sheet's status
+The `io.keikai.api.model.Sheet` allows us to get a sheet's status
 such as protection (`isProtected()`), auto filter
 (`isAutoFilterEnabled()`), hidden and freeze rows or columns
 (`getRowFreeze()`), and properties such as name (`getSheetName()`),
@@ -158,7 +158,7 @@ of the Spreadsheet.
 ``` xml
 
 <div height="100%" width="100%" 
-apply="org.zkoss.zss.essential.BookSheetComposer">
+apply="io.keikai.essential.BookSheetComposer">
     <listbox id="sheetBox" mold="select"/>
     <spreadsheet id="spreadsheet" src="/WEB-INF/books/startzss.xlsx"
         maxrows="200" maxcolumns="40"
@@ -294,9 +294,9 @@ introduced in later sections.
 `Ranges` and `Range` provides major APIs to access cells. Because of
 referencing relationship among cells mentioned at the beginning of this
 section, we also provides utility classes,
-<javadoc directory="zss">org.zkoss.zss.api.CellOperationUtil</javadoc>
+<javadoc directory="keikai">io.keikai.api.CellOperationUtil</javadoc>
 and
-<javadoc directory="zss">org.zkoss.zss.api.SheetOperationUtil</javadoc>,
+<javadoc directory="keikai">io.keikai.api.SheetOperationUtil</javadoc>,
 to help you change cell data and styles. You can use them without
 knowing more details about underlying implementation, and they will
 handle those details for you such as synchronization and checking. We

@@ -16,9 +16,9 @@ capability.
 | Border Style  | Because of browser limitation, only **solid**/**dashed**/ **dotted** border style are supported now. |
 
 To get "style" information stored in
-<javadoc directory="zss">org.zkoss.zss.api.model.CellStyle</javadoc>
+<javadoc directory="keikai">io.keikai.api.model.CellStyle</javadoc>
 object, you must get
-<javadoc directory="zss">org.zkoss.zss.api.Range</javadoc> object first.
+<javadoc directory="keikai">io.keikai.api.Range</javadoc> object first.
 Then, we can get a cell's alignment, border setting, and cell color via
 `CellStyle`. Every getter method of `CellStyle` has a clear name to
 indicate what information it returns. Please refer its javadoc for
@@ -70,7 +70,7 @@ String colorCode = style.getBackgroundColor().getHtmlColor();
 # Font
 
 Those information about font can be retrieve via
-<javadoc directory="zss">org.zkoss.api.model.Font</javadoc>, and we can
+<javadoc directory="keikai">org.zkoss.api.model.Font</javadoc>, and we can
 get this object by `CellStyle`'s `getFont()`. Here are some examples:
 
 ``` java
@@ -101,7 +101,7 @@ font.getUnderline();
 
 In order to save you from complicated underlying implementation, we
 provide a utility class
-<javadoc directory="zss">org.zkoss.zss.api.CellOperationUtil</javadoc>
+<javadoc directory="keikai">io.keikai.api.CellOperationUtil</javadoc>
 to change a cell range's style and it supports almost all cell related
 operations you want. We recommend you to use this utility class because
 the utility class will look for existing `CellStyle` object which equal
@@ -134,7 +134,7 @@ horizontal alignment.
 ## Using `Range` API
 
 Althought the utility class
-(<javadoc directory="zss">org.zkoss.zss.api.CellOperationUtil</javadoc>)
+(<javadoc directory="keikai">io.keikai.api.CellOperationUtil</javadoc>)
 provides convenience, but it doesn't provide complete API to change all
 properties for a style. Sometimes you still need to use `Range` API.
 
@@ -157,12 +157,12 @@ The following codes demonstrate how to change alignment:
 ```
 
   - Line 4:
-    <javadoc directory="zss">org.zkoss.zss.api.Range.CellStyleHelper</javadoc>
+    <javadoc directory="keikai">io.keikai.api.Range.CellStyleHelper</javadoc>
     is a utility class that can you clone style related object and
     returns an editable version such as
-    <javadoc  directory="zss">org.zkoss.zss.api.model.EditableCellStyle</javadoc>
+    <javadoc  directory="keikai">io.keikai.api.model.EditableCellStyle</javadoc>
     or
-    <javadoc directory="zss">org.zkoss.zss.api.model.EditableFont</javadoc>.
+    <javadoc directory="keikai">io.keikai.api.model.EditableFont</javadoc>.
   - Line 5: Change the style on newly-created cell style object.
   - Line 6: Set newly-created cell style object back to range to apply
     change.

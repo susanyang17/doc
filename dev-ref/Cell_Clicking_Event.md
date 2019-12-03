@@ -8,21 +8,21 @@ There are 3 events related to cell clicking:
 
 This event is fired when a user left clicks on a cell. When a
 corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellMouseEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellMouseEvent</javadoc>
 object is passed as an argument.
 
 ## onCellDoubleClick
 
 This event is fired when a user double clicks on a cell. When a
 corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellMouseEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellMouseEvent</javadoc>
 object is passed as an argument.
 
 ## onCellRightClick
 
 This event is fired when a user right clicks on a cell. When a
 corresponding event listener is invoked, a
-<javadoc directory="zss">org.zkoss.zss.ui.event.CellMouseEvent</javadoc>
+<javadoc directory="keikai">io.keikai.ui.event.CellMouseEvent</javadoc>
 object is passed as an argument.
 
 # Event Monitor Example
@@ -69,7 +69,7 @@ public class EventsComposer extends SelectorComposer<Component>{
 
   - Line 4,12,16: Apply `@Listen` to listen an event with the syntax
     `[EVENT NAME] = [COMPONENT SELECTOR]`. All event name can be found
-    in <javadoc directory="zss">org.zkoss.zss.ui.event.Events</javadoc>.
+    in <javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>.
     The "\#ss" is the component selector which means the component with
     id `ss` on the ZUL page. (SelectorComposer supports various selector
     syntax that let you select components easily. Please refer to [ZK

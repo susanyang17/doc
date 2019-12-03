@@ -70,12 +70,12 @@ just need to choose one of them:
 ``` xml
 
 <dependency>
-    <groupId>org.zkoss.zss</groupId>
+    <groupId>io.keikai</groupId>
     <artifactId>zssex</artifactId>
     <version>${zss.version}</version>
 </dependency>
 <dependency>
-    <groupId>org.zkoss.zss</groupId>
+    <groupId>io.keikai</groupId>
     <artifactId>zssjsp</artifactId>
     <version>${zss.version}</version>
 </dependency> 
