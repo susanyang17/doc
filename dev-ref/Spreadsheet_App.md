@@ -1,13 +1,13 @@
 # Overview
 
-keikai spreadsheet App is a web-based Excel like application based on the ZK
+Keikai spreadsheet App is a web-based Excel like application based on the ZK
 Spreadsheet component. We created it to demonstrate Spreadsheet's
 numerous powerful features. You can also use this application as a basis
 of your application and add more functions like authentication.
 
 Please follow these steps to run this application:
 
-1.  Download keikai spreadsheet App from
+1.  Download Keikai spreadsheet App from
     <http://www.zkoss.org/download/zkspreadsheet> (OSE or EE
     evaluation).
 2.  Unzip the zip file and deploy the Spreadsheet App's WAR file to your
@@ -25,7 +25,7 @@ the screenshot below: ![ center](zss-essentials-zssapp.png " center")
 
 You might notice that we add a menu on top of Spreadsheet component and
 3 leftmost buttons ("New Book", "Save Book", and "Export to PDF") on the
-toolbar are enabled because we have implemented them in keikai spreadsheet
+toolbar are enabled because we have implemented them in Keikai spreadsheet
 App.
 
 # Features

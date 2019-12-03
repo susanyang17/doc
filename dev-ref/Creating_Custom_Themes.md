@@ -1,10 +1,10 @@
 `since 3.5.0`
 
-keikai spreadsheet is an embeddable component that allow web developers to
+Keikai spreadsheet is an embeddable component that allow web developers to
 use as a building block for easy web page UI construction whilst
 delivering the rich functionality of Excel within browsers using pure
 Java. Theme is a collection of stylesheets and associated images for the
-keikai spreadsheet component. Stylesheets are the files with extensions of
+Keikai spreadsheet component. Stylesheets are the files with extensions of
 ".css.dsp". Think of them as normal CSS files that could utilize JSP
 taglib functionality. Associated images all have file extensions either
 of ".gif" or ".png". Please refer to the subsections for the process of
@@ -35,7 +35,7 @@ Setting up the environment:
     inside the folder **src/archive/web/classic/js/zss**
 
 Next, the new theme will need to be registered first before it could be
-used by the keikai spreadsheet application. For archive-based themes, this
+used by the Keikai spreadsheet application. For archive-based themes, this
 is done by providing an implementation of the
 <javadoc type="interface">org.zkoss.zk.ui.util.WebAppInit</javadoc>
 interface.
@@ -69,7 +69,7 @@ configuration.
 </config>
 ```
 
-Now, the keikai spreadsheet style modifications shall begin. You can change
+Now, the Keikai spreadsheet style modifications shall begin. You can change
 the style in **src/archive/web/classic/js/zss/css/ss.css.dsp**, for
 example, change selection's border color:
 
@@ -82,9 +82,9 @@ example, change selection's border color:
 
 # Use a Theme
 
-Using a archive-based theme in a keikai spreadsheet Application is simple.
+Using a archive-based theme in a Keikai spreadsheet Application is simple.
 Simply put the theme jar file inside the **WEB-INF/lib** folder of your
-keikai spreadsheet application. During the startup of your application, the
+Keikai spreadsheet application. During the startup of your application, the
 new custom theme would be automatically registered, and available to
 use.
 

@@ -9,11 +9,11 @@
     implement your user permission features with ZSS. Please refer to
     the following sections:
       - Hide the toolbar and the context menu to prevent editing. Please
-        refer to [keikai spreadsheet Essentials/Working with
+        refer to [Keikai spreadsheet Essentials/Working with
         Spreadsheet/Control
         Components](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Control_Components "wikilink").
       - Disable available functions for different users. Please refer to
-        [keikai spreadsheet Essentials/Working with
+        [Keikai spreadsheet Essentials/Working with
         Spreadsheet/Advanced/Disable
         Functions](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Advanced/Disable_Functions "wikilink").
       - Protect sheets and set available actions. Refer to

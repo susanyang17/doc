@@ -2,7 +2,7 @@
 
 # Start with ZSS JSF Example Project
 
-If you want to run keikai spreadsheet JSF demo in your local site, just
+If you want to run Keikai spreadsheet JSF demo in your local site, just
 <https://github.com/zkoss/zssjsfdemo> and run it in your environment.
 
 ## How to Run
@@ -49,7 +49,7 @@ two kind of project respectively.
         might be `javax.faces-2.1.24.jar`.
     2.  Put the JAR file to **`/WEB-INF/lib`** in your web project.
 3.  Install Spreadsheet library
-    1.  Download keikai spreadsheet component (binary). Choose
+    1.  Download Keikai spreadsheet component (binary). Choose
         <http://www.zkoss.org/download/zkspreadsheet> or licensed EE
         from <http://www.zkoss.org/download/premium>.
           - 

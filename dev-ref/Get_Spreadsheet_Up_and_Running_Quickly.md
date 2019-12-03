@@ -12,7 +12,7 @@ JSF](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSF/Get_Spreadsheet_Runnin
 
 ## Start with WAR
 
-If you want to quickly run keikai spreadsheet at your local site, please
+If you want to quickly run Keikai spreadsheet at your local site, please
 download <http://www.zkoss.org/download/zkspreadsheet> which is an
 Excel-like web application. We created it to demonstrate Spreadsheet
 numerous powerful features.
@@ -167,7 +167,7 @@ pom.xml.
 ## Sample of pom.xml
 
 Here is a sample of pom.xml for a simple Java web project that uses the
-keikai spreadsheet.
+Keikai spreadsheet.
 
 ``` xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" http://maven.apache.org/POM/4.0.0" 
@@ -193,19 +193,19 @@ keikai spreadsheet.
         </repository>        
     </repositories>
     <dependencies>        
-        <!-- Required if using keikai spreadsheet OSE -->
+        <!-- Required if using Keikai spreadsheet OSE -->
         <dependency>
             <groupId>io.keikai</groupId>
             <artifactId>zss</artifactId>
             <version>${zss.version}</version>
         </dependency>
-        <!-- Required if using keikai spreadsheet EE -->
+        <!-- Required if using Keikai spreadsheet EE -->
         <dependency>
             <groupId>io.keikai</groupId>
             <artifactId>zssex</artifactId>
             <version>${zss.version}</version>
         </dependency>
-        <!-- [Optional] Using keikai spreadsheet PDF Exporter -->
+        <!-- [Optional] Using Keikai spreadsheet PDF Exporter -->
         <dependency>
             <groupId>io.keikai</groupId>
             <artifactId>zsspdf</artifactId>
@@ -233,11 +233,11 @@ keikai spreadsheet.
 
 ### Version Dependency and Naming
 
-Different versions of keikai spreadsheet depends on different ZK version.
+Different versions of Keikai spreadsheet depends on different ZK version.
 Here are the suggested versions,
 
-keikai spreadsheet 3.5: ZK 7.0.3  
-keikai spreadsheet 3.9: ZK 8.0.5
+Keikai spreadsheet 3.5: ZK 7.0.3  
+Keikai spreadsheet 3.9: ZK 8.0.5
 
 For customers using 3.0.1, if you require "IE 11 support" feature, you
 should override ZK dependencies with **6.5.5** because 3.0.1 depends on
@@ -261,7 +261,7 @@ below:
 
 1.  Create a dynamic web project
 2.  Install Spreadsheet library
-    1.  Download keikai spreadsheet component (binary). Choose "Open Source
+    1.  Download Keikai spreadsheet component (binary). Choose "Open Source
         Downloads" or "Free Evaluation Downloads" from
         <http://www.zkoss.org/download/zkspreadsheet> or EE from
         <http://www.zkoss.org/download/premium>.

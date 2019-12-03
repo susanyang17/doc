@@ -1,6 +1,6 @@
 # Editing Cell Events
 
-There are three editing events that keikai spreadsheet supports:
+There are three editing events that Keikai spreadsheet supports:
 
 ## onStartEditing
 

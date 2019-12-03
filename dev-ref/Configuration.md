@@ -140,10 +140,10 @@ re-evaluate formulas at loading.
 
 Few points need to be noticed:
 
-1.  If some functions not yet supported by keikai spreadsheet are used in a
+1.  If some functions not yet supported by Keikai spreadsheet are used in a
     formula, re-evaluation breaks the cached value even if precedent
     cells do not change.
-2.  If some customized function **only** supported in keikai spreadsheet are
+2.  If some customized function **only** supported in Keikai spreadsheet are
     used in a formula, a cache is always `#NAME!` error. Users must
     enforce re-evaluation by calling `Range.refresh(true, true, true)`.
 

@@ -62,7 +62,7 @@ the server starts like:
 
      Licensed Company: my company
      Certificate Number: 123456       
-     Licensed Product: keikai spreadsheet EE
+     Licensed Product: Keikai spreadsheet EE
      ...
 
      To renew, obtain more licenses, or if you require help, please contact info@zkoss.org.

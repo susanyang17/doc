@@ -3,7 +3,7 @@
 # Overview
 
 In this section, we will demonstrate how to make an HTML element, like a
-button, to interact with keikai spreadsheet in a JSP using AJAX. As the ZK
+button, to interact with Keikai spreadsheet in a JSP using AJAX. As the ZK
 framework has integrated with <http://jquery.com>, and we don't have to
 include jQuery's JavaScript library. This will be our first choice when
 using a JavaScript library. We assume you know some basics about jQuery.

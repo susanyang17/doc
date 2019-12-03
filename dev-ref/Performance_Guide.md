@@ -2,7 +2,7 @@ We list optimization tips for some scenarios.
 
 # Calling Multiple Range Methods
 
-When calling `Range` setter method, keikai spreadsheet will automatically
+When calling `Range` setter method, Keikai spreadsheet will automatically
 check cell dependencies, update the dependent cells and refresh the
 spreadsheet UI of the range. However, in following cases, developers
 might not want such "automation" and like to control the evaluation and
@@ -13,7 +13,7 @@ update by themselves:
 <!-- end list -->
 
   -   
-    If we don't disable auto refresh in such case, the keikai spreadsheet
+    If we don't disable auto refresh in such case, the Keikai spreadsheet
     will generate a lot of small AU response to a browser which slows
     down browser rendering speed.
 
@@ -26,7 +26,7 @@ update by themselves:
 
   -   
     Sometimes we need to load the data from a database to initialize a
-    sheet before keikai spreadsheet renders in a browser. Disable the auto
+    sheet before Keikai spreadsheet renders in a browser. Disable the auto
     refresh can eliminate Spreadsheet's unnecessary internal
     calculations for rendering.
 
@@ -130,7 +130,7 @@ time-consuming cell's height calculating for each row.
 A typical use case is loading a template file and inserting application
 data from a database at the beginning. Normally, this will generate lots
 of internal events and trigger formula dependency recalculation which is
-unnecessary before showing keikai spreadsheet to a browser. You can
+unnecessary before showing Keikai spreadsheet to a browser. You can
 implement
 <javadoc directory="keikai">io.keikai.api.PostImport</javadoc> and put
 your initialization logic in `process()`. Then ZSS will invoke

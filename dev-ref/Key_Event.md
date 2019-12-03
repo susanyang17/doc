@@ -1,6 +1,6 @@
 # Overview
 
-There is one key event that keikai spreadsheet supports:
+There is one key event that Keikai spreadsheet supports:
 
 ## onCtrlKey
 

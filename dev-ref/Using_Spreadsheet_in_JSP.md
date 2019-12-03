@@ -1,6 +1,6 @@
-keikai spreadsheet can also be embedded in a JSP by spreadsheet custom tag
+Keikai spreadsheet can also be embedded in a JSP by spreadsheet custom tag
 to empower JSP with AJAX. Spreadsheet JSP tag works much the same way as
-keikai spreadsheet ZUL component tag does within a ZK application with
+Keikai spreadsheet ZUL component tag does within a ZK application with
 support for all the attributes and events. You can just download the
 example project to experience it. Furthermore, if you want a DOM element
 can interact with Spreadsheet, you can send your own AJAX request in

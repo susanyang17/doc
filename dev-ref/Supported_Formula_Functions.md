@@ -1,4 +1,4 @@
-Here we list all keikai spreadsheet supported functions in OSE and EE:
+Here we list all Keikai spreadsheet supported functions in OSE and EE:
 
 # Date & Time
 

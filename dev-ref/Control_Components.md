@@ -106,7 +106,7 @@ setting the library property *io.keikai.ui.keepCellSelection* to
 
 ## Preloaded Column / Row Size
 
-In order to speed up rendering cells, keikai spreadsheet caches a range of
+In order to speed up rendering cells, Keikai spreadsheet caches a range of
 cell data at client-side to avoid getting data from the server-side when
 scrolling. You can adjust this range by `preloadColumnSize` (default:
 40) and `preloadRowSize` (default: 60) like:
@@ -234,7 +234,7 @@ Then we can apply this controller to a root component of a ZUL page.
 **index.zul**
 
 ``` xml
-    <window title="My First keikai spreadsheet Application" 
+    <window title="My First Keikai spreadsheet Application" 
     apply="io.keikai.essential.MyComposer"
         border="normal" height="100%" width="100%">
         <spreadsheet id="ss"src="/WEB-INF/books/startzss.xlsx"

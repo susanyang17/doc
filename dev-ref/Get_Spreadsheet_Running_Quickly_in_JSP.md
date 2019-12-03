@@ -2,7 +2,7 @@
 
 # Quick Start ZSS JSP Demo Project
 
-Suggest you to run keikai spreadsheet JSP demo project in your local site
+Suggest you to run Keikai spreadsheet JSP demo project in your local site
 without coding, just <https://github.com/zkoss/zssjspdemo> and execute
 the command below (require to install <https://maven.apache.org/>)
 
@@ -99,7 +99,7 @@ below:
 
 1.  Create a dynamic web project
 2.  Install Spreadsheet library
-    1.  Download keikai spreadsheet component (binary). Choose
+    1.  Download Keikai spreadsheet component (binary). Choose
         <http://www.zkoss.org/download/zkspreadsheet> or licensed EE
         from <http://www.zkoss.org/download/premium>.
           - 
@@ -140,7 +140,7 @@ Steps are as follows:
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>My First keikai spreadsheet JSP application</title>
+    <title>My First Keikai spreadsheet JSP application</title>
     <zssjsp:head/>
 </head>
 <body>

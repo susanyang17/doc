@@ -1,6 +1,6 @@
 # Overview
 
-There is only one hyperlink event that keikai spreadsheet supports.
+There is only one hyperlink event that Keikai spreadsheet supports.
 
 ## onCellHyperlink
 

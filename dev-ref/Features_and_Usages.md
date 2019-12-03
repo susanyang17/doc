@@ -2,7 +2,7 @@
 
 ![ center | 900px](essentials-feature-ui.png " center | 900px")
 
-Above is a screenshot of keikai spreadsheet's user interface, each section
+Above is a screenshot of Keikai spreadsheet's user interface, each section
 is introduced in the following:
 
 1.  Toolbar

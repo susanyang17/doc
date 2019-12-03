@@ -20,12 +20,12 @@ Steps to add a custom function:
 After completing above steps, you can use the custom function in
 Spreadsheet.
 
-# Only Work in keikai spreadsheet
+# Only Work in Keikai spreadsheet
 
 Notice that a custom function is implemented with Java in your project.
 So the custom function will not be saved into an XLSX file. That means a
 custom function is only evaluated and recognized when you load a file
-into keikai spreadsheet. If you open the exported file with a custom
+into Keikai spreadsheet. If you open the exported file with a custom
 function by MS Excel (or other compatible editors), Excel cannot
 recognize the custom function and will show `#NAME?` (or might be other
 error results) in a cell.
@@ -286,7 +286,7 @@ For our custom function, we can write:
     signature="org.zkoss.poi.ss.formula.eval.ValueEval chain(org.zkoss.poi.ss.formula.eval.ValueEval[], int, int)"?>
 <?taglib uri="/WEB-INF/tld/function.tld" prefix="zss" ?>    
 <zk>
-    <window title="keikai spreadsheet" border="normal" height="100%">
+    <window title="Keikai spreadsheet" border="normal" height="100%">
         <spreadsheet src="/WEB-INF/books/customFunction.xlsx" 
         maxVisibleRows="250" maxVisibleColumns="40" width="100%" height="100%" 
         showContextMenu="true" showSheetbar="true" showToolbar="true" />
@@ -344,7 +344,7 @@ Declare it in a ZUL page.
 ``` xml
 <?taglib uri="/WEB-INF/tld/function.tld" prefix="zss" ?>    
 <zk>
-    <window title="keikai spreadsheet" border="normal" height="100%">
+    <window title="Keikai spreadsheet" border="normal" height="100%">
         <spreadsheet src="/WEB-INF/books/customFunction.xlsx" 
         maxVisibleRows="250" maxVisibleColumns="40" width="100%" height="100%" 
         showContextMenu="true" showSheetbar="true" showToolbar="true" />
@@ -371,7 +371,7 @@ customized function will be invoked instead of built-in one.
     class="io.keikai.essential.advanced.MyCustomFunctions"  
     signature="org.zkoss.poi.ss.formula.eval.ValueEval myLen(org.zkoss.poi.ss.formula.eval.ValueEval[], int, int)"?>
 <zk>
-    <window title="keikai spreadsheet" border="normal" height="100%">
+    <window title="Keikai spreadsheet" border="normal" height="100%">
         <spreadsheet src="/WEB-INF/books/overrideFunction.xlsx" 
         maxVisibleRows="250" maxVisibleColumns="40" width="100%" height="100%" 
         showContextMenu="true" showSheetbar="true" showToolbar="true" />

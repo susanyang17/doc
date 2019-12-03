@@ -5,7 +5,7 @@ events we are interested in. When the event we listen is triggered, our
 special business logic is performed. This mechanism helps you customize
 Spreadsheet furthermore to fulfill your business needs.
 
-keikai spreadsheet supports numerous events such as mouse events, key
+Keikai spreadsheet supports numerous events such as mouse events, key
 events, selection events, editing events and hyperlink events. You can
 listen to these events to apply customized function upon your business
 requirement. For example by listening to editing events such as

@@ -1,8 +1,6 @@
-\_\_TOC\_\_
-
 # Overview
 
-keikai spreadsheet is an AJAX component that delivers Excel-like experience
+Keikai spreadsheet is an AJAX component that delivers Excel-like experience
 for your Java web application. It has a grid-like user interface with
 toolbar, formula bar, and sheet bar and it provides necessary features
 such as editing text and styles, merging, sorting cells and inserting,
@@ -13,19 +11,19 @@ included in Spreadsheet.
 
 Being able to import and export Excel files are just the top of the
 features iceberg. Unlike other online spreadsheet such as Google Docs or
-Microsoft Office 2010 online suite, you can integrate keikai spreadsheet
+Microsoft Office 2010 online suite, you can integrate Keikai spreadsheet
 with your enterprise back-end systems seamlessly and create
 collaborative and dynamic enterprise applications at minimal cost. You
-can call versatile Java APIs to control and configure the keikai spreadsheet
+can call versatile Java APIs to control and configure the Keikai spreadsheet
 component(s). You can register event listeners so an action can be
 automatically triggered if any specified cell, range, or name changes.
 You can make cells reference to the backend Java beans, so any changes
-on the backend data can automatically reflect on keikai spreadsheet. You can
+on the backend data can automatically reflect on Keikai spreadsheet. You can
 create your own customized formulas in Java and use them in the
 spreadsheet like other built-in formulas. You can even create an online
-spreadsheet service with keikai spreadsheet component.
+spreadsheet service with Keikai spreadsheet component.
 
-keikai spreadsheet is an extensible, customizable, and integrable Java AJAX
+Keikai spreadsheet is an extensible, customizable, and integrable Java AJAX
 web spreadsheet solution, with both built-in browser AJAX user interface
 and back-end server side Excel-like data and logic. No ActiveX or other
 plug-ins are required.
@@ -37,7 +35,7 @@ plug-ins are required.
 **More Inner Details** ![ center | 900px](essentials-architecture.png
 " center | 900px")
 
-keikai spreadsheet component consists of three major parts -- the
+Keikai spreadsheet component consists of three major parts -- the
 client-side UI , the server-side component, and the book data model with
 the formula evaluation engine. The UI is a grid like widget that you can
 in-place edit the content of each cell. The component is a server-side

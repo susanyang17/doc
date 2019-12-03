@@ -20,7 +20,7 @@ inputs to default value. The screenshot below shows a request of a user
 # Create a JSF Page
 
 Spreadsheet can be embedded in a JSF page in the same way as JSF
-standard components. First specify keikai spreadsheet component namespace
+standard components. First specify Keikai spreadsheet component namespace
 URI <http://www.zkoss.org/jsf/zss> <http://www.zkoss.org/jsf/zss></tt>
 declaration along with other JSF namespace declarations and you can use
 the tag like <zssjsf:spreadsheet/>. If we want to interact with
@@ -72,7 +72,7 @@ application.
 </html>
 ```
 
-  - Line 16: keikai spreadsheet JSF component tag supports all the
+  - Line 16: Keikai spreadsheet JSF component tag supports all the
     properties that are supported by Spreadsheet ZUL component tag.
   - Line 17: The `book` attribute is used to bind a
     <javadoc directory="keikai">io.keikai.api.model.Book</javadoc> to
