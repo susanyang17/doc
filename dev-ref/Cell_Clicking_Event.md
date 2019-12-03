@@ -35,7 +35,7 @@ The image Below is a screenshot of "Event Monitor" application, when we
 interact with the Spreadsheet on the left hand side, the panel on the
 right hand side will shows messages about related events.
 
-![ center](zss-essentials-events-cellClicking.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-events-cellClicking.png " center")
 
 As you can see in the right panel, it shows messages when I click a
 cell. We can achieve this in a controller very easily with `@Listen`. We

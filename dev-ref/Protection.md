@@ -8,7 +8,7 @@ Spreadsheet's API also allows you to enable / disable protection and get
 protection status of a sheet. Let's use a simple example to demonstrate
 this usage:
 
-![ center](zss-essentials-protection.png " center") The screenshot above
+![ center](/assets/images/dev-ref/zss-essentials-protection.png " center") The screenshot above
 is a simple application. There is a label on the right showing current
 sheet's protection status. The "true" means the sheet is under
 protection and cannot be edited. The "Toggle Protection" button can
@@ -78,7 +78,7 @@ The screenshot below is a protected sheet with B2 unlocked. You can see
 the sheet protection status is "true, but cell lock status is "false" on
 the right panel when selecting B2 which means B2 can be edited.
 
-![ center](zss-essentials-protection-unlock.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-protection-unlock.png " center")
 
 Besides, Spreadsheet also allows you to lock / unlock cells and retrieve
 locked status with API. In our example application, when you select
@@ -152,7 +152,7 @@ When a sheet is **protected**:
 <!-- end list -->
 
 1.  For example, you can click
-    ![zss-essentials-protection-excel-icon.png](zss-essentials-protection-excel-icon.png
+    ![zss-essentials-protection-excel-icon.png](/assets/images/dev-ref/zss-essentials-protection-excel-icon.png
     "zss-essentials-protection-excel-icon.png") of menu "Review" in
     Excel 2007 to protect a sheet.
 2.  Steps to unlock cells in Excel 2007: select one or more cells first,

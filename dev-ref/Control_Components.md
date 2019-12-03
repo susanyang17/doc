@@ -149,7 +149,7 @@ from the cached. So the rendered range becomes larger. If the cache does
 not cover the whole visible range, ZSS will send AU request
 (`onZssFetchActiveRange`) to get the data back to the cache.
 
-![ center](3Ranges.png " center")
+![ center](/assets/images/dev-ref/3Ranges.png " center")
 
 ## MaxRenderedCellSize
 

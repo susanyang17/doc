@@ -30,9 +30,9 @@ plug-ins are required.
 
 # Architecture
 
-**Overview** ![ center](essentials-app-architecture.png " center")
+**Overview** ![ center](/assets/images/dev-ref/essentials-app-architecture.png " center")
 
-**More Inner Details** ![ center | 900px](essentials-architecture.png
+**More Inner Details** ![ center | 900px](/assets/images/dev-ref/essentials-architecture.png
 " center | 900px")
 
 Keikai spreadsheet component consists of three major parts -- the

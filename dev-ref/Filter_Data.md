@@ -10,7 +10,7 @@ protection for you.
 We'll use a simple application to demonstrate filter API. Its screenshot
 is as below:
 
-![ center](zss-essentials-filter-example.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-filter-example.png " center")
 
 In this application, through those buttons on the right hand side we can
 toggle, clear, and reapply filters and filter data by "Type" column.

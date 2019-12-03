@@ -55,7 +55,7 @@ to
 The screenshot below is a application that can add, move and delete a
 chart. For simplicity, this application only adds pie charts.
 
-![ center | 900px](zss-essentials-chart.png " center | 900px")
+![ center | 900px](/assets/images/dev-ref/zss-essentials-chart.png " center | 900px")
 
 When we click "Add", it will add a pie chart with the data from A1:B6
 and add a items in the Listbox on the top right corner. Select a chart

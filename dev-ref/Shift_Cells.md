@@ -14,7 +14,7 @@ otherwise it will be shifted left.
 
 Assume that we have selected a selected range of cells:
 
-![ center](zss-essentials-shift-before.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-shift-before.png " center")
 
 We want to move the selected cells 3 columns to the right, we can write
 the below code to shift it:
@@ -25,5 +25,5 @@ Range range = Ranges.range(spreadsheet.getSelectedSheet(), "F6:F10");
 CellOperationUtil.shift(range, 0, 3);
 ```
 
-The result will be like: ![ center](zss-essentials-shift-after.png
+The result will be like: ![ center](/assets/images/dev-ref/zss-essentials-shift-after.png
 " center")

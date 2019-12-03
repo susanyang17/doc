@@ -18,13 +18,13 @@ For example:
 Assume that we have a book with personal profile named "profile.xlsx" as
 follows.
 
-![ center](essentials-reference-profile.png " center")
+![ center](/assets/images/dev-ref/essentials-reference-profile.png " center")
 
 Now we want to create a resume for it without modifying "profile.xlsx".
 Therefore, we can make cells of "resume.xlsx" reference to
 "profile.xlsx". The screenshot is below:
 
-![ center](essentials-reference-resume.png " center")
+![ center](/assets/images/dev-ref/essentials-reference-resume.png " center")
 
 The following codes demonstrate how to achieve the resume:
 

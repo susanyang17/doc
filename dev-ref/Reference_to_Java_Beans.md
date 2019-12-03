@@ -34,7 +34,7 @@ Then you can access JavaBeans like a formula, e.g. enter
 
 Assume the application below has a sheet in protection, a user cannot
 modify any cells directly in the sheet. They can only update value via
-panel on the right side. ![ center](essentials-bean.png " center") You
+panel on the right side. ![ center](/assets/images/dev-ref/essentials-bean.png " center") You
 can see from the formula bar, the content of B3 is an EL expresstion,
 `=assetsBean.liquidAssets`.
 

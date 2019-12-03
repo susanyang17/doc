@@ -37,9 +37,9 @@ object is passed as an argument.
 Look at the screenshots below, we can show different custom popup menus
 when a users click a column or row header.
 
-![ center](zss-essentials-events-columnMenu.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-events-columnMenu.png " center")
 
-![ center](zss-essentials-events-rowMenu.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-events-rowMenu.png " center")
 
 To popup our custom menu, we should disable built-in context menu
 (`showContextMenu="false"` or un-specified) first and listen

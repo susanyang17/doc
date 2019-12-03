@@ -152,7 +152,7 @@ Please refer to
   - Insert special symbols in cells to simulate a checkbox, button.
 
 You can insert icon-like symbols in a cell, so users think that cell is
-a button like below: ![ center](Zss-essentials-symbol.png " center")
+a button like below: ![ center](/assets/images/dev-ref/Zss-essentials-symbol.png " center")
 Then you can determine these cells in an event listener and perform your
 business logic.
 
@@ -163,7 +163,7 @@ Please refer to
 
   - Show a component on a cell with a popup.
 
-![ center](Zss-essentials-popup.png " center")
+![ center](/assets/images/dev-ref/Zss-essentials-popup.png " center")
 
 # Unable to get property 'appendCell' of undefined or null reference in IE
 

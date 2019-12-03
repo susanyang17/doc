@@ -16,19 +16,19 @@ We will demonstrate the usage of API with
 In this application, you can log in with 3 different roles: OWNER,
 EDITOR, VIEWER. Their permissions are described in the image below:
 
-![ center](zss-essentials-login.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-login.png " center")
 
 If you log in as an owner, you will have full control of the file. But
 if you log in as an editor, you will find all sheet related operations
 are disabled.
 
-![ center](zss-essentials-editor.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-editor.png " center")
 
 When you log in as a viewer, the only thing you can do is viewing.
 Because there is no UI for edit, and all sheets are protected from
 editing.
 
-![ center](zss-essentials-viewer.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-viewer.png " center")
 
 This application relies on those API we mentioned in previous chapters
 to control the access for each role. Let's recap them here:

@@ -38,7 +38,7 @@ In our Event Monitor application, you can see the mouse pointer becomes
 a 4-direction arrow pointer. That means we move the selection area.
 Thus, you can selection update message on the right hand side panel.
 
-![ center](zss-essentials-events-selection.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-events-selection.png " center")
 
 The following codes demonstrate how to listen above events and get
 related data from them.
@@ -101,7 +101,7 @@ selection dialog, e.g. let users select a cell range for futher
 processing without entering it by a keyboard. An example is showed by
 the screenshot below:
 
-![ center](zss-essentials-rangeSelectionDialog.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-rangeSelectionDialog.png " center")
 
 When opening the dialog to select a range, we can hide edit UI and
 cancel `onStartEditing` event to forbid users editing.

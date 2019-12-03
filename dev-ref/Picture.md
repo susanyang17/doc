@@ -55,7 +55,7 @@ size. .
 # Example
 
 The screenshot below is a application that can add, move and delete a
-picture. ![ center | 900px](zss-essentials-picture.png
+picture. ![ center | 900px](/assets/images/dev-ref/zss-essentials-picture.png
 " center | 900px")
 
 If we click "Add", it will add a ZK logo picture and update picture

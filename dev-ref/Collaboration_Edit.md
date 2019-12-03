@@ -20,10 +20,10 @@ will immediately reflect on another user's Spreadsheet.
 
 The screenshot below is what the user, Paul, sees and he can also see
 another user's (John) current selection (purple box). ![ center |
-900px](essentials-feature-coedit-user1.png " center | 900px")
+900px](/assets/images/dev-ref/essentials-feature-coedit-user1.png " center | 900px")
 
 Another user, John, can also see Paul's current selection (blue box) in
-his spreadsheet. ![ center | 900px](essentials-feature-coedit-user2.png
+his spreadsheet. ![ center | 900px](/assets/images/dev-ref/essentials-feature-coedit-user2.png
 " center | 900px")
 
 The controller's code of above example:

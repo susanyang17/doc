@@ -50,7 +50,7 @@ String stringValue = cellData.getStringValue();
 
 The screenshot below is an example which can display a focused cell's
 data and the editor at right bottom corner allows you to change the
-focused cell's editing text. ![ center](zss-essentials-cellData.png
+focused cell's editing text. ![ center](/assets/images/dev-ref/zss-essentials-cellData.png
 " center")
 
 You can see the cell data of "D5". Its editing text is "=SUM(D1:D3)" and

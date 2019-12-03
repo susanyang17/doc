@@ -3,7 +3,7 @@
 This section describes how to pop up a new customized context menu in a
 Spreadsheet like the image below:
 
-![ center](zss-essentials-customContextMenu.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-customContextMenu.png " center")
 
 The steps are simple:
 

@@ -36,7 +36,7 @@ according to specified auto fill type.
 The screenshot below demonstrates filling 6 cells from our selection to
 the right automatically in `DEFAULT` auto fill type. You can see that
 first cell's style of each row is copied to the rest cells. ![ center |
-800px](zss-essentials-autoFill.png " center | 800px")
+800px](/assets/images/dev-ref/zss-essentials-autoFill.png " center | 800px")
 
 The following codes demonstrate how to achieve this function:
 

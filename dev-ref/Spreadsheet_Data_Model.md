@@ -151,7 +151,7 @@ Now, we present basic usage with a custom sheet switching example. Users
 can use the listbox with sheet name to switch the current selected sheet
 of the Spreadsheet.
 
-[center ](File:zss-essentials-book-sheet.png "wikilink")
+[center ](/assets/images/dev-ref/File:zss-essentials-book-sheet.png "wikilink")
 
 **setSheet.zul**
 

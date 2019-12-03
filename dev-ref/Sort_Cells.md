@@ -14,8 +14,8 @@ will be arranged before text.
 
 A range of cells before sorting:
 
-![ center](zss-essentials-sortBefore.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-sortBefore.png " center")
 
 A range of cells after sorting in ascending order:
 
-![ center](zss-essentials-sortAfter.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-sortAfter.png " center")

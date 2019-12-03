@@ -76,10 +76,10 @@ This property only works under Spreadsheet EE. The default value is
 Spreadsheet uses OSE's ColorPicker.
 
 ColorPicker of EE: ![
-center](zss-essentials-configuration-colorPickerEE.png " center")
+center](/assets/images/dev-ref/zss-essentials-configuration-colorPickerEE.png " center")
 
 ColorPicker of OSE (fewer color choices): ![
-center](zss-essentials-configuration-colorPickerCE.png " center")
+center](/assets/images/dev-ref/zss-essentials-configuration-colorPickerCE.png " center")
 
 **Example in zk.xml**
 
@@ -101,9 +101,9 @@ Currently, ZSS provides the following different themes: **Default**
 (built-in theme) and **Classic** from
 <https://github.com/zkoss/zssthemes/releases>
 
-![ left | thumb | 300px | Default](skyline-look-and-feel.png
+![ left | thumb | 300px | Default](/assets/images/dev-ref/skyline-look-and-feel.png
 " left | thumb | 300px | Default") ![ left | thumb | 300px |
-Classic](classic-look-and-feel.png " left | thumb | 300px | Classic")
+Classic](/assets/images/dev-ref/classic-look-and-feel.png " left | thumb | 300px | Classic")
 
 <div style="clear: both">
 

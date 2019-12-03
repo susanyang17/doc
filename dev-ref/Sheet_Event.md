@@ -46,7 +46,7 @@ application's screenshot about sheet operations. You can see from the
 right hand side panel that we create a "sheet3", select it, move it,
 rename it to "essentials", and delete it finally.
 
-![ center](zss-essentials-events-sheet.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-events-sheet.png " center")
 
 ``` java
 public class EventsComposer extends SelectorComposer<Component>{

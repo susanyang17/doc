@@ -11,7 +11,7 @@ without specifying `ctrlKeys` on <spreadsheet>.
 
 # Event Monitor Example
 
-![ center](zss-essentials-events-key.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-events-key.png " center")
 
 In [Event
 Monitor](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Events/Editing_Event#Event_Monitor_Example "wikilink")

@@ -10,15 +10,15 @@ Spreadsheet's API as well.
 Using WYSIWYG editor is easy, simply right click on the cell to open
 context menu and click "Rich Text Edit".
 
-![EditRichText.png](EditRichText.png "EditRichText.png")
+![EditRichText.png](/assets/images/dev-ref/EditRichText.png "EditRichText.png")
 
 Then you can edit in rich text within WYSIWYG editor
 
-![Richtextbox.png](Richtextbox.png "Richtextbox.png")
+![Richtextbox.png](/assets/images/dev-ref/Richtextbox.png "Richtextbox.png")
 
 The result:
 
-![RichText.png](RichText.png "RichText.png")
+![RichText.png](/assets/images/dev-ref/RichText.png "RichText.png")
 
 ## Set Rich Text via API
 
@@ -36,7 +36,7 @@ For example, the screenshot below is an application which can display a
 focused cell's data and the editor on the right bottom corner allows you
 to change the focused cell's rich text.
 
-![ center](RichTextAPI.png " center")
+![ center](/assets/images/dev-ref/RichTextAPI.png " center")
 
 When we focus on A1, we can see the cell's Rich Text HTML, we can then
 change the text and see the update.

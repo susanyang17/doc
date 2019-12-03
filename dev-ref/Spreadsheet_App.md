@@ -21,7 +21,7 @@ Please follow these steps to run this application:
         the power of Spreadsheet App.
 
 After you visit Spreadsheet App, you should see its user interface like
-the screenshot below: ![ center](zss-essentials-zssapp.png " center")
+the screenshot below: ![ center](/assets/images/dev-ref/zss-essentials-zssapp.png " center")
 
 You might notice that we add a menu on top of Spreadsheet component and
 3 leftmost buttons ("New Book", "Save Book", and "Export to PDF") on the
@@ -38,7 +38,7 @@ Usage](ZK_Spreadsheet_Essentials_3/Features_and_Usage "wikilink").
 ## File Menu
 
 The "File" menu contains many file operations including load, save, and
-export. ![ center](zss-essentials-zssapp-file.png " center")
+export. ![ center](/assets/images/dev-ref/zss-essentials-zssapp-file.png " center")
 
 Each menu item and its function description are:
 
@@ -102,13 +102,13 @@ Each menu item and its function description are:
 
 When you select "Open or Manage Books", the dialog below appears and you
 can open, delete, or upload a book. ![
-center](zss-essentials-zssapp-file-booklist.png " center")
+center](/assets/images/dev-ref/zss-essentials-zssapp-file-booklist.png " center")
 
 ## Edit Menu
 
 The "Edit" menu has "Undo" and "Redo" item and they also display
 corresponding action they will perform when you click on them. ![
-center](zss-essentials-zssapp-edit.png " center")
+center](/assets/images/dev-ref/zss-essentials-zssapp-edit.png " center")
 
 Each menu item and its function description are:
 
@@ -143,7 +143,7 @@ Each menu item and its function description are:
 ## View Menu
 
 The "View" menu can change view effects of current sheet. ![
-center](zss-essentials-zssapp-view.png " center")
+center](/assets/images/dev-ref/zss-essentials-zssapp-view.png " center")
 
 Each menu item and its function description are:
 
@@ -193,7 +193,7 @@ Each menu item and its function description are:
 The screenshot below shows a result after selecting "Freeze Rows &
 Columns" when selection box stays in B2. It freezes the row above and
 the column left to current selection: ![
-center](zss-essentials-zssapp-freeze.png " center")
+center](/assets/images/dev-ref/zss-essentials-zssapp-freeze.png " center")
 
 # Configuration
 

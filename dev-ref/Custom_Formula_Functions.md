@@ -45,7 +45,7 @@ to implement your custom function.
 Assume that we are going to create a money exchange function,
 `EXCHANGE()`, that accepts 2 double arguments and return exchange
 result. The first one is money, and the second one is exchange rate. ![
-center](zss-essentials-customFormula-exchange.png " center")
+center](/assets/images/dev-ref/zss-essentials-customFormula-exchange.png " center")
 
 The custom function can be implemented like:
 
@@ -88,7 +88,7 @@ variable number of numeric arguments, you should follow the steps below:
 
 Assume that we are going to create a custom function, MYSUBTOTAL(), that
 accepts variable number of numeric arguments and sums them all. ![
-center](zss-essentials-customFormula-mysubtotal.png " center")
+center](/assets/images/dev-ref/zss-essentials-customFormula-mysubtotal.png " center")
 
 First, we create a class to implement my subtotal function:
 
@@ -169,7 +169,7 @@ function's requirement.
 
 Here, we demonstrate this approach with a function, `CHAIN()`, that
 chains multiple text cells into one text. Below screenshot shows its use
-cases: ![ center](zss-essentials-customFormula-chain.png " center")
+cases: ![ center](/assets/images/dev-ref/zss-essentials-customFormula-chain.png " center")
 
 You can see that this function can accept various arguments including
 string, a range of cells, and multiple cell references. Different kind
