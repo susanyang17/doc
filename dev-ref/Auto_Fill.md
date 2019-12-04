@@ -40,7 +40,7 @@ first cell's style of each row is copied to the rest cells. ![ center |
 
 The following codes demonstrate how to achieve this function:
 
-``` java
+{% highlight java linenos %}
 public class AutoFillComposer extends SelectorComposer<Component> {
 
     @Wire
@@ -82,7 +82,7 @@ public class AutoFillComposer extends SelectorComposer<Component> {
     }
 
 }
-```
+{% endhighlight %}
 
   - Line 26,27: The scope of Range for destination must include the one
     for source.

@@ -42,7 +42,7 @@ cell. We can achieve this in a controller very easily with `@Listen`. We
 omit lots of similar codes and leave those codes that are worth for your
 reference.
 
-``` java
+{% highlight java linenos %}
 public class EventsComposer extends SelectorComposer<Component>{
     //omitted codes...
 
@@ -65,7 +65,7 @@ public class EventsComposer extends SelectorComposer<Component>{
     
 }
     
-```
+{% endhighlight %}
 
   - Line 4,12,16: Apply `@Listen` to listen an event with the syntax
     `[EVENT NAME] = [COMPONENT SELECTOR]`. All event name can be found

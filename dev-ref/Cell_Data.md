@@ -88,7 +88,7 @@ number.
 
 **Controller**
 
-``` java
+{% highlight java linenos %}
 public class CellDataComposer extends SelectorComposer {
 
     @Wire
@@ -148,7 +148,7 @@ public class CellDataComposer extends SelectorComposer {
         
     }
 }
-```
+{% endhighlight %}
 
   - Line 34,35,36,38,40: These codes use API described in previous
     section to display the focused cell's data in a Groupbox.
