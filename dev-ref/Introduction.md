@@ -49,11 +49,11 @@ responsible for formula parsing and calculations.
 
 You can use Spreadsheet in JSP with custom tag library and interact with
 it by writing Javascript. Please refer to [ Using Spreadsheet in
-JSP](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSP "wikilink")
+JSP](Using_Spreadsheet_in_JSP "wikilink")
 for details. For JSF, we provides a Spreadsheet JSF component which can
 be used within a JSF page and interact with other components by AJAX
 tag. Please refer to [ Using Spreadsheet in
-JSF](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSF "wikilink")
+JSF](Using_Spreadsheet_in_JSF "wikilink")
 for details.
 
 

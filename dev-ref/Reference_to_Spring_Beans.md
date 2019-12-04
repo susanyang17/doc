@@ -17,7 +17,7 @@ Bean, e.g. enter `=myBean.myProperty`.
 # Example
 
 We continue to use the same example in [ Reference to Java
-Beans](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Advanced/Reference_to_Java_Beans#Example "wikilink").
+Beans](Working_with_Spreadsheet/Advanced/Reference_to_Java_Beans#Example "wikilink").
 Assume the application below has a sheet in protection, a user cannot
 modify any cells directly in the sheet. They can only update value via
 panel on the right side. ![ center](/assets/images/dev-ref/essentials-bean.png " center") You
@@ -67,7 +67,7 @@ for detail.)
 # Example
 
 We continue to use the same example in [ Reference to Java
-Beans](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Advanced/Reference_to_Java_Beans#Example "wikilink").
+Beans](Working_with_Spreadsheet/Advanced/Reference_to_Java_Beans#Example "wikilink").
 Assume the application below has a sheet in protection, a user cannot
 modify any cells directly in the sheet. They can only update value via
 panel on the right side. ![ center](/assets/images/dev-ref/essentials-bean.png " center") You

@@ -13,7 +13,7 @@ object is passed as an argument.
 # Event Monitor Example
 
 The [ Event
-Monitor](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Events/Cell_Clicking_Event#Event_Monitor_Example "wikilink")
+Monitor](Working_with_Spreadsheet/Handling_Events/Cell_Clicking_Event#Event_Monitor_Example "wikilink")
 application's screenshot when we click the link <http://www.zkoss.org>
 <http://www.zkoss.org> in A7. ![
 center](/assets/images/dev-ref/zss-essentials-events-hyperlink.png " center")

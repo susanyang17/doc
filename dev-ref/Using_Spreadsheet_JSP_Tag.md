@@ -242,7 +242,7 @@ public class ForLeaveServlet extends HttpServlet{
 
 Inside `JsonUpdateBridge.process()`, you can use those APIs we mentioned
 in [ Handling Data
-Model](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Data_Model "wikilink")
+Model](Working_with_Spreadsheet/Handling_Data_Model "wikilink")
 to implement your business logic. In our example, we use
 <javadoc directory="keikai">io.keikai.api.Range</javadoc> to set cell
 edit text and get a value from the cells.

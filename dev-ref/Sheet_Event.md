@@ -41,7 +41,7 @@ object is passed as an argument.
 # Event Monitor Example
 
 Below is a [ Event
-Monitor](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Events/Cell_Clicking_Event#Event_Monitor_Example "wikilink")
+Monitor](Working_with_Spreadsheet/Handling_Events/Cell_Clicking_Event#Event_Monitor_Example "wikilink")
 application's screenshot about sheet operations. You can see from the
 right hand side panel that we create a "sheet3", select it, move it,
 rename it to "essentials", and delete it finally.

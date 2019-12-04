@@ -33,7 +33,7 @@ App.
 Here we will focus on those features which we create specially for
 Spreadsheet App. For the Spreadsheet component's features, please refer
 to [ Features and
-Usage](ZK_Spreadsheet_Essentials_3/Features_and_Usage "wikilink").
+Usage](Features_and_Usage "wikilink").
 
 ## File Menu
 

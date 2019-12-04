@@ -5,7 +5,7 @@ Of course it requires you to [ know some basics about
 ZK](ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVC "wikilink"). If
 your environment won't allow you to use ZK yet, Spreadsheet can also be
 used in JSP or JSF. Please read [ Using Spreadsheet in
-JSP](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSP "wikilink") or
+JSP](Using_Spreadsheet_in_JSP "wikilink") or
 [ Using Spreadsheet in
-JSF](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSF "wikilink")
+JSF](Using_Spreadsheet_in_JSF "wikilink")
 respectively for details.

@@ -6,5 +6,5 @@ example project to experience it. Furthermore, if you want a DOM element
 can interact with Spreadsheet, you can send your own AJAX request in
 Javascript or use <http://jquery.com>. Then handle AJAX request by
 yourself with Spreadsheet API we mentioned in [ Working with
-Spreadsheet](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet "wikilink").
+Spreadsheet](Working_with_Spreadsheet "wikilink").
 We will demonstrate the usage with an example application.

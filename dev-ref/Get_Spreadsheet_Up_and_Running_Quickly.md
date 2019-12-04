@@ -3,10 +3,10 @@
 This chapter tells you how to run Spreadsheet App and get ready to
 develop with Spreadsheet. If you are interested in using spreadsheet in
 JSP, please refer to [ Get Spreadsheet Running Quickly in
-JSP](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSP/Get_Spreadsheet_Running_Quickly_in_JSP "wikilink").
+JSP](Using_Spreadsheet_in_JSP/Get_Spreadsheet_Running_Quickly_in_JSP "wikilink").
 If you are going to use Spreadhsheet in JSF, please refer to [ Get
 Spreadsheet Running Quickly in
-JSF](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_JSF/Get_Spreadsheet_Running_Quickly_in_JSF "wikilink").
+JSF](Using_Spreadsheet_in_JSF/Get_Spreadsheet_Running_Quickly_in_JSF "wikilink").
 
 # Download and Experience
 
@@ -31,9 +31,9 @@ After you download, please:
 
 The full introduction of Spreadsheet App's function is covered in [
 Spreadsheet
-App](ZK_Spreadsheet_Essentials_3/Using_Spreadsheet_in_ZK/Spreadsheet_App "wikilink")
+App](Using_Spreadsheet_in_ZK/Spreadsheet_App "wikilink")
 and the Spreadsheet's features are described in [ Features and
-Usage](ZK_Spreadsheet_Essentials_3/Features_and_Usage "wikilink").
+Usage](Features_and_Usage "wikilink").
 
 The purpose of following paragraphs is to tell you how to prepare an
 environment for working with Spreadsheet in API.
@@ -348,5 +348,5 @@ can be smaller". Don't worry. Spreadsheet provides various options which
 can be configured via ZUL to fulfill your requirements, and you can even
 use its API to implement your own business logic in order to react to
 events. Please read [ Working with
-Spreadsheet](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet "wikilink")
+Spreadsheet](Working_with_Spreadsheet "wikilink")
 for details.

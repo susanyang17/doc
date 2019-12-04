@@ -1,5 +1,3 @@
-\_\_TOC\_\_
-
 # MVC in Brief
 
 ZK framework supports the MVC design pattern to develop a web
@@ -8,13 +6,13 @@ application. This pattern separates an application into 3 parts:
 application handles. The View is UI which indicates a ZUL page in a
 ZK-based application. The Controller handles events from UI, controls
 the UI, and accesses the Model. For complete explanation, please refer
-to [ZK Developer%27s
+to [ZK Developer's
 Reference/MVC](ZK_Developer%27s_Reference/MVC "wikilink").
 
 # Spreadsheet Properties
 
 Each component is represented by a unique tag name, e.g. Spreadsheet is
-<spreadsheet> in a ZUL page. The easiest way to control a component is
+`<spreadsheet>` in a ZUL page. The easiest way to control a component is
 to set a component's properties via a tag's attribute. Each property has
 its own effect, and you can change it by specifying values in a tag's
 attribute.
@@ -26,7 +24,6 @@ Spreadsheet's `src` attribute to the file path which is a relative URI
 with respect to the web application root.
 
 ``` xml
-
 <spreadsheet src="/TestFile2007.xlsx" .../>
 ```
 
@@ -44,7 +41,6 @@ accepts boolean literal.
 Default: `false`
 
 ``` xml
-
     <spreadsheet showToolbar="true"/>
 ```
 
@@ -56,7 +52,6 @@ only accepts boolean literal.
 Default: `false`
 
 ``` xml
-
     <spreadsheet showFormulabar="true"/>
 ```
 
@@ -68,7 +63,6 @@ only accepts boolean literal.
 Default: `false`
 
 ``` xml
-
     <spreadsheet showSheetbar="true"/>
 ```
 
@@ -80,7 +74,6 @@ only accepts boolean literal.
 Default: `false`
 
 ``` xml
-
     <spreadsheet showContextMenu="true"/>
 ```
 
@@ -103,6 +96,7 @@ If you want to change the default value to `false`; you can do that by
 setting the library property *io.keikai.ui.keepCellSelection* to
 `false`[1](http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Configuration#Keep_Cell_Selection)
 <http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Configuration#Keep_Cell_Selection>\]
+
 
 ## Preloaded Column / Row Size
 
@@ -278,7 +272,7 @@ Let's see an example to get Spreadsheet component in index.zul:
 
 **@Wire usage**
 
-``` java
+{% highlight java linenos %}
 public class MyComposer extends SelectorComposer<Component> {
 
     @Wire
@@ -291,7 +285,7 @@ public class MyComposer extends SelectorComposer<Component> {
     }
 
 }
-```
+{% endhighlight %}
 
   - Line 3,4: If you specify nothing in `@Wire`, ZK will use the
     variable name as a component's id to look for matching component in
@@ -300,6 +294,7 @@ public class MyComposer extends SelectorComposer<Component> {
   - Line 7: Override this method to write initializing codes in it.
   - Line 8: Remember to call `super.doAfterCompose()` before you
     accessing components because parent class wires components for you.
+
 
 ## Set Spreadsheet Properties by API
 
@@ -313,7 +308,7 @@ setter.
 
 **Setter usage**
 
-``` java
+{% highlight java linenos %}
 public class MyComposer extends SelectorComposer<Component> {
 
     @Wire
@@ -330,7 +325,7 @@ public class MyComposer extends SelectorComposer<Component> {
     }
 
 }
-```
+{% endhighlight %}
 
   - Line 11,12: Using API allows you to set a component dynamically upon
     different conditions.
@@ -341,9 +336,9 @@ In most scenarios, the controller is usually used to listen to
 interested events of Spreadsheet and implement business logic to react
 the events. When a user interacts with a Spreadsheet, it will send
 various events according to user actions. Please refer to [ Handling
-Events](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Events "wikilink")
+Events](Handling_Events)
 on how to listen events in a controller. To implement business logic,
 you definitely will need to access Spreadsheet data model. Refer to
 sections under [ Handling Data
-Model](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Data_Model "wikilink")
+Model](Handling_Data_Model)
 to know how to use it.

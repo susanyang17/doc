@@ -192,7 +192,7 @@ reset and check cells.
 
 Inside `ActionBridge.execute()`, you can use those APIs we mentioned in
 [ Handling Data
-Model](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Data_Model "wikilink")
+Model](Working_with_Spreadsheet/Handling_Data_Model "wikilink")
 to implement your business logic. In our example, we use
 <javadoc directory="keikai">io.keikai.api.Range</javadoc> to set cell
 edit text and get value from cells.
@@ -203,7 +203,7 @@ The usage of `ActionBridge` is to call its `execute()` with an
 <javadoc directory="keikai">io.keikai.jsf.Action</javadoc> object and
 we implement our business logic in `Action`'s `execute()` method with
 those APIs mentioned in [ previous
-sections](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet "wikilink").
+sections](Working_with_Spreadsheet "wikilink").
 In "reset cells" case, we use `Range` to clear cell text.
 
 ``` java

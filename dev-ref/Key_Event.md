@@ -14,7 +14,7 @@ without specifying `ctrlKeys` on <spreadsheet>.
 ![ center](/assets/images/dev-ref/zss-essentials-events-key.png " center")
 
 In [Event
-Monitor](ZK_Spreadsheet_Essentials_3/Working_with_Spreadsheet/Handling_Events/Editing_Event#Event_Monitor_Example "wikilink")
+Monitor](Working_with_Spreadsheet/Handling_Events/Editing_Event#Event_Monitor_Example "wikilink")
 example, the messages show that ctrl+c is pressed first then ctrl+v.
 Let's see how to make it:
 
