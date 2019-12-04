@@ -1,4 +1,4 @@
-Only ZSS EE requires a license file. You can choose one of the following
+Only Keikai EE requires a license file. You can choose one of the following
 ways to put a license file:
 
 # Default License Loading Path
@@ -31,9 +31,7 @@ license file.
 # Specify the Path in a System Property
 
 Because
-\[<https://www.zkoss.org/javadoc/latest/zk/org/zkoss/lang/Library.html#getProperty(java.lang.String>)
-<https://www.zkoss.org/javadoc/latest/zk/org/zkoss/lang/Library.html#getProperty(java.lang.String>)
-`Library.getProperty()`\] will look for a system property if no
+[`Library.getProperty()`](https://www.zkoss.org/javadoc/latest/zk/org/zkoss/lang/Library.html#getProperty(java.lang.String) will look for a system property if no
 corresponding property defined in `zk.xml`, you can also pass the
 license file path to ZSS via a system property.
 

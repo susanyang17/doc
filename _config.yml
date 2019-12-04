@@ -35,7 +35,7 @@ defaults:
       path: "dev-ref"
     values:
       sidebar:
-        nav: "devRef"
+        nav: "dev-ref"
   - scope:
       path: "tutorial"
     values:
