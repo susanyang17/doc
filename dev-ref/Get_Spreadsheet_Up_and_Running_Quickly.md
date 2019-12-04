@@ -184,7 +184,7 @@ Keikai spreadsheet.
     </properties>
     <version>1.0.0</version>
     <packaging>war</packaging>
-    <name>zss maven sample</name>
+    <name>Keikai maven sample</name>
     <repositories>
         <repository>
             <id>ZK EVAL</id>
@@ -245,7 +245,7 @@ ZK 6.5.4 by default. If we take above sample pom.xml as an example, just
 uncomment those ZK dependencies and set property `zk.version` to 6.5.5.
 
 Also note that starting from version 3.5, evaluation copies are renamed
-with a post-fix of Eval. For example the version number of ZSS 3.5.0
+with a post-fix of Eval. For example the version number of Keikai 3.5.0
 evaluation copy is now 3.5.0-Eval.
 
 ## Trouble Shooting

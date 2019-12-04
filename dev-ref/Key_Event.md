@@ -50,7 +50,7 @@ public class EventsComposer extends SelectorComposer<Component>{
 
 # Add More Shortcut Keys
 
-If you want to add more shortcut keys to a ZSS component, remember to
+If you want to add more shortcut keys to a Keikai component, remember to
 append the default shortcut keys:
 
   -   
@@ -99,7 +99,7 @@ for how to implement a UserActionHandler and the difference between
 
 # Known issue
 
-There is a known issue <http://tracker.zkoss.org/browse/ZSS-920>, when
+There is a known issue <http://tracker.zkoss.org/browse/Keikai-920>, when
 you add spreadsheet as the child of root, you may trigger onCtrlEvent to
 server once you press delete key on BODY. To solve this issue, you can
 enclose spreadsheet tag by any other tags like DIV:

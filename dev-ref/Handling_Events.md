@@ -50,5 +50,5 @@ public class EventsComposer extends SelectorComposer<Component>{
     event it listens. You can get event related data like row or column
     for further processing.
 
-All ZSS events you can listen are listed in
+All Keikai events you can listen are listed in
 <javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>

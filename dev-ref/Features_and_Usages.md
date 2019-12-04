@@ -78,24 +78,24 @@ center](/assets/images/dev-ref/zss-essentials-feature-zoom150.png " 800px| cente
 
 ## Display Currency Symbol of Different Countries
 
-ZSS can display currency symbol of different countries such as $, ¥, ₩,
+Keikai can display currency symbol of different countries such as $, ¥, ₩,
 €, and HKD on a cell with currency format.
 
 ## Localization of Number/Formula Input
 
-ZSS also accepts ','(comma) or '.'(dot) as the decimal point for decimal
+Keikai also accepts ','(comma) or '.'(dot) as the decimal point for decimal
 numbers.
 
 ## Smart Input
 
-When you enter a text in a cell with the default format (General), ZSS
+When you enter a text in a cell with the default format (General), Keikai
 convert some special number inputs such as 1,234,567, $123456,
 ($123456), ($1,234,567), 1.2%, 123456E10 into a number value and set its
 corresponding Cell format automatically.
 
 ## Date Format
 
-Some date formats in ZSS are regional (starting with an **asterisk,
+Some date formats in Keikai are regional (starting with an **asterisk,
 \***, same as Excel ) and some are international. ![
 center](/assets/images/dev-ref/zss-essentials-dateFormat.png " center") Regional ones will
 change its displaying format according to the system locale, but
@@ -107,7 +107,7 @@ international one doesn't change. \[1\]
 
 `since 3.9.0`
 
-ZSS can display conditional formatting of an Excel file. This feature
+Keikai can display conditional formatting of an Excel file. This feature
 allows you to highlight a cell with a certain color according to the
 cell's value like the "Income" column below: ![
 center](/assets/images/dev-ref/zss-essentials-conditionalFormatting.png " center")
@@ -182,44 +182,44 @@ which are all .
 
 ## Copy & Paste
 
-  - If you copy and paste inside a ZSS component, it has full
+  - If you copy and paste inside a Keikai component, it has full
     information at both server and client side, so such copy-paste can
     retain all information of cells including styles, a formula, format,
     data validation.
-  - If you copy a whole column/row, ZSS also copy the width/height. But
+  - If you copy a whole column/row, Keikai also copy the width/height. But
     copying one or multiple cells doesn't copy the width and height to
     target cells.
-  - If you want to copy almost a whole sheet to another ZSS component,
+  - If you want to copy almost a whole sheet to another Keikai component,
     please call
     <https://www.zkoss.org/javadoc/latest/zss/org/zkoss/zss/api/Range.html#cloneSheetFrom-java.lang.String-io.keikai.model.Sheet->.
     It can clone a sheet from another `Book` object.
 
-### Between ZSS and Other Application like Excel
+### Between Keikai and Other Application like Excel
 
   - Such copy-paste only works with **Ctrl+c** and **Ctrl+v**. Click
     "Paste" on the toolbar or context menu only works for copying cells
-    inside one ZSS component.
+    inside one Keikai component.
   - Such copy-paste is an action between 2 applications (Excel and
-    browser) through a system clipboard. Currently, ZSS only extract
+    browser) through a system clipboard. Currently, Keikai only extract
     text content from a system clipboard, so this copy-paste only pastes
     the "pure text" you see on the screen without any specified style on
     cells.
   - For example, a cell in Excel with a formula `=sum(1)`, if you copy
-    the cell and paste it to ZSS, the cell in ZSS gets `1` as a number.
-    Just like you type `1` in a ZSS cell.
+    the cell and paste it to Keikai, the cell in Keikai gets `1` as a number.
+    Just like you type `1` in a Keikai cell.
   - If you enter edit mode, select the text `=sum(1)` and copy it in
-    Excel, then paste to a cell in ZSS. ZSS gets a formula, just like
-    you type a formula in a ZSS cell.
+    Excel, then paste to a cell in Keikai. Keikai gets a formula, just like
+    you type a formula in a Keikai cell.
 
-### Between 2 ZSS components
+### Between 2 Keikai components
 
-Copy-paste cells between 2 ZSS components also rely on the system
-clipboard, so it's a similar case like ZSS and Excel, only copying pure
+Copy-paste cells between 2 Keikai components also rely on the system
+clipboard, so it's a similar case like Keikai and Excel, only copying pure
 text.
 
 ### limitation
 
-ZSS can't paste a cell that has a multiline text into one cell of ZSS,
+Keikai can't paste a cell that has a multiline text into one cell of Keikai,
 and it will split the text into multiple cells by rows.
 
 ### Special Paste
@@ -324,13 +324,13 @@ update its values, and applied criteria will also work on new data.
 `since 3.8.1`
 
 **Filter by search.** When you enter text in the search box, it will
-instantly list and select all matched values. Press "Enter" and ZSS will
+instantly list and select all matched values. Press "Enter" and Keikai will
 filter your data with those matched values. ![
 center](/assets/images/dev-ref/zss-essentials-filterBySearching.png " center")
 
 `since 3.9.0`
 
-ZSS supports **number filter**, **color filter**, **date filter**, and
+Keikai supports **number filter**, **color filter**, **date filter**, and
 **text filter**. ![ center](/assets/images/dev-ref/zss-essentials-colorFilter.png " center")
 
 ![ center](/assets/images/dev-ref/zss-essentials-dateFilter.png " center")

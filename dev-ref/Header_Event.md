@@ -46,7 +46,7 @@ To popup our custom menu, we should disable built-in context menu
 onHeaderRightClick event.
 
 ``` xml
-    <window title="ZSS Mouse Events" border="normal" width="100%"
+    <window title="Keikai Mouse Events" border="normal" width="100%"
         height="100%" apply="io.keikai.essential.events.MouseEventsComposer">
         <spreadsheet width="600px" height="300px" 
             maxVisibleRows="100" maxVisibleColumns="40" 

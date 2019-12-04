@@ -133,7 +133,7 @@ of internal events and trigger formula dependency recalculation which is
 unnecessary before showing Keikai spreadsheet to a browser. You can
 implement
 <javadoc directory="keikai">io.keikai.api.PostImport</javadoc> and put
-your initialization logic in `process()`. Then ZSS will invoke
+your initialization logic in `process()`. Then Keikai will invoke
 `process()` right after the file importing and turn off those
 unnecessary update triggered by `Range` API. Therefore, it can speed up
 the data/formula inserting.
@@ -206,7 +206,7 @@ public class PostImportComposer extends SelectorComposer<Component> implements P
 
 If the data to insert is too large, so that it still consumes a long
 time you can't accept. Then you can insert the data in 2 phases. First,
-just insert a small part of data (e.g. 500 rows) since ZSS doesn't
+just insert a small part of data (e.g. 500 rows) since Keikai doesn't
 render all rows to a browser and a user's screen size is also limited. A
 user can't see all rows at once in the beginning. Then send an
 <https://www.zkoss.org/wiki/ZK_Developer%27s_Reference/UI_Patterns/Long_Operations/Use_Echo_Events>

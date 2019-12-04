@@ -139,7 +139,7 @@ When a sheet is **protected**:
         This action doesn't copy the "locked" status. The unlocked cell
         keeps unlocked.
 3.  If there is a locked cell in the affected target range while
-    pasting, ZSS doesn't paste cells
+    pasting, Keikai doesn't paste cells
 4.  Cut an unlocked cell, the cell still keep unlocked
       -   
         Without sheet protection, cut an unlocked cell, the cell

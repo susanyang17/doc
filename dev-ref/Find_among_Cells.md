@@ -1,5 +1,5 @@
 Find a text among cells is a common function. Keikai spreadsheet doesn't
-have this built-in function, but we can easily build our own with ZSS
+have this built-in function, but we can easily build our own with Keikai
 API.
 
 ![ center](/assets/images/dev-ref/Zss-essentials-find-dialog.png " center")

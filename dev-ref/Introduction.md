@@ -57,7 +57,7 @@ JSF](Using_Spreadsheet_in_JSF "wikilink")
 for details.
 
 
-# Difference from ZSS 3.9
+# Difference from Keikai 3.9
 
 In 3.5.0, we introduce a brand new model implementation. This
 enhancement doesn't change the way you use the Spreadsheet's public API

@@ -97,7 +97,7 @@ center](/assets/images/dev-ref/zss-essentials-configuration-colorPickerCE.png " 
 
 `since 3.5.0`
 
-Currently, ZSS provides the following different themes: **Default**
+Currently, Keikai provides the following different themes: **Default**
 (built-in theme) and **Classic** from
 <https://github.com/zkoss/zssthemes/releases>
 
@@ -127,8 +127,8 @@ registered.
 
 Default value: **false**
 
-Set the property to `true` and ZSS will import formula cache of an Excel
-file and it can reduce the file loading time because ZSS doesn't need to
+Set the property to `true` and Keikai will import formula cache of an Excel
+file and it can reduce the file loading time because Keikai doesn't need to
 re-evaluate formulas at loading.
 
 ``` xml
@@ -153,14 +153,14 @@ Few points need to be noticed:
 
 Default value: **true**
 
-Set the property to `false` and ZSS will set default value of
+Set the property to `false` and Keikai will set default value of
 *keepCellSelection* attribute to false. Before version 3.8.1, when ZK
 Spreadsheet component loses its focus, it will hide the cell selection
 mark automatically. However, sometimes an end user would need to know
 which range is selected when he/she is operating on another control
 component (e.g. a dialog window). We have set the default value of
 `keepCellSelection` to true to avoid the confusion. However, if you
-would like ZSS to behavior as before version 3.8.1, you can set this
+would like Keikai to behavior as before version 3.8.1, you can set this
 property to `false`.
 
 ``` xml

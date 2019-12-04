@@ -3,7 +3,7 @@ ways to put a license file:
 
 # Default License Loading Path
 
-ZSS loads a license file from the default path:
+Keikai loads a license file from the default path:
 
 **`WEB-INF/classes/metainfo/zss/license/`**
 
@@ -16,7 +16,7 @@ application.
 Some application servers like Weblogic could fail to locate the license
 file in the default path. Then you can specify the absolute path of the
 license with the following library property in `zk.xml` and copy your
-ZSS license file there.
+Keikai license file there.
 
 ``` xml
 <library-property>
@@ -25,7 +25,7 @@ ZSS license file there.
 </library-property>
 ```
 
-It's also a way that multiple ZSS-bases applications can load the same
+It's also a way that multiple Keikai-bases applications can load the same
 license file.
 
 # Specify the Path in a System Property
@@ -33,7 +33,7 @@ license file.
 Because
 [`Library.getProperty()`](https://www.zkoss.org/javadoc/latest/zk/org/zkoss/lang/Library.html#getProperty(java.lang.String) will look for a system property if no
 corresponding property defined in `zk.xml`, you can also pass the
-license file path to ZSS via a system property.
+license file path to Keikai via a system property.
 
 For example in a Tomcat, you can add a `setenv.sh` (or `setenv.bat`)
 that contains

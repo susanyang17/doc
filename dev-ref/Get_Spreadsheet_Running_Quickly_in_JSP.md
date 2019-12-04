@@ -1,6 +1,6 @@
 \_\_TOC\_\_
 
-# Quick Start ZSS JSP Demo Project
+# Quick Start Keikai JSP Demo Project
 
 Suggest you to run Keikai spreadsheet JSP demo project in your local site
 without coding, just <https://github.com/zkoss/zssjspdemo> and execute

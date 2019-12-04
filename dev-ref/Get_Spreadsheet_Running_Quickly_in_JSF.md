@@ -1,6 +1,6 @@
 \_\_TOC\_\_
 
-# Start with ZSS JSF Example Project
+# Start with Keikai JSF Example Project
 
 If you want to run Keikai spreadsheet JSF demo in your local site, just
 <https://github.com/zkoss/zssjsfdemo> and run it in your environment.
@@ -146,7 +146,7 @@ two kind of project respectively.
         </dependency> 
 ```
 
-  - You can browser ZK maven repository to know available ZSS version.
+  - You can browser ZK maven repository to know available Keikai version.
 
 <!-- end list -->
 

@@ -1,12 +1,12 @@
-# Does ZSS support user permission control?
+# Does Keikai support user permission control?
 
   -   
     We provide API for you to build your owned permission control. User
     permission feature involves authentication and authorization which
-    is out of ZSS function's scope. Since ZSS cannot identify a user, it
+    is out of Keikai function's scope. Since Keikai cannot identify a user, it
     cannot assign a user with corresponding permissions. But you can
     easily integrate existing framework like Spring Security and
-    implement your user permission features with ZSS. Please refer to
+    implement your user permission features with Keikai. Please refer to
     the following sections:
       - Hide the toolbar and the context menu to prevent editing. Please
         refer to [Keikai spreadsheet Essentials/Working with
@@ -22,9 +22,9 @@
 You can see an example at
 <http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Use_Case/User_Permission>.
 
-# How do I save the content of ZSS or even save it to a database?
+# How do I save the content of Keikai or even save it to a database?
 
-To save the content of ZSS, we recommend to export it as an Excel file
+To save the content of Keikai, we recommend to export it as an Excel file
 instead of saving it rows by rows. It is also the way we implement the
 "Save" function in zssapp. After exporting, you can save the file into a
 BLOB type column of a database.
@@ -32,7 +32,7 @@ BLOB type column of a database.
 :\* How to export: [ Export to
 Excel](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Handling_Data_Model/Export_to_Excel "wikilink")
 
-:\* Integrate custom saving process to ZSS toolbar's Save button: [
+:\* Integrate custom saving process to Keikai toolbar's Save button: [
 Toolbar
 Customization](ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Advanced/Toolbar_Customization#Save_Book "wikilink")
 
@@ -47,13 +47,13 @@ There are many reasons, but we list the most possible ones:
     resolve it by applying the correct font.
       - The computer of your PDF viewer software doesn't install
         corresponding fonts.
-    For ZSS doesn't embed fonts into a exported PDF file, your computer
+    For Keikai doesn't embed fonts into a exported PDF file, your computer
     should install the corresponding fonts to display the file
     correctly. You can test it by opening the PDF file in another
     computer or different OS. Please check installed fonts on your
     computer. Installing missing fonts can solve this problem.
 
-The ZSS bundled iText will find fonts from the following paths. Please
+The Keikai bundled iText will find fonts from the following paths. Please
 check the fonts you apply are available in these paths: **Won't scan its
 subdirectories**
 
@@ -84,22 +84,22 @@ Extracted from FontFactoryImp com.lowagie.text.FontFactoryImp.
     one exported correctly. Install the corresponding fonts can solve
     this issue.
 
-# How do I know my file can be loaded correctly by ZSS?
+# How do I know my file can be loaded correctly by Keikai?
 
 In general, those functions we implement with the toolbar are supported.
 However, the best way is to upload your files to the
 <http://www.zkoss.org/download/zkspreadsheet>. It's a ready-to-use web
-application based on ZSS component. You just run the war with a Java
+application based on Keikai component. You just run the war with a Java
 application server, then you can upload files via the menu, File / Open
 / Upload.
 
-# Does ZSS support VB macro?
+# Does Keikai support VB macro?
 
 No. Even
 <https://www.microsoft.com/en-us/microsoft-365/blog/2014/04/14/weve-updated-excel-online-whats-new-in-april-2014/>
 (or
 <https://social.technet.microsoft.com/Forums/office/en-US/7c46823c-2581-47a6-baac-66fb99ac3ea8>).
-The macro in a file will be lost after being imported since ZSS doesn't
+The macro in a file will be lost after being imported since Keikai doesn't
 keep the macro information.
 
 If you need something similar, you can port your macro to Java within a
@@ -118,14 +118,14 @@ memory at that process. Please increase your JVM heap size. (You can
 refer to
 <https://docs.oracle.com/cd/E15523_01/web.1111/e13814/jvm_tuning.htm#PERFM164>)
 
-# What is the maximal rows and columns ZSS supports?
+# What is the maximal rows and columns Keikai supports?
 
   - The max column is **16384** (2^14)
   - the max row is **1048576** (2^20)
 
-ZSS renders cells on demand instead of rendering all cells at once in a
+Keikai renders cells on demand instead of rendering all cells at once in a
 browser, but it loads a file's whole content into the memory. So the
-bigger memory your server has, the more rows and columns ZSS can load.
+bigger memory your server has, the more rows and columns Keikai can load.
 
 Even if you have sufficient memory, loading time could be an issue.
 Because loading time grows linearly with cell number. Under our test
@@ -135,13 +135,13 @@ seconds. As the cell number grows, the time could be too long to be
 acceptable by users. You can measure the loading time on your machine
 first.
 
-# Does ZSS support form control like the menu in Excel, **Developer \> Form Controls**?
+# Does Keikai support form control like the menu in Excel, **Developer \> Form Controls**?
 
 No. But there are several alternatives:
 
   - Use ZK menu.
 
-Please refer to the menu on top of ZSS at
+Please refer to the menu on top of Keikai at
 <http://zssdemo.zkoss.org/zssdemo/excel_like>
 
   - Create a custom context menu.
@@ -169,7 +169,7 @@ Please refer to
 
 If you visit with IE11 and see such error message in developer tool's
 console. This is mostly caused by compatibility mode. Please turn it off
-and reload the page again since ZK/ZSS don't support such mode.
+and reload the page again since ZK/Keikai don't support such mode.
 
 # See Errors When Copying Massive Cells
 

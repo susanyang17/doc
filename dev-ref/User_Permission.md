@@ -1,7 +1,7 @@
 # Overview
 
-One of the most concerned issues is access control for ZSS. We think
-most enterprises have their own authorization rule. Therefore, ZSS
+One of the most concerned issues is access control for Keikai. We think
+most enterprises have their own authorization rule. Therefore, Keikai
 doesn't have its own authorization and authentication features because
 one feature can't fulfill all kinds of requirements. Instead, it
 provides 3 categories of API to help you build your own user permission

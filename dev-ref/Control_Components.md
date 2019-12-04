@@ -79,13 +79,13 @@ Default: `false`
 
 ## Selection Visiblility
 
-<http://tracker.zkoss.org/browse/ZSS-1044-->\>
+<http://tracker.zkoss.org/browse/Keikai-1044-->\>
 
 ` Since 3.8.1`
 
 Default: `true`
 
-When it's `true`, ZSS keeps the selection area visible after opening a
+When it's `true`, Keikai keeps the selection area visible after opening a
 dialog like "Format Cell". Specify `false` to remove this behavior.
 
 ``` xml
@@ -111,12 +111,12 @@ scrolling. You can adjust this range by `preloadColumnSize` (default:
 
 If you specify a larger size, it will make a more smooth scrolling when
 moving to adjacent cells. On the other hand, when you reach out of the
-cached range, ZSS takes more time to get the cached data from a server.
+cached range, Keikai takes more time to get the cached data from a server.
 
 ### Pasting Lots of Cells Requires Larger Preloaded Size
 
 If you paste lots of cell from Excel which is over cached cell range,
-ZSS will fail to handle the pasting because of lack of corresponding
+Keikai will fail to handle the pasting because of lack of corresponding
 cached cell data at the client-side (you should see an error message in
 the developer tool / Console tab). In such case, you need to increase
 preloaded row/column size according to the expected row/column size for
@@ -138,9 +138,9 @@ There are 3 ranges behind the scene:
     in the range, then Spreadsheet still renders row 25th\~30th.
 2.  **cached range**: the browser cached cell data.
 
-When the visible range moves by user scrolling, ZSS renders DOM of cells
+When the visible range moves by user scrolling, Keikai renders DOM of cells
 from the cached. So the rendered range becomes larger. If the cache does
-not cover the whole visible range, ZSS will send AU request
+not cover the whole visible range, Keikai will send AU request
 (`onZssFetchActiveRange`) to get the data back to the cache.
 
 ![ center](/assets/images/dev-ref/3Ranges.png " center")
