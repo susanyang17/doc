@@ -1,85 +1,73 @@
+---
+title: 'Features and Usages'
+---
 # Spreadsheet User Interface Overview
 
 ![ center | 900px](/assets/images/dev-ref/essentials-feature-ui.png " center | 900px")
 
-Above is a screenshot of Keikai spreadsheet's user interface, each section
-is introduced in the following:
+This is the screenshot of Keikai spreadsheet's user interface, each section
+is introduced as follows:
 
 1.  Toolbar
       -   
-        The toolbar contains all commonly-used functions including
-        setting cell's style, alignment, border, background color, font,
-        font color, merging (and unmerging) of cells, sorting, auto
-        filter, protection and grid line visibility. It has 2 tabs,
-        another tab is used to insert charts, images, and hyperlinks for
-        web page and email address:
+        The toolbar contains all commonly-used features including controls to
+        set cell's style, alignment, border, background color, font,
+        font color, merging (and unmerging), sorting, auto
+        filter, protection, grid line visibility and to insert charts, images, and hyperlinks.
         The 3 leftmost buttons, "New Book", "Save Book", and "Export to
-        PDF", are not built-in functions. You have to implement them by
-        yourself.
+        PDF" are not built-in features as they highly depend on your application settings. You will have to implement the logic by
+        yourself and associate them with the buttons.
 2.  Formula bar
       -   
-        It displays editing text or formula of current selected cell and
-        can be used to enter or edit a formula or data.
+        It displays text or formula of the current selected cell. It can also be used for entering or editing a formula or data.
 3.  Sheet Area
       -   
-        It displays the content of current selected sheet, and you
-        usually perform most editing operations in this area.
+        It displays the content of current selected sheet, this is also the area where users normally work with.
 4.  Context menu
       -   
-        Right clicking on a cell, a column header, or a row header pops
-        up a context menu. It contains most options of the toolbar and
-        works like a shortcut.
+        A context menu is displayed when you right click on a cell, a column header, or a row header. It contains most options of the toolbar and works like a shortcut.
 5.  Sheet bar
       -   
-        A list of all sheets in this book. You can navigate to any sheet
-        by clicking on it. Click
-        ![essentials-feature-addSheet.png](/assets/images/dev-ref/essentials-feature-addSheet.png
-        "essentials-feature-addSheet.png") can add a new sheet. Right
-        clicking on a sheet pops a context menu, and it allows you to do
-        some sheet operations.
+        Sheet bar displays a list of all sheets in this book. You can navigate to any sheet
+        by clicking on it. You can add a sheet by clicking the + button on the left. If you right
+        click on the sheet bar it pops up a context menu, and allows you to perform sheet operations.
         ![ center](/assets/images/dev-ref/essentials-feature-sheet-contextmenu.png " center")
-        Sheet navigation button makes you switch sheets conveniently.
-
-![ center](/assets/images/dev-ref/essentials-feature-sheet-navigation.png " center")
+        The hamburger menu next to the + icon is the sheet navigation button. It allows users to switch sheets conveniently.
 
 # Features
 
-## Integrating with ZK Charts
+## Integrated with ZK Charts
 
-Every chart is now rendered by another ZK product ZK Charts which is
-more elegant and displayed with animation. When you hover your mouse
-pointer, it will show related data in a tooltip. ![ 900px |
-center](/assets/images/dev-ref/zss-essential-zkchart.png " 900px | center")
+The charts in Keikai sheet is rendered by another ZK product called ZK Charts. When you hover your mouse
+pointer over the charts, it will show related info in a tooltip. ![ 900px |
+center](/assets/images/dev-ref/Zss-essential-zkchart.png " 900px | center")
 
 ## Rich Text Editing
 
-You can apply multiple styles to a cell with a rich text editor. To open
-a rich-text editor, right clicking a cell, select "Right Text Edit" in
+You can apply multiple styles to a same cell by using the rich text editor. To open
+a rich-text editor, right click a cell and select "Right Text Edit" in
 the context menu.
 
 ![ center](/assets/images/dev-ref/essential-richtexteditor.png " center")
 
 ## Comment
 
-To insert/edit/delete a comment, right clicking a cell, select
+To insert/edit/delete a comment, right click a cell and select
 corresponding item in the context menu.
 
 ![ 550px](/assets/images/dev-ref/essential-edit-comment.png " 550px")
 ![essential-display-comment.png](/assets/images/dev-ref/essential-display-comment.png
 "essential-display-comment.png")
 
-## Support Different Zoom Level
+## Support Different Zoom Levels
 
-Spreadsheet supports viewing in different zoom level. You can change
-zoom level within a browser according to your need.
-
-The screenshot below is a Spreadsheet which is zoomed to 150%. ![ 800px|
-center](/assets/images/dev-ref/zss-essentials-feature-zoom150.png " 800px| center")
+Spreadsheet supports viewing in different zoom levels. You can change browser's
+zoom level according to your needs.
 
 ## Display Currency Symbol of Different Countries
 
-Keikai can display currency symbol of different countries such as $, ¥, ₩,
-€, and HKD on a cell with currency format.
+Keikai can display different currency symbols such as $, ¥, ₩,
+€, and HKD in a cell with the currency format.
 
 ## Localization of Number/Formula Input
 
@@ -88,10 +76,9 @@ numbers.
 
 ## Smart Input
 
-When you enter a text in a cell with the default format (General), Keikai
-convert some special number inputs such as 1,234,567, $123456,
-($123456), ($1,234,567), 1.2%, 123456E10 into a number value and set its
-corresponding Cell format automatically.
+When you enter numbers in a cell with the default format (General), Keikai
+converts the numbers into the number format and sets its corresponding format automatically for you, for example 1,234,567, $123456,
+($123456), ($1,234,567), 1.2% or 123456E10.
 
 ## Date Format
 
