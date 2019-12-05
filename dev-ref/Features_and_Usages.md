@@ -31,7 +31,9 @@ is introduced as follows:
         Sheet bar displays a list of all sheets in this book. You can navigate to any sheet
         by clicking on it. You can add a sheet by clicking the + button on the left. If you right
         click on the sheet bar it pops up a context menu, and allows you to perform sheet operations.
+        
         ![ center](/assets/images/dev-ref/essentials-feature-sheet-contextmenu.png " center")
+        
         The hamburger menu next to the + icon is the sheet navigation button. It allows users to switch sheets conveniently.
 
 # Features
@@ -39,8 +41,9 @@ is introduced as follows:
 ## Integrated with ZK Charts
 
 The charts in Keikai sheet is rendered by another ZK product called ZK Charts. When you hover your mouse
-pointer over the charts, it will show related info in a tooltip. ![ 900px |
-center](/assets/images/dev-ref/Zss-essential-zkchart.png " 900px | center")
+pointer over the charts, it will show related info in a tooltip. 
+
+![ 900px |center](/assets/images/dev-ref/Zss-essential-zkchart.png " 900px | center")
 
 ## Rich Text Editing
 
@@ -56,6 +59,9 @@ To insert/edit/delete a comment, right click a cell and select
 corresponding item in the context menu.
 
 ![ 550px](/assets/images/dev-ref/essential-edit-comment.png " 550px")
+
+Show comment
+
 ![essential-display-comment.png](/assets/images/dev-ref/essential-display-comment.png
 "essential-display-comment.png")
 
@@ -83,26 +89,26 @@ converts the numbers into the number format and sets its corresponding format au
 ## Date Format
 
 Some date formats in Keikai are regional (starting with an **asterisk,
-\***, same as Excel ) and some are international. ![
-center](/assets/images/dev-ref/zss-essentials-dateFormat.png " center") Regional ones will
-change its displaying format according to the system locale, but
-international one doesn't change. \[1\]
+\***, same as Excel ) and some are international. 
+
+![center](/assets/images/dev-ref/zss-essentials-dateFormat.png " center") 
+
+Regional ones will change its displaying format according to the system locale, but
+international ones won't change. \[1\]
 
 <references/>
 
 ## Conditional Formatting
 
-`since 3.9.0`
+Keikai can display conditional formatting set in an Excel file. This feature
+allows you to highlight cells with the given conditions. In the case below, the values in the "Income" column has conditional formatting enabled: 
 
-Keikai can display conditional formatting of an Excel file. This feature
-allows you to highlight a cell with a certain color according to the
-cell's value like the "Income" column below: ![
-center](/assets/images/dev-ref/zss-essentials-conditionalFormatting.png " center")
+![center](/assets/images/dev-ref/zss-essentials-conditionalFormatting.png " center")
 
-  - Modify conditional formatting is not supported yet.
+  - Modify conditional formatting in Keikai UI is not supported at the moment.
 
-## Name Range
-ZSS cam read a name range from a xlsx file, so you can specify a name range in a formula like `=SUM(source)`. To create a name range, please call [Range::createName](https://www.zkoss.org/javadoc/latest/zss/org/zkoss/zss/api/Range.html#createName-java.lang.String-).
+## Named Range
+Keikai can read a named range from an xlsx file, so you can specify a named range in a formula like `=SUM(source)`. To create a named range, please reference javadoc [Range::createName](https://keikai.io/javadoc/).
 
 
 # Supported Hotkeys
@@ -168,36 +174,32 @@ ZSS cam read a name range from a xlsx file, so you can specify a name range in a
 
 # Usage
 
-The following sections will introduce usages of some noticeable features
-which are all .
+In the following sections we will introduce the usages of some noticeable features.
 
 ## Copy & Paste
 
-  - If you copy and paste inside a Keikai component, it has full
+  - If you copy and paste within a Keikai component, it has full
     information at both server and client side, so such copy-paste can
-    retain all information of cells including styles, a formula, format,
+    retain all cell information including styles, formula, format, and
     data validation.
-  - If you copy a whole column/row, Keikai also copy the width/height. But
-    copying one or multiple cells doesn't copy the width and height to
+  - If you copy a whole column/row, Keikai also copy its width and height. But if you are only
+    copying one or multiple cells, Keikai won't copy the width and height to
     target cells.
-  - If you want to copy almost a whole sheet to another Keikai component,
+  - If you wish to copy a whole sheet to another Keikai component,
     please call
     <https://www.zkoss.org/javadoc/latest/zss/org/zkoss/zss/api/Range.html#cloneSheetFrom-java.lang.String-io.keikai.model.Sheet->.
-    It can clone a sheet from another `Book` object.
+    It can clone a sheet from another `Book` object and is more performant.
 
-### Between Keikai and Other Application like Excel
+### Copy/Paste Between Keikai and Other Applications like Excel
 
-  - Such copy-paste only works with **Ctrl+c** and **Ctrl+v**. Click
-    "Paste" on the toolbar or context menu only works for copying cells
-    inside one Keikai component.
+  - Such copy-paste will only work with **Ctrl+C** and **Ctrl+V**. The toolbar or context menu "Paste" button only works for copying cells within the same Keikai component and will not work across different applications.
   - Such copy-paste is an action between 2 applications (Excel and
     browser) through a system clipboard. Currently, Keikai only extract
     text content from a system clipboard, so this copy-paste only pastes
-    the "pure text" you see on the screen without any specified style on
-    cells.
-  - For example, a cell in Excel with a formula `=sum(1)`, if you copy
-    the cell and paste it to Keikai, the cell in Keikai gets `1` as a number.
-    Just like you type `1` in a Keikai cell.
+    "pure text" without any styles.
+  - For example, a cell in Excel has a formula `=sum(1,2)` which is `3`. If you copy
+    this cell and paste it into Keikai, the cell in Keikai gets `3` as a number.
+    Just like you type `3` in a Keikai cell.
   - If you enter edit mode, select the text `=sum(1)` and copy it in
     Excel, then paste to a cell in Keikai. Keikai gets a formula, just like
     you type a formula in a Keikai cell.
