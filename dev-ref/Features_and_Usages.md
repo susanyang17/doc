@@ -222,140 +222,118 @@ You can select "Paste Special" to access all available pasting options in the di
 
 ## Custom Sort
 
-The "Ascending" and "Descending" function can sort data by only one
-column but "Custom sort" can sort data by multiple columns. ![
-center](/assets/images/dev-ref/essentials-feature-customSort.png " center")
+With the "Ascending" and "Descending" function you can sort data by only one
+column, with "Custom sort" you can sort data by multiple columns. 
+
+![center](/assets/images/dev-ref/essentials-feature-customSort.png " center")
 
 After selecting "Custom sort" on the toolbar, a dialog appears. You can
-add sorting criteria to 3 columns at the most. If your data includes
-column headings, make sure the "My data has headers" option is checked.
-![ center](/assets/images/dev-ref/essentials-feature-customSortDialog.png " center")
+add sorting criterias up to 3 columns. If your data includes
+column header, make sure the "My data has headers" option is checked.
 
-The sorting result of criteria above: ![
-center](/assets/images/dev-ref/essentials-feature-customSort-after.png " center")
+![ center](/assets/images/dev-ref/essentials-feature-customSortDialog.png " center")
 
 ## Auto Fill
 
 Auto fill is a handy feature to fill cells with data in a particular
 pattern based on selected cells. Text will be copied and numbers and
-dates will be increased (or decreased).
+dates will be increased (or decreased) as you drag through.
 
-To use this, You should select one or more cells and drag the fill
+To use this, select one or more cells and drag the fill
 handle across or down the cells that you want to fill.
 
-![ center](/assets/images/dev-ref/essentials-feature-autoFill-select.png " center")
+![ center](/assets/images/dev-ref/Essentials-feature-autoFill-select.png)
 
-Fill cells by dragging right, left, up, or down. ![
-center](/assets/images/dev-ref/essentials-feature-autoFill.png " center")
+Fill cells by dragging right, left, up, or down. 
+
+![center](/assets/images/dev-ref/Essentials-feature-autoFill.png)
 
 The supported cell content are number, weekday (full/short), month
 (full/short), and timestamp.
 
 ## Format Cell
 
-A context menu appears when right clicking a cell, "Format Cell"
-provides 10 different categories with total of 47 formats to apply on
-cells. ![ center](/assets/images/dev-ref/essentials-feature-formatCell.png " center")
+The Format Cell optin is in the context menu. It provides 10 different categories with a total of 47 formats to apply on
+cells. 
+
+![ center](/assets/images/dev-ref/essentials-feature-formatCell.png)
 
 ## Sheet Protection
 
-If you enable "Protect Sheet" for a sheet in Excel, Spreadsheet will
+If you enable "Protect Sheet" for a sheet in Excel, Keikai will
 keep this setting when reading the Excel file, hence, when you edit a
-protected sheet, you will receive an alert message on the top left-hand
-corner.
+protected sheet, you will see an alert message telling you that the sheet is being protected.
 
-When a sheet is under protection, you can only edit those unlocked
-cells. For those locked cells, you still can specify which action you
-allow users to do.
+When a sheet is under protection, users can only edit unlocked
+cells. You can specify which actions are allowed for unlocked cells.
 
 ![ center](/assets/images/dev-ref/zss-essentials-feature-protection.png " center")
 
 ## Filters
 
-The filter can help you screen out data and work with a subset of data
+A filter can help you screen out data and work with a subset of data
 in a range of cells without moving or deleting them.
 
 When you click on the filter icon, there are 3 menu items: **Filter**,
-**Clear**, and **Reapply** related to filter. ![
-center](/assets/images/dev-ref/zss-essentials-filter-menu.png " center")
+**Clear**, and **Reapply** relating to the filter. 
 
-Click "Filter"
-![zss-essentials-filter-filter-icon.png](/assets/images/dev-ref/zss-essentials-filter-filter-icon.png
-"zss-essentials-filter-filter-icon.png") can enable / disable filters.
-When filters are enabled, first row of each column will show up a
-drop-down arrow icon
-![zss-essentials-filter-dropdown-icon.png](/assets/images/dev-ref/zss-essentials-filter-dropdown-icon.png
-"zss-essentials-filter-dropdown-icon.png"). If you click the drop-down
-icon, a list of values appears and you can select from the list as a
-filtering criterion to apply on data.
+![center](/assets/images/dev-ref/zss-essentials-filter-menu.png)
 
-![ center](/assets/images/dev-ref/zss-essentials-filter-enable.png " center")
+Click the funnel-like "Filter" icon to enable/disable filters.
+When filters are enabled, a drop-down icon will show up in the first row of each column. If you click the drop-down
+icon, a list of values will appear and you can select from the list as the filtering criteria to apply to your data.
 
-After you select some values click
-![zss-essentials-ok.png](/assets/images/dev-ref/zss-essentials-ok.png "zss-essentials-ok.png"),
-Spreadsheet will filter those data with selected values. Only those rows
-with matching criteria will be displayed while others stay hidden.
+![ center](/assets/images/dev-ref/zss-essentials-filter-enable.png)
+
+After you select some values, click OK and Spreadsheet will filter those data with selected values. Only the rows
+with matching criteria will be displayed while others will be hidden.
 
 You can also filter by multiple columns. Filters are additive, which
 means that each filter is based on the existing filters and further
 reduces the subset of data.
 
-Click "Clear"
-![zss-essentials-filter-clear-icon.png](/assets/images/dev-ref/zss-essentials-filter-clear-icon.png
-"zss-essentials-filter-clear-icon.png") removes all applied criteria and
-display all data available.
+Click "Clear" removes all applied criteria and displays all data available.
 
-If you add new data row, you should click "Reapply"
-![zss-essentials-filter-reapply-icon.png](/assets/images/dev-ref/zss-essentials-filter-reapply-icon.png
-"zss-essentials-filter-reapply-icon.png"). Then, drop-down list will
-update its values, and applied criteria will also work on new data.
-
-`since 3.8.1`
+If you added a new data row, you should click "Reapply". The drop-down list will then
+update its values to take into account the newly added data.
 
 **Filter by search.** When you enter text in the search box, it will
 instantly list and select all matched values. Press "Enter" and Keikai will
-filter your data with those matched values. ![
-center](/assets/images/dev-ref/zss-essentials-filterBySearching.png " center")
-
-`since 3.9.0`
+filter your data with those matched values. 
+![center](/assets/images/dev-ref/zss-essentials-filterBySearching.png)
 
 Keikai supports **number filter**, **color filter**, **date filter**, and
-**text filter**. ![ center](/assets/images/dev-ref/zss-essentials-colorFilter.png " center")
+**text filter**. 
 
-![ center](/assets/images/dev-ref/zss-essentials-dateFilter.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-colorFilter.png)
+
+![ center](/assets/images/dev-ref/zss-essentials-dateFilter.png)
 
 ## Data Validation
 
-Spreadsheet can read data validation settings of Excel files including
+Spreadsheet can read Excel data validation settings including
 validation criteria of lists, numbers, decimals, dates, or time.
-(Spreadsheet OSE will ignore validation settings.)
+(Not supported in OSE.)
 
-![ center](/assets/images/dev-ref/zss-essentials-validation-dialog.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-validation-dialog.png)
 
-If the validation criteria is a list, the cell will appear a drop-down
-arrow icon. You can click the icon to select available values. ![
-center](/assets/images/dev-ref/zss-essentials-validation-list.png " center")
+If the validation criteria is a list, the cell will display a drop-down
+arrow. You can click the icon to select available values. 
+
+![center](/assets/images/dev-ref/zss-essentials-validation-list.png)
 
 When you click on the cell with validation, the input message you set
-will appear automatically. ![
-center](/assets/images/dev-ref/zss-essentials-validation-message.png " center")
+will be displayed automatically. 
 
 If your input violates validation criteria, an error alert will pop up.
+
 ![ center](/assets/images/dev-ref/zss-essentials-validation-alert.png " center")
 
 There are 3 types of alerts and each of them has a different icon in the
-dialog. For an error alert
-![zss-essentials-validation-error-icon.png](/assets/images/dev-ref/zss-essentials-validation-error-icon.png
-"zss-essentials-validation-error-icon.png"), you can retry to enter
+dialog. For an error alert (red icon), you can retry and enter
 again or cancel to revert back to the original value. For a warning
-alert
-![zss-essentials-validation-warning-icon.png](/assets/images/dev-ref/zss-essentials-validation-warning-icon.png
-"zss-essentials-validation-warning-icon.png") , you can click "Yes" to
-accept the invalid input, "No" to edit the invalid input, or "Cancel" to
-remove the invalid input. For a information alert
-![zss-essentials-validation-information-icon.png](/assets/images/dev-ref/zss-essentials-validation-information-icon.png
-"zss-essentials-validation-information-icon.png"), you can click "OK" to
-accept the invalid value or "Cancel" to reject it.
+alert (yellow icon), you can click "Yes" to accept the invalid input, or, "No" to edit the invalid input, or "Cancel" to
+remove the invalid input. For an information alert (blue icon), you can click "OK" to accept the invalid value or "Cancel" to reject it.
 
   - custom validation is not supported yet.
 
