@@ -1,4 +1,5 @@
 ---
+title: Keikai Developer Reference
 permalink: /dev-ref
 toc: false
 ---
