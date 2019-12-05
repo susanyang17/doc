@@ -43,7 +43,7 @@ is introduced as follows:
 The charts in Keikai sheet is rendered by another ZK product called ZK Charts. When you hover your mouse
 pointer over the charts, it will show related info in a tooltip. 
 
-![ 900px |center](/assets/images/dev-ref/Zss-essential-zkchart.png " 900px | center")
+![center](/assets/images/dev-ref/Zss-essential-zkchart.png)
 
 ## Rich Text Editing
 
@@ -51,19 +51,18 @@ You can apply multiple styles to a same cell by using the rich text editor. To o
 a rich-text editor, right click a cell and select "Right Text Edit" in
 the context menu.
 
-![ center](/assets/images/dev-ref/essential-richtexteditor.png " center")
+![ center](/assets/images/dev-ref/essential-richtexteditor.png)
 
 ## Comment
 
 To insert/edit/delete a comment, right click a cell and select
 corresponding item in the context menu.
 
-![ 550px](/assets/images/dev-ref/essential-edit-comment.png " 550px")
+![center](/assets/images/dev-ref/essential-edit-comment.png)
 
 Show comment
 
-![essential-display-comment.png](/assets/images/dev-ref/essential-display-comment.png
-"essential-display-comment.png")
+![center](/assets/images/dev-ref/essential-display-comment.png)
 
 ## Support Different Zoom Levels
 
@@ -91,7 +90,7 @@ converts the numbers into the number format and sets its corresponding format au
 Some date formats in Keikai are regional (starting with an **asterisk,
 \***, same as Excel ) and some are international. 
 
-![center](/assets/images/dev-ref/zss-essentials-dateFormat.png " center") 
+![center](/assets/images/dev-ref/zss-essentials-dateFormat.png) 
 
 Regional ones will change its displaying format according to the system locale, but
 international ones won't change. \[1\]
@@ -103,7 +102,7 @@ international ones won't change. \[1\]
 Keikai can display conditional formatting set in an Excel file. This feature
 allows you to highlight cells with the given conditions. In the case below, the values in the "Income" column has conditional formatting enabled: 
 
-![center](/assets/images/dev-ref/zss-essentials-conditionalFormatting.png " center")
+![center](/assets/images/dev-ref/zss-essentials-conditionalFormatting.png)
 
   - Modify conditional formatting in Keikai UI is not supported at the moment.
 
@@ -200,29 +199,26 @@ In the following sections we will introduce the usages of some noticeable featur
   - For example, a cell in Excel has a formula `=sum(1,2)` which is `3`. If you copy
     this cell and paste it into Keikai, the cell in Keikai gets `3` as a number.
     Just like you type `3` in a Keikai cell.
-  - If you enter edit mode, select the text `=sum(1)` and copy it in
-    Excel, then paste to a cell in Keikai. Keikai gets a formula, just like
-    you type a formula in a Keikai cell.
+  - If you enter edit mode in Excel, select the text `=sum(1,2)` and copy it, then paste to a cell in Keikai. Keikai will get the formula, just like you typed a formula into the Keikai cell.
 
 ### Between 2 Keikai components
 
 Copy-paste cells between 2 Keikai components also rely on the system
-clipboard, so it's a similar case like Keikai and Excel, only copying pure
-text.
+clipboard, so it's similar to copy/paste between Keikai and Excel -- only pure text is copied.
 
 ### limitation
 
-Keikai can't paste a cell that has a multiline text into one cell of Keikai,
-and it will split the text into multiple cells by rows.
+If you copy multiline text (multiple lines with line breaks in between) from an Excel cell and paste it into Keikai, the multiline text will be displayed in multiple cells. For example if the data in an Excel cell contains 3 rows, ROW1, ROW2 and ROW3; after pasting to Keikai A1 cell, the data will be displayed in 3 consecutive cells: A1 (containing ROW1), A2 (containing ROW2), and A3 (containing ROW3). 
 
-### Special Paste
+### Paste Special
 
-In addition to normal pasting, Spreadsheet also provides other special
-pasting options on the toolbar. ![ center](/assets/images/dev-ref/essentials-feature-paste.png
-" center")
+In addition to standard pasting, Spreadsheet also provides custom pasting options in the toolbar. 
 
-You can select "Paste Special" to access all available pasting options
-in a dialog. ![ center](/assets/images/dev-ref/essentials-feature-pasteSpecial.png " center")
+![ center](/assets/images/dev-ref/essentials-feature-paste.png)
+
+You can select "Paste Special" to access all available pasting options in the dialog. 
+
+![ center](/assets/images/dev-ref/essentials-feature-pasteSpecial.png)
 
 ## Custom Sort
 
