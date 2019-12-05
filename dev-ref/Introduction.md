@@ -1,3 +1,6 @@
+---
+title: 'Introduction'
+---
 # Background
 
 Keikai spreadsheet is an AJAX component that delivers Excel-like experience
