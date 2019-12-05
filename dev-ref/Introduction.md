@@ -29,7 +29,7 @@ plug-ins are required.
 ![](/assets/images/dev-ref/Essentials-app-architecture.png)
 
 **More Details** 
-![](/assets/images/dev-ref/essentials-architecture.png)
+![](/assets/images/dev-ref/Essentials-architecture.png)
 
 Keikai spreadsheet component consists of three major parts -- the
 client-side UI , the server-side component, and the book data model with
@@ -39,21 +39,16 @@ instance which your controller usually works with. The data model stores
 the actual Spreadsheet data. The formula evaluation engine is
 responsible for formula parsing and calculations.
 
-# Using in JSP or JSF
+# Use in JSP
 
-If you have an existing JSP project that you wish to include spreadsheet features, you can use Keikai in JSP with custom tag library and interact with it by writing Javascript. Please refer to [ Using Spreadsheet in
-JSP](Using_Spreadsheet_in_JSP "wikilink")
-for details. For JSF, we provides a Spreadsheet JSF component which can
-be used within a JSF page and interact with other components by AJAX
-tag. Please refer to [ Using Spreadsheet in
-JSF](Using_Spreadsheet_in_JSF "wikilink")
-for details.
+If you have an existing JSP project that you wish to include spreadsheet features, you can use Keikai in JSP with custom tag library and interact with it by writing Javascript. Please refer to [ Using Spreadsheet in JSP](Using_Spreadsheet_in_JSP "wikilink")
+for details. 
 
 
 # Supported Browsers
 
-For the best user experience, we recommend using one of the following
-browsers: IE 11 and higher, latest version of Chrome, FF, or Safari.
+For best user experience, we recommend using one of the following
+browsers: the latest version of Chrome, FF, Safari, or IE11 and higher versions.
 
 # Next Step
 
