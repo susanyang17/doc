@@ -3,7 +3,7 @@ title: 'Features and Usages'
 ---
 # Spreadsheet User Interface Overview
 
-![ center | 900px](/assets/images/dev-ref/essentials-feature-ui.png " center | 900px")
+![center](/assets/images/dev-ref/essentials-feature-ui.png)
 
 This is the screenshot of Keikai spreadsheet's user interface, each section
 is introduced as follows:
@@ -32,7 +32,7 @@ is introduced as follows:
         by clicking on it. You can add a sheet by clicking the + button on the left. If you right
         click on the sheet bar it pops up a context menu, and allows you to perform sheet operations.
         
-        ![ center](/assets/images/dev-ref/essentials-feature-sheet-contextmenu.png " center")
+        ![ center](/assets/images/dev-ref/essentials-feature-sheet-contextmenu.png)
         
         The hamburger menu next to the + icon is the sheet navigation button. It allows users to switch sheets conveniently.
 
