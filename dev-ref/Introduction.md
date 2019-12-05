@@ -18,7 +18,7 @@ spreadsheet just like other built-in formulas. You can even provide an online
 spreadsheet service with Keikai.
 
 Keikai spreadsheet is an extensible, customizable, and integrable Java AJAX
-web spreadsheet solution, on the front-end it has a built-in browser AJAX user interface
+web spreadsheet component, on the front-end it has an AJAX user interface in the browser, 
 and on the back-end a server side Excel-like data and logic. No ActiveX or any other
 plug-ins are required.
 
