@@ -114,6 +114,10 @@ center](/assets/images/dev-ref/zss-essentials-conditionalFormatting.png " center
 
   - Modify conditional formatting is not supported yet.
 
+## Name Range
+ZSS cam read a name range from a xlsx file, so you can specify a name range in a formula like `=SUM(source)`. To create a name range, please call [Range::createName](https://www.zkoss.org/javadoc/latest/zss/org/zkoss/zss/api/Range.html#createName-java.lang.String-).
+
+
 # Supported Hotkeys
 
 <table>
