@@ -1,31 +1,25 @@
-# Overview
+# Background
 
 Keikai spreadsheet is an AJAX component that delivers Excel-like experience
-for your Java web application. It has a grid-like user interface with
-toolbar, formula bar, and sheet bar and it provides necessary features
-such as editing text and styles, merging, sorting cells and inserting,
-deleting, and freezing rows and columns. Spreadsheet not only supports
-over 75% of Excel formulas and you can even add your own ones. Some
-handy features like "auto fill", "auto filter", and protection are also
-included in Spreadsheet.
+to your Java web application. It has a grid-like user interface with
+a toolbar, a formula bar, and a sheet bar; it provides popular spreadsheet features
+such as editing text and styles, merging and sorting cells, and inserting,
+deleting, and freezing rows and columns. In addition Keikai supports more than 200 commonly used Excel built-in formulas and you can even add your own. Some other handy features like "auto fill", "filter", and "sheet/cell protection" are also
+supported.
 
-Being able to import and export Excel files are just the top of the
-features iceberg. Unlike other online spreadsheet such as Google Docs or
-Microsoft Office 2010 online suite, you can integrate Keikai spreadsheet
-with your enterprise back-end systems seamlessly and create
-collaborative and dynamic enterprise applications at minimal cost. You
-can call versatile Java APIs to control and configure the Keikai spreadsheet
-component(s). You can register event listeners so an action can be
-automatically triggered if any specified cell, range, or name changes.
-You can make cells reference to the backend Java beans, so any changes
+Being able to import and export Excel files are just the most basic features provided. You can do much more with Keikai. 
+In contrast to other online spreadsheets such as Google Docs and Microsoft Excel Online, you can integrate Keikai spreadsheet with your enterprise back-end systems and create collaborative and dynamic spreadsheet-driven enterprise applications easily. You
+can call versatile Java APIs to control and configure Keikai spreadsheet. You can register event listeners so that an action can be
+automatically triggered when any specified cell, range, or name changes.
+You can make cells reference to the backend Java beans, so that any changes
 on the backend data can automatically reflect on Keikai spreadsheet. You can
-create your own customized formulas in Java and use them in the
-spreadsheet like other built-in formulas. You can even create an online
-spreadsheet service with Keikai spreadsheet component.
+create your own custom formulas in Java and use them in the
+spreadsheet just like other built-in formulas. You can even provide an online
+spreadsheet service with Keikai.
 
 Keikai spreadsheet is an extensible, customizable, and integrable Java AJAX
-web spreadsheet solution, with both built-in browser AJAX user interface
-and back-end server side Excel-like data and logic. No ActiveX or other
+web spreadsheet solution, on the front-end it has a built-in browser AJAX user interface
+and on the back-end a server side Excel-like data and logic. No ActiveX or any other
 plug-ins are required.
 
 # Architecture
@@ -34,7 +28,7 @@ plug-ins are required.
 
 ![](/assets/images/dev-ref/Essentials-app-architecture.png)
 
-**More Inner Details** 
+**More Details** 
 ![](/assets/images/dev-ref/essentials-architecture.png)
 
 Keikai spreadsheet component consists of three major parts -- the
@@ -47,8 +41,7 @@ responsible for formula parsing and calculations.
 
 # Using in JSP or JSF
 
-You can use Spreadsheet in JSP with custom tag library and interact with
-it by writing Javascript. Please refer to [ Using Spreadsheet in
+If you have an existing JSP project that you wish to include spreadsheet features, you can use Keikai in JSP with custom tag library and interact with it by writing Javascript. Please refer to [ Using Spreadsheet in
 JSP](Using_Spreadsheet_in_JSP "wikilink")
 for details. For JSF, we provides a Spreadsheet JSF component which can
 be used within a JSF page and interact with other components by AJAX
@@ -57,26 +50,11 @@ JSF](Using_Spreadsheet_in_JSF "wikilink")
 for details.
 
 
-# Difference from Keikai 3.9
-
-In 3.5.0, we introduce a brand new model implementation. This
-enhancement doesn't change the way you use the Spreadsheet's public API
-mostly, but reduces Spreadsheet's memory consumption. Also we have
-established a new theme mechanism that you can design your own theme
-with CSS and change it dynamically. We have as well designed a new
-Skyline theme as the default theme for the version 3.5. There are other
-enhancements; please refer to
-<http://books.zkoss.org/wiki/Small_Talks/2014/July/New_Features_of_ZK_Spreadsheet_3.5.0>
-for details.
-
 # Supported Browsers
 
 For the best user experience, we recommend using one of the following
-browsers: Internet Explorer 9 and higher, latest version of FF, Chrome,
-or Safari
+browsers: IE 11 and higher, latest version of Chrome, FF, or Safari.
 
 # Next Step
 
-You can <http://zssdemo.zkoss.org/zssdemo> or [ get Spreadsheet running
-at your local
-site](ZK_Spreadsheet_Essentials/Using_Spreadsheet_in_ZK/Get_Spreadsheet_Up_and_Running_Quickly "wikilink").
+You can visit [Keikai Demo](https://keikai.io/demo/) or [Run it up locally](https://doc.keikai.io/tutorial).
