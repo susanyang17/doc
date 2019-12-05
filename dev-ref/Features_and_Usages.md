@@ -225,13 +225,13 @@ You can select "Paste Special" to access all available pasting options in the di
 With the "Ascending" and "Descending" function you can sort data by only one
 column, with "Custom sort" you can sort data by multiple columns. 
 
-![center](/assets/images/dev-ref/essentials-feature-customSort.png " center")
+![center](/assets/images/dev-ref/essentials-feature-customSort.png)
 
 After selecting "Custom sort" on the toolbar, a dialog appears. You can
 add sorting criterias up to 3 columns. If your data includes
 column header, make sure the "My data has headers" option is checked.
 
-![ center](/assets/images/dev-ref/essentials-feature-customSortDialog.png " center")
+![ center](/assets/images/dev-ref/essentials-feature-customSortDialog.png)
 
 ## Auto Fill
 
@@ -267,7 +267,7 @@ protected sheet, you will see an alert message telling you that the sheet is bei
 When a sheet is under protection, users can only edit unlocked
 cells. You can specify which actions are allowed for unlocked cells.
 
-![ center](/assets/images/dev-ref/zss-essentials-feature-protection.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-feature-protection.png)
 
 ## Filters
 
@@ -300,12 +300,13 @@ update its values to take into account the newly added data.
 **Filter by search.** When you enter text in the search box, it will
 instantly list and select all matched values. Press "Enter" and Keikai will
 filter your data with those matched values. 
+
 ![center](/assets/images/dev-ref/zss-essentials-filterBySearching.png)
 
 Keikai supports **number filter**, **color filter**, **date filter**, and
 **text filter**. 
 
-![ center](/assets/images/dev-ref/zss-essentials-colorFilter.png)
+![center](/assets/images/dev-ref/zss-essentials-colorFilter.png)
 
 ![ center](/assets/images/dev-ref/zss-essentials-dateFilter.png)
 
@@ -327,7 +328,7 @@ will be displayed automatically.
 
 If your input violates validation criteria, an error alert will pop up.
 
-![ center](/assets/images/dev-ref/zss-essentials-validation-alert.png " center")
+![ center](/assets/images/dev-ref/zss-essentials-validation-alert.png)
 
 There are 3 types of alerts and each of them has a different icon in the
 dialog. For an error alert (red icon), you can retry and enter
