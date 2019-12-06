@@ -66,23 +66,22 @@ Show comment
 
 ## Support Different Zoom Levels
 
-Spreadsheet supports viewing in different zoom levels. You can change browser's
-zoom level according to your needs.
+You can view Keikai in different browser zoom levels. 
 
-## Display Currency Symbol of Different Countries
+## Support Various Currencies
 
 Keikai can display different currency symbols such as $, ¥, ₩,
-€, and HKD in a cell with the currency format.
+€, and HKD in a cell in the currency format.
 
-## Localization of Number/Formula Input
+## Localize A Number/Formula Input
 
 Keikai also accepts ','(comma) or '.'(dot) as the decimal point for decimal
 numbers.
 
 ## Smart Input
 
-When you enter numbers in a cell with the default format (General), Keikai
-converts the numbers into the number format and sets its corresponding format automatically for you, for example 1,234,567, $123456,
+When you enter numbers in a cell with the default format (General), Keikai will
+convert the numbers into corresponding number format for you, for example 1,234,567, $123456,
 ($123456), ($1,234,567), 1.2% or 123456E10.
 
 ## Date Format
@@ -181,9 +180,8 @@ In the following sections we will introduce the usages of some noticeable featur
     information at both server and client side, so such copy-paste can
     retain all cell information including styles, formula, format, and
     data validation.
-  - If you copy a whole column/row, Keikai also copy its width and height. But if you are only
-    copying one or multiple cells, Keikai won't copy the width and height to
-    target cells.
+  - If you copy a whole column/row, Keikai also copies its width and height. But if you are only
+    copying one or multiple cells, Keikai won't copy the width and height.
   - If you wish to copy a whole sheet to another Keikai component,
     please call
     <https://www.zkoss.org/javadoc/latest/zss/org/zkoss/zss/api/Range.html#cloneSheetFrom-java.lang.String-io.keikai.model.Sheet->.
@@ -197,13 +195,13 @@ In the following sections we will introduce the usages of some noticeable featur
     text content from a system clipboard, so this copy-paste only pastes
     "pure text" without any styles.
   - For example, a cell in Excel has a formula `=sum(1,2)` which is `3`. If you copy
-    this cell and paste it into Keikai, the cell in Keikai gets `3` as a number.
+    this cell and paste it into Keikai, the cell in Keikai gets the calculated `3` as its value.
     Just like you type `3` in a Keikai cell.
-  - If you enter edit mode in Excel, select the text `=sum(1,2)` and copy it, then paste to a cell in Keikai. Keikai will get the formula, just like you typed a formula into the Keikai cell.
+  - If you enter edit mode in Excel and select the text `=sum(1,2)` and copy it, and then paste it to a cell in Keikai, Keikai will get the formula, just like you typed a formula into the Keikai cell.
 
 ### Between 2 Keikai components
 
-Copy-paste cells between 2 Keikai components also rely on the system
+Copy-paste cell data between 2 Keikai components also rely on the system
 clipboard, so it's similar to copy/paste between Keikai and Excel -- only pure text is copied.
 
 ### limitation
@@ -228,7 +226,7 @@ column, with "Custom sort" you can sort data by multiple columns.
 ![center](/assets/images/dev-ref/essentials-feature-customSort.png)
 
 After selecting "Custom sort" on the toolbar, a dialog appears. You can
-add sorting criterias up to 3 columns. If your data includes
+add sorting criteria up to 3 columns. If your data includes
 column header, make sure the "My data has headers" option is checked.
 
 ![ center](/assets/images/dev-ref/essentials-feature-customSortDialog.png)
@@ -253,14 +251,13 @@ The supported cell content are number, weekday (full/short), month
 
 ## Format Cell
 
-The Format Cell optin is in the context menu. It provides 10 different categories with a total of 47 formats to apply on
-cells. 
+The Format Cell optin is in the context menu. It provides 10 different categories with a total of 47 formats to apply to the cells. 
 
 ![ center](/assets/images/dev-ref/essentials-feature-formatCell.png)
 
 ## Sheet Protection
 
-If you enable "Protect Sheet" for a sheet in Excel, Keikai will
+If you enable "Protect Sheet" against a sheet in Excel, Keikai will
 keep this setting when reading the Excel file, hence, when you edit a
 protected sheet, you will see an alert message telling you that the sheet is being protected.
 
@@ -314,7 +311,6 @@ Keikai supports **number filter**, **color filter**, **date filter**, and
 
 Spreadsheet can read Excel data validation settings including
 validation criteria of lists, numbers, decimals, dates, or time.
-(Not supported in OSE.)
 
 ![ center](/assets/images/dev-ref/zss-essentials-validation-dialog.png)
 
@@ -339,5 +335,3 @@ remove the invalid input. For an information alert (blue icon), you can click "O
   - custom validation is not supported yet.
 
 <!-- end list -->
-
-1.  <https://support.office.com/en-us/article/Format-a-date-the-way-you-want-8e10019e-d5d8-47a1-ba95-db95123d273e?ui=en-US&rs=en-US&ad=US&fromAR=1>
