@@ -1,35 +1,35 @@
-\_\_TOC\_\_
+---
+title: 'Use Spreadsheet JSP Tag'
+---
 
 # Overview
 
-In this section, we will demonstrate how to make an HTML element, like a
-button, to interact with Keikai spreadsheet in a JSP using AJAX. As the ZK
-framework has integrated with <http://jquery.com>, and we don't have to
-include jQuery's JavaScript library. This will be our first choice when
-using a JavaScript library. We assume you know some basics about jQuery.
+In this section, we will demonstrate how you can make an HTML element, like a
+button, to interact with Keikai spreadsheet in a JSP using AJAX. Since ZK
+framework already integrated <http://jquery.com>, we don't have to
+include jQuery's JavaScript library again. The following section requires basic JS & jQuery knowledge.
 
-The example application is a simple page to request for leave. A user
-fills the required field in cells and click "OK" button to submit his
+The example is a simple Request For Leave application. A user
+fills in the required field in cells and click "OK" button to submit his
 request for leave. Or he can clicks "Reset" button to reset what he
 inputs to default value. The screenshot below shows a request of a user
 "John":
 
-![ center](/assets/images/dev-ref/essentials-jsp-app.png " center")
+![center](/assets/images/dev-ref/Essentials-jsp-app.png)
 
-We use Spreadsheet to make the application form and the two buttons are
-just ordinary HTML buttons.
+The application form is created using Keikai Spreadsheet and the two buttons Reset and OK are
+just ordinary HTML buttons in a JSP page.
 
 ## Interaction between JSP and Spreadsheet
 
 The sequence diagram displays the overall handling process of an AJAX
 request when a user clicks a button in app4l.jsp.
 
-![ center](/assets/images/dev-ref/essentials-jsp-interaction.png " center")
+![center](/assets/images/dev-ref/Essentials-jsp-interaction.png)
 
 The `app4l.jsp` is the main page with the form for leave. The
 `ForLeaveServlet` is a servlet we implement for the example to handle
-AJAX requests from `app4l.jsp`.
-<javadoc directory="keikai">io.keikai.jsp.JsonUpdateBridge</javadoc> is
+AJAX requests from `app4l.jsp`. `io.keikai.jsp.JsonUpdateBridge`is
 a utility class that provides access to ZK desktop and starts an
 execution in a foreign AJAX channel. We should access components like
 spreadsheet in its `process()` method and it will generate a
@@ -38,9 +38,9 @@ corresponding ZK AJAX response for us.
 Firstly, `app4l.jsp` sends an AJAX request with required parameter such
 as desktop ID, spreadsheet UUID, and application related data to
 `ForLeaveServlet`. The servlet extracts necessary parameters to create
-`JsonUpdateBridge` object and call its `process()` to handle the AJAX
-request. Then responds with the JSON object which contains ZK AJAX
-response to the client. Then we use a Javascript utility object `zssjsp`
+`JsonUpdateBridge` object and calls its `process()` to handle the AJAX
+request. Then it responds with the JSON object which contains ZK AJAX
+response to the client. We can then use a Javascript utility object `zssjsp`
 provided by Spreadsheet to process ZK AJAX response and process other
 data of the JSON response according to our business logic.
 
@@ -51,8 +51,8 @@ library. You have to declare a tag library with `<%@taglib %>` first and
 write Spreadsheet JSP tag with a specified prefix.
 
 **app4l.jsp**
-
 ``` html
+{% highlight java linenos %}
 <%@page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <%@taglib prefix="zssjsp" uri="http://www.zkoss.org/jsp/zss"%> http://www.zkoss.org/jsp/zss"%>
@@ -75,7 +75,8 @@ write Spreadsheet JSP tag with a specified prefix.
     <button id="resetBtn">Reset</button>
     <button id="checkBtn">OK</button>
     ...
-</body>    
+</body>
+{% endhighlight %}
 ```
 
   - Line 3, 10: Basic steps to use spreadsheet JSP tag.
@@ -85,11 +86,10 @@ write Spreadsheet JSP tag with a specified prefix.
 
 ## Book Provider
 
-The line 15 in the previous code sample, app4l.jsp, has a special
-attribute which contains a book provider class name
+Line 15 in the previous code sample, app4l.jsp, has a special
+attribute which contains a book provider class named
 `io.keikai.jspdemo.DemoBookProvider`. The class implements an
-interface,
-<javadoc directory="keikai">io.keikai.jsp.BookProvider</javadoc>, which
+interface `io.keikai.jsp.BookProvider` which
 is used to load a book model programmatically in JSP or in a servlet.
 This provider is called when creating a Spreadsheet in ZK context. The
 returned book model will be set to a Spreadsheet.
@@ -117,7 +117,7 @@ public class DemoBookProvider implements BookProvider{
 
 # Send AJAX Request
 
-The scenario is clicking a button to send an AJAX request, so we have to
+The scenario in the example is that the user clicks a button to send an AJAX request, so we have to
 bind event listeners on buttons. To send an AJAX request with JQuery in
 JSP doesn't require any ZK knowledge, but the servlet needs desktop ID
 and spreadsheet's UUID to retrieve a ZK desktop and spreadsheet
@@ -127,8 +127,8 @@ Spreadsheet to get it.
 **Javascript in app4l.jsp**
 
 ``` javascript
-//jq is jquery name in zk, which version is 1.6.4 in spreadsheet
-// 3.0.0 (zk 6.5.3 and later) 
+{% highlight java linenos %}
+//jq is jquery name in zk, version 1.12.4 is used in ZK 9
 jq(document).ready(function(){
     //register client event on button by jquery api 
     jq("#checkBtn").click(function(){
@@ -154,7 +154,8 @@ function postAjax(action){
     jq.ajax({url:"app4l",//the servlet url
         data:{desktopId:desktopId,zssUuid:zssUuid,action:action},
         type:'POST',dataType:'json'}).done(handleAjaxResult);
-}   
+} 
+{% endhighlight %}
 ```
 
   - Line 5: The `jq` is a variable that equals to `$` of jQuery
@@ -162,7 +163,7 @@ function postAjax(action){
   - Line 17,18 : Use Javascript object `zssjsp` provided by Spreadsheet
     to get desktop ID and spreadsheet's UUID with spreadsheet's
     component ID, "myzss".
-  - Line 25: You can refer to <http://api.jquery.com/category/ajax/> for
+  - Line 25: You can refer to ![jQueryAPI](http://api.jquery.com/category/ajax/) for
     details.
 
 # Handle AJAX Request and Response
@@ -178,6 +179,7 @@ business logic and access spreadsheet component in it. Then
 `JsonUpdateBridge` will generate corresponding ZK AJAX response for us.
 
 ``` java
+{% highlight java linenos %}
 public class ForLeaveServlet extends HttpServlet{
 
     @Override
@@ -229,6 +231,7 @@ public class ForLeaveServlet extends HttpServlet{
     }
 ...
 }
+{% endhighlight %}
 ```
 
   - Line 10,12: Get desktop ID and spreadsheet UUID for they will be
@@ -241,10 +244,8 @@ public class ForLeaveServlet extends HttpServlet{
 ## Handling Spreadsheet Data Model
 
 Inside `JsonUpdateBridge.process()`, you can use those APIs we mentioned
-in [ Handling Data
-Model](Working_with_Spreadsheet/Handling_Data_Model "wikilink")
-to implement your business logic. In our example, we use
-<javadoc directory="keikai">io.keikai.api.Range</javadoc> to set cell
+in [Handling Data Model](Handling_Data_Model)
+to implement your business logic. In our example, we use `io.keikai.api.Range` to set cell
 edit text and get a value from the cells.
 
 ## Reset Cells
@@ -270,9 +271,10 @@ public class ForLeaveServlet extends HttpServlet{
 ## Check Cells
 
 The method `handleReset()` implements the business logic to validate
-user input and return a data for form element to submit at the browser.
+user input and return a data for form element to submit in the browser.
 
 ``` java
+{% highlight java linenos %}
 public class ForLeaveServlet extends HttpServlet{
 ...
     //validate cell data of user input and return a JSONObject
@@ -320,11 +322,12 @@ public class ForLeaveServlet extends HttpServlet{
     }
 ...
 }
+{% endhighlight %}
 ```
 
-  - Line 13: The `result` is a JSONObject that will be sent back to
+  - Line 13: The `result` is a JSONObject that will be sent back to the
     client. You can put any data you like according to your business
-    requirement because you can get it in `app4l.jsp` and handle by
+    requirement because you can get it in `app4l.jsp` and handle it by
     yourself. In our case, we put a validation message in order and show
     it with Javascript.
   - Line 25: You can handle your business logic here and return a final
@@ -342,6 +345,7 @@ like showing validation message or submitting a form.
 **Javascript in app4l.jsp**
 
 ``` javascript
+{% highlight java linenos %}
     function postAjax(action){
         ...
         jq.ajax({url:"app4l",//the servlet url to handle ajax request 
@@ -374,6 +378,7 @@ like showing validation message or submitting a form.
             }
         };
     }
+{% endhighlight %}
 ```
 
   - Line 5: Specify AJAX response handling method with
@@ -382,10 +387,9 @@ like showing validation message or submitting a form.
     object, e.g. reset data in cells.
   - Line 14: Display a validation message if it exists.
   - Line 29: Submit a form whose data comes from JSON object. This
-    technique can be used to trigger another controller of Spring MVC's
-    or Struts.
+    technique can be used to trigger another controller like Spring MVC's
+    or Struts'.
 
 # Source Code of Example
 
-Source code of above example application can be accessed in
-<https://github.com/zkoss/zssjspdemo>.
+Source code of above example application will be available soon.
