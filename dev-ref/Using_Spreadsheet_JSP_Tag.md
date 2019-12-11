@@ -51,7 +51,7 @@ library. You have to declare a tag library with `<%@taglib %>` first and
 write Spreadsheet JSP tag with a specified prefix.
 
 **app4l.jsp**
-{% highlight java linenos %} html
+{% highlight java linenos %}
 <%@page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <%@taglib prefix="zssjsp" uri="http://www.zkoss.org/jsp/zss"%> http://www.zkoss.org/jsp/zss"%>
@@ -124,7 +124,6 @@ Spreadsheet to get it.
 
 **Javascript in app4l.jsp**
 
-``` javascript
 {% highlight java linenos %}
 //jq is jquery name in zk, version 1.12.4 is used in ZK 9
 jq(document).ready(function(){
@@ -154,7 +153,6 @@ function postAjax(action){
         type:'POST',dataType:'json'}).done(handleAjaxResult);
 } 
 {% endhighlight %}
-```
 
   - Line 5: The `jq` is a variable that equals to `$` of jQuery
     integrated within ZK.
@@ -176,7 +174,6 @@ We should override the `JsonUpdateBridge`'s `process()` to implement our
 business logic and access spreadsheet component in it. Then
 `JsonUpdateBridge` will generate corresponding ZK AJAX response for us.
 
-``` java
 {% highlight java linenos %}
 public class ForLeaveServlet extends HttpServlet{
 
@@ -230,7 +227,6 @@ public class ForLeaveServlet extends HttpServlet{
 ...
 }
 {% endhighlight %}
-```
 
   - Line 10,12: Get desktop ID and spreadsheet UUID for they will be
     used in `JsonUpdateBridge`
@@ -271,7 +267,6 @@ public class ForLeaveServlet extends HttpServlet{
 The method `handleReset()` implements the business logic to validate
 user input and return a data for form element to submit in the browser.
 
-``` java
 {% highlight java linenos %}
 public class ForLeaveServlet extends HttpServlet{
 ...
@@ -321,9 +316,8 @@ public class ForLeaveServlet extends HttpServlet{
 ...
 }
 {% endhighlight %}
-```
 
-  - Line 13: The `result` is a JSONObject that will be sent back to the
+- Line 13: The `result` is a JSONObject that will be sent back to the
     client. You can put any data you like according to your business
     requirement because you can get it in `app4l.jsp` and handle it by
     yourself. In our case, we put a validation message in order and show
@@ -342,7 +336,6 @@ like showing validation message or submitting a form.
 
 **Javascript in app4l.jsp**
 
-``` javascript
 {% highlight java linenos %}
     function postAjax(action){
         ...
@@ -377,7 +370,6 @@ like showing validation message or submitting a form.
         };
     }
 {% endhighlight %}
-```
 
   - Line 5: Specify AJAX response handling method with
     `handleAjaxResult` when we send AJAX request.
