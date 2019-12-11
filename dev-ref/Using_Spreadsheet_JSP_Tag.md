@@ -125,7 +125,8 @@ Spreadsheet to get it.
 **Javascript in app4l.jsp**
 
 {% highlight java linenos %}
-//jq is jquery name in zk, version 1.12.4 is used in ZK 9
+//jq is jquery name in zk
+//version 1.12.4 is used in ZK 9
 jq(document).ready(function(){
     //register client event on button by jquery api 
     jq("#checkBtn").click(function(){
