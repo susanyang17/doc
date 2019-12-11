@@ -1,20 +1,23 @@
+---
+title: 'Control Component'
+---
 # MVC in Brief
 
-ZK framework supports the MVC design pattern to develop a web
+Keikai is based on ZK Framework and ZK Framework supports the MVC design pattern to develop a web
 application. This pattern separates an application into 3 parts:
 *Model*, *View*, and *Controller*. The Model is the data that an
-application handles. The View is UI which indicates a ZUL page in a
-ZK-based application. The Controller handles events from UI, controls
+application handles. The View is the UI which indicates a ZUL page in a
+ZK-based application. The Controller handles events from the UI, controls
 the UI, and accesses the Model. For complete explanation, please refer
 to [ZK Developer's
-Reference/MVC](ZK_Developer%27s_Reference/MVC "wikilink").
+Reference/MVC](https://www.zkoss.org/wiki/ZK_Developer%27s_Reference/MVC).
 
 # Spreadsheet Properties
 
-Each component is represented by a unique tag name, e.g. Spreadsheet is
+Each component is represented by a unique tag name, e.g. Keikai Spreadsheet is a
 `<spreadsheet>` in a ZUL page. The easiest way to control a component is
 to set a component's properties via a tag's attribute. Each property has
-its own effect, and you can change it by specifying values in a tag's
+its own purpose, and you can change it by specifying values in a tag's
 attribute.
 
 ## Excel File Path
@@ -30,7 +33,7 @@ with respect to the web application root.
   - In this case, TestFile2007.xlsx is under the web application's root
     folder.
 
-Some UI part's visibility is configurable like toolbar, formula bar,
+In addition to the file path, some UI parts are configurable like toolbar, formula bar,
 sheet bar, and context menu.
 
 ## Toolbar
@@ -68,7 +71,7 @@ Default: `false`
 
 ## Context Menu
 
-The `showToolbar` attribute controls context menu's visibility, and it
+The `showContextMenu` attribute controls context menu's visibility, and it
 only accepts boolean literal.
 
 Default: `false`
@@ -79,29 +82,23 @@ Default: `false`
 
 ## Selection Visiblility
 
-<http://tracker.zkoss.org/browse/Keikai-1044-->\>
-
-` Since 3.8.1`
-
 Default: `true`
 
 When it's `true`, Keikai keeps the selection area visible after opening a
-dialog like "Format Cell". Specify `false` to remove this behavior.
+dialog like "Format Cell". Specify `false` to turn off this behavior.
 
 ``` xml
 <spreadsheet keepCellSelection="false"  .../>
 ```
 
-If you want to change the default value to `false`; you can do that by
+If you wish to change the default value to `false`; you can do that by
 setting the library property *io.keikai.ui.keepCellSelection* to
-`false`[1](http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Configuration#Keep_Cell_Selection)
-<http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Configuration#Keep_Cell_Selection>\]
-
+`false`. [Read more here](http://books.zkoss.org/wiki/ZK_Spreadsheet_Essentials/Working_with_Spreadsheet/Configuration#Keep_Cell_Selection)
 
 ## Preloaded Column / Row Size
 
-In order to speed up rendering cells, Keikai spreadsheet caches a range of
-cell data at client-side to avoid getting data from the server-side when
+In order to speed up cell rendering, Keikai spreadsheet caches a range of
+cell data at client-side to avoid constantly getting data from the server-side when
 scrolling. You can adjust this range by `preloadColumnSize` (default:
 40) and `preloadRowSize` (default: 60) like:
 
@@ -110,40 +107,39 @@ scrolling. You can adjust this range by `preloadColumnSize` (default:
 ```
 
 If you specify a larger size, it will make a more smooth scrolling when
-moving to adjacent cells. On the other hand, when you reach out of the
-cached range, Keikai takes more time to get the cached data from a server.
+moving to adjacent cells. On the other hand, when you scroll out of the
+cached range, it takes more time for Keikai to get the next data batch from the server.
 
 ### Pasting Lots of Cells Requires Larger Preloaded Size
 
-If you paste lots of cell from Excel which is over cached cell range,
-Keikai will fail to handle the pasting because of lack of corresponding
+If you paste lots of cells from Excel which is more than cached range,
+Keikai will fail to handle the pasting because it does not have corresponding
 cached cell data at the client-side (you should see an error message in
-the developer tool / Console tab). In such case, you need to increase
+the developer tool / Console tab). If you run into this issue, you should increase
 preloaded row/column size according to the expected row/column size for
-copying.
+copy-pasting.
 
 ### Underlying Details
 
 There are 3 ranges behind the scene:
 
-1.  **visible range**: the viewport that shows a sheet. By default is 40
-    column \* 50 rows. It changes if resize a browser window, or
-    scrolling, etc.
+1.  **visible range**: the viewport that shows a sheet. By default it is 40
+    column \* 50 rows. It changes if you resize a browser window, or
+    scrolls the page, etc.
 
-<!-- end list -->
-
-1.  **rendered range**: the range with rendered DOM of cells.
+2.  **rendered range**: the range with rendered DOM of cells.
     Spreadsheet could also render hidden rows if the next visible row is
     within the range, e.g. if row 25th\~30th are hidden, but row 31th is
-    in the range, then Spreadsheet still renders row 25th\~30th.
-2.  **cached range**: the browser cached cell data.
+    in the range, then Spreadsheet still renders row 25th\~30th but hides them.
+    
+3.  **cached range**: the browser cached cell data.
 
 When the visible range moves by user scrolling, Keikai renders DOM of cells
-from the cached. So the rendered range becomes larger. If the cache does
+from the cached range. So the rendered range becomes larger. If the cache does
 not cover the whole visible range, Keikai will send AU request
 (`onZssFetchActiveRange`) to get the data back to the cache.
 
-![ center](/assets/images/dev-ref/3Ranges.png " center")
+![center](/assets/images/dev-ref/3Ranges.png)
 
 ## MaxRenderedCellSize
 
@@ -151,29 +147,23 @@ It's a threshold to remove cached cell data when scrolling. When you
 scroll toward one direction, Spreadsheet will remove cached cell data in
 reversed direction. For example, if you scroll toward right (east), it
 will remove those cached cells data of the left (west) which are over
-the `MaxRenderedCellSize` inside the "cached range" but outside the
+the `MaxRenderedCellSize` inside the "cached range" but outside of the
 "visible range".
 
 ## Max Visible Rows and Columns
 
 The attribute `maxVisibleColumns` controls the maximum visible number of
-columns in Spreadsheet. The minimal value of the attribute must be
-larger than 0. For example, if you set it to 40, it will allow showing
-only column `A` to column `AN`.
+columns in the Spreadsheet, it must be larger than 0. For example, if you set it to 40, it will display 40 columns: column `A` to column `AN`.
 
-*(Since 3.8.1)* If you set this attribute to 0 or just do not set it, ZK
-Spreadsheet will detect the sheet content and show as more columns as
-needed. However, it will show at least 40 columns if you have a smaller
-sheet.
+If you set this attribute to 0 or didn't set it, spreadsheet will detect the sheet content and show as more columns as
+needed. However, it will show at least 40 columns if you have a smaller sheet.
 
 Similarly, the attribute `maxVisibleRows` controls the maximum visible
-number of rows in Spreadsheet. You can use above 2 attributes to set up
+number of rows in Spreadsheet. You can use these 2 attributes above to set up
 the visible area according to your requirement.
 
-*(Since 3.8.1)* If you set this attribute to 0 or just do not set it, ZK
-Spreadsheet will detect the sheet content and show as more rows as
-needed. However, it will show at least 200 rows if you have a smaller
-sheet.
+If you set this attribute to 0 or didn't set it, spreadsheet will detect the sheet content and show as more rows as
+needed. However, it will show at least 200 rows if you have a smaller sheet.
 
 **Usage:**
 
@@ -185,22 +175,17 @@ sheet.
 
 There are other properties inherited from parent component you can set,
 such as `width`, or `height`. For the complete list, please look for
-those inherited setter methods in the javadoc
-<javadoc directory="keikai">io.keikai.ui.Spreadsheet</javadoc>.
+those inherited setter methods in the javadoc `io.keikai.ui.Spreadsheet`.
 
 Each **setter** means a corresponding **attribute**, for example:
 
   - `setWidth()`
-
-<!-- end list -->
 
 ``` xml
 <spreadsheet width="100%">
 ```
 
   - `setHeight()`
-
-<!-- end list -->
 
 ``` xml
 <spreadsheet height="100%">
@@ -210,10 +195,9 @@ Each **setter** means a corresponding **attribute**, for example:
 
 After we create a ZUL page, we can apply a Controller to handle events
 and control components of the page. In ZK, the simplest way to create a
-Controller is to create a class that extends
-<javadoc>org.zkoss.zk.ui.select.SelectorComposer</javadoc>. ( For
+Controller is to create a class that extends `org.zkoss.zk.ui.select.SelectorComposer`. For
 details, please refer to [ZK Developer%27s
-Reference/MVC/Controller](ZK_Developer%27s_Reference/MVC/Controller "wikilink")).
+Reference/MVC/Controller](https://www.zkoss.org/wiki/ZK_Developer%27s_Reference/MVC/Controller).
 
 **Controller example**
 
@@ -227,7 +211,7 @@ Then we can apply this controller to a root component of a ZUL page.
 
 **index.zul**
 
-``` xml
+{% highlight java linenos %}
     <window title="My First Keikai spreadsheet Application" 
     apply="io.keikai.essential.MyComposer"
         border="normal" height="100%" width="100%">
@@ -236,7 +220,7 @@ Then we can apply this controller to a root component of a ZUL page.
         maxVisibleRows="150" maxVisibleColumns="40"
          showToolbar="true" showSheetbar="true" showFormulabar="true"/>
     </window>
-```
+{% endhighlight %}
 
   - Line 2: We usually apply a controller on the root component (the
     outermost component) of a ZUL page so that we can gain control of
@@ -245,16 +229,16 @@ Then we can apply this controller to a root component of a ZUL page.
     component selector to get Spreadsheet object in a controller and we
     will describe it in next section.
 
-## Access Components on a ZUL Page
+## Access Components in a ZUL Page
 
-After applying a controller, we can easily get a component object on the
+After applying the controller, we can easily get a component object in the
 zul with the help of SelectorComposer and manipulate the component to
-fulfill our business requirement.
+fulfill our business requirements.
 
 Steps to get a component:
 
 1.  Declare a member variable with the same type as the component you
-    want to get.
+    wish to get.
 2.  Apply the annotation `@Wire` with component selector syntax which
     specifies matching criteria against the components of the page which
     is applied with this controller.
@@ -263,10 +247,10 @@ When a ZUL page is applied with a controller, ZK will *wire*
 corresponding components object to those variables annotated with
 `@Wire` according to component selector.
 
-If you want to initialize components in a Controller, you should
+If you wish to initialize components in a Controller, you should
 override `doAfterCompose()`. For complete explanation, please refer to
 [ZK Developer%27s Reference/MVC/Controller/Wire
-Components](ZK_Developer%27s_Reference/MVC/Controller/Wire_Components "wikilink").
+Components](https://www.zkoss.org/wiki/ZK_Developer%27s_Reference/MVC/Controller/Wire_Components "wikilink").
 
 Let's see an example to get Spreadsheet component in index.zul:
 
@@ -289,11 +273,11 @@ public class MyComposer extends SelectorComposer<Component> {
 
   - Line 3,4: If you specify nothing in `@Wire`, ZK will use the
     variable name as a component's id to look for matching component in
-    the ZUL page. In our case, ZK will try to find a Spreadsheet
+    the ZUL page. In this case, ZK will try to find a Spreadsheet
     component whose id is `ss` in index.zul.
-  - Line 7: Override this method to write initializing codes in it.
+  - Line 7: Override this method to write initializing code in it.
   - Line 8: Remember to call `super.doAfterCompose()` before you
-    accessing components because parent class wires components for you.
+    access components because parent class wires the components for you.
 
 
 ## Set Spreadsheet Properties by API
@@ -301,9 +285,8 @@ public class MyComposer extends SelectorComposer<Component> {
 After we retrieve a reference to a component, we can use its API to
 manipulate a component. The basic usage is to set (or get) a component's
 properties. Each Spreadsheet's property listed in previous section has a
-corresponding getter and setter. For example, there are
-`setShowToolbar()` and `isShowToolbar()` corresponding to attribute
-`showToolbar`. You can read Javadoc for complete list of getter and
+corresponding getter and setter. For example,`setShowToolbar()` and `isShowToolbar()` corresponds to the attribute
+`showToolbar`. You can read Javadoc for the complete list of getter and
 setter.
 
 **Setter usage**
@@ -334,11 +317,8 @@ public class MyComposer extends SelectorComposer<Component> {
 
 In most scenarios, the controller is usually used to listen to
 interested events of Spreadsheet and implement business logic to react
-the events. When a user interacts with a Spreadsheet, it will send
-various events according to user actions. Please refer to [ Handling
-Events](Handling_Events)
-on how to listen events in a controller. To implement business logic,
+to the events. When a user interacts with a Spreadsheet, it will send
+various events according to his actions. Please refer to [Handling
+Events](Handling_Events) on how you can listen events in a controller. To implement business logic,
 you definitely will need to access Spreadsheet data model. Refer to
-sections under [ Handling Data
-Model](Handling_Data_Model)
-to know how to use it.
+sections under [Handling Data Model](Handling_Data_Model) to know how to use it.
