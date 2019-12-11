@@ -1,44 +1,41 @@
+---
+title: 'Keikai Demo App'
+---
+
 # Overview
 
-Keikai spreadsheet App is a web-based Excel like application based on the ZK
-Spreadsheet component. We created it to demonstrate Spreadsheet's
+Keikai Spreadsheet Demo App is a web-based Excel like application based on the Keikai component. We created it to demonstrate Spreadsheet's
 numerous powerful features. You can also use this application as a basis
-of your application and add more functions like authentication.
+of your application and add more functions like authentication on top of it.
 
 Please follow these steps to run this application:
 
-1.  Download Keikai spreadsheet App from
-    <http://www.zkoss.org/download/zkspreadsheet> (OSE or EE
-    evaluation).
+1.  Download Keikai spreadsheet Demo App from [Keikai Download Page](https://keikai.io/download). Depending on the features you require, choose OSE or EE evaluation version accordingly.
 2.  Unzip the zip file and deploy the Spreadsheet App's WAR file to your
     application server according to its instruction.
       -   
         For Tomcat just put the war file in `[CATALINA_HOME]\webapps`.
 3.  Start your application server and connect it with your browser.
       -   
-        For Tomcat, just visit <http://localhost:8080/zssapp>
-        <http://localhost:8080/zssapp> then you can start to experience
+        For Tomcat, just visit <http://localhost:8080/keikaiapp>
+        <http://localhost:8080/keikaiapp> then you can start to experience
         the power of Spreadsheet App.
 
 After you visit Spreadsheet App, you should see its user interface like
-the screenshot below: ![ center](/assets/images/dev-ref/zss-essentials-zssapp.png " center")
+the screenshot below:<!-->need to replace image when ready--> 
+![center](/assets/images/dev-ref/Zss-essentials-zssapp.png) 
 
-You might notice that we add a menu on top of Spreadsheet component and
-3 leftmost buttons ("New Book", "Save Book", and "Export to PDF") on the
-toolbar are enabled because we have implemented them in Keikai spreadsheet
-App.
+You might notice that we added a menu on top of the Spreadsheet component and enabled the 3 leftmost buttons ("New Book", "Save Book", and "Export to PDF") on the toolbar. These are application specific and we have implemented them in this Demo App. You can reference this application to implement your own.
 
 # Features
 
-Here we will focus on those features which we create specially for
-Spreadsheet App. For the Spreadsheet component's features, please refer
-to [ Features and
-Usage](Features_and_Usage "wikilink").
+Here we focus on features we created specially for the Spreadsheet Demo App. For component's features, please refer
+to [Features and Usage](Features_and_Usage).
 
 ## File Menu
 
-The "File" menu contains many file operations including load, save, and
-export. ![ center](/assets/images/dev-ref/zss-essentials-zssapp-file.png " center")
+The "File" menu contains many file operations such as load, save, and
+export. ![center](/assets/images/dev-ref/Zss-essentials-zssapp-file.png)
 
 Each menu item and its function description are:
 
@@ -59,7 +56,7 @@ Each menu item and its function description are:
 <tbody>
 <tr class="odd">
 <td><p>New</p></td>
-<td><p>create a book with 2 blank sheets which equals to click <img src="zss-essentials-zssapp-newBook.png" title="fig:zss-essentials-zssapp-newBook.png" alt="zss-essentials-zssapp-newBook.png" /> on the toolbar</p></td>
+<td><p>create a book with 2 blank sheets which equals to click <img src="Zss-essentials-zssapp-newBook.png" title="fig:zss-essentials-zssapp-newBook.png" alt="Zss-essentials-zssapp-newBook.png" /> on the toolbar</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -69,7 +66,7 @@ Each menu item and its function description are:
 </tr>
 <tr class="odd">
 <td><p>Save</p></td>
-<td><p>save current book which equals to click <img src="zss-essentials-zssapp-saveBook.png" title="fig:zss-essentials-zssapp-saveBook.png" alt="zss-essentials-zssapp-saveBook.png" /> on the toolbar</p></td>
+<td><p>save current book which equals to click <img src="Zss-essentials-zssapp-saveBook.png" title="fig:zss-essentials-zssapp-saveBook.png" alt="zss-essentials-zssapp-saveBook.png" /> on the toolbar</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -94,21 +91,18 @@ Each menu item and its function description are:
 </tr>
 <tr class="even">
 <td><p>Export PDF</p></td>
-<td><p>export current book as a PDF file which equals to click <img src="zss-essentials-zssapp-exportPdf.png" title="fig:zss-essentials-zssapp-exportPdf.png" alt="zss-essentials-zssapp-exportPdf.png" /> on the toolbar</p></td>
+<td><p>export current book as a PDF file which equals to click <img src="Zss-essentials-zssapp-exportPdf.png" title="fig:zss-essentials-zssapp-exportPdf.png" alt="zss-essentials-zssapp-exportPdf.png" /> on the toolbar</p></td>
 <td><p>yes</p></td>
 </tr>
 </tbody>
 </table>
 
 When you select "Open or Manage Books", the dialog below appears and you
-can open, delete, or upload a book. ![
-center](/assets/images/dev-ref/zss-essentials-zssapp-file-booklist.png " center")
+can open, delete, or upload a book. ![center](/assets/images/dev-ref/Zss-essentials-zssapp-file-booklist.png)
 
 ## Edit Menu
 
-The "Edit" menu has "Undo" and "Redo" item and they also display
-corresponding action they will perform when you click on them. ![
-center](/assets/images/dev-ref/zss-essentials-zssapp-edit.png " center")
+The "Edit" menu has "Undo" and "Redo". Undo and Redo will be performed when you click on them. ![center](/assets/images/dev-ref/Zss-essentials-zssapp-edit.png)
 
 Each menu item and its function description are:
 
@@ -142,8 +136,7 @@ Each menu item and its function description are:
 
 ## View Menu
 
-The "View" menu can change view effects of current sheet. ![
-center](/assets/images/dev-ref/zss-essentials-zssapp-view.png " center")
+The "View" menu can control different view options. ![center](/assets/images/dev-ref/Zss-essentials-zssapp-view.png)
 
 Each menu item and its function description are:
 
@@ -199,15 +192,16 @@ center](/assets/images/dev-ref/zss-essentials-zssapp-freeze.png " center")
 
 ## Repository Root
 
-You can assign your own folder as the drive storage via system property.
+Cloud Drive is the folder where your files are uploaded to. Keikai Demo App will read Excel files from this folder.
+You can specify the path/folder via system property.
 
 ``` xml
 zssapp.repository.root
 ```
 
-For example, in Tomcat server, we can assign the following value into
+For example, in a Tomcat server, we can assign the following value into
 TOMCAT\_HOME/conf/catalina.properties. In this case, Cloud Drive folder
-will be changed into C:\\zssapp\\books.
+will be changed to C:\\zssapp\\books.
 
 ``` xml
 zssapp.repository.root=C:\\zssapp\\books
@@ -215,18 +209,15 @@ zssapp.repository.root=C:\\zssapp\\books
 
 ## Auto Save
 
-`Since 3.8.0`
+Demo App supports auto save, and it is triggered in the following cases:
 
-App supports auto save, and it is triggered in the following cases:
-
-1.  Users changes a file content, and time period specified expires.
-2.  Last editing user for the book leaves, e.g. open another book or
-    close the browser.
+1.  When user changes the file content, and reaches the specified saving time.
+2.  Last editing user for the book leaves the book, e.g. opens another book or
+    closes the browser.
 3.  When server shuts down normally.
 
-By default, we save all changes for you every 15 minutes, but you can
-change this period via configuration. Following example configures the
-period with 5 minutes.
+By default, the app saves all changes every 15 minutes, but you can
+change the frequency via configuration. The following example demonstrates how you can change the saving frequency to 5 minutes (300 seconds).
 
 **Example in zk.xml**
 
