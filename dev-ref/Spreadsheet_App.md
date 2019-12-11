@@ -37,6 +37,7 @@ to [Features and Usage](Features_and_Usage).
 
 The "File" menu contains many file operations such as load, save, and
 export.
+
 ![center](/assets/images/dev-ref/Zss-essentials-zssapp-file.png)
 
 Each menu item and its function description are:
@@ -58,7 +59,7 @@ Each menu item and its function description are:
 <tbody>
 <tr class="odd">
 <td><p>New</p></td>
-<td><p>create a book with 2 blank sheets which equals to click ![center](/assets/images/dev-ref/Zss-essentials-zssapp-newBook.png) on the toolbar</p></td>
+<td><p>create a book with 2 blank sheets which equals to click the New Book icon on the toolbar</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -68,7 +69,7 @@ Each menu item and its function description are:
 </tr>
 <tr class="odd">
 <td><p>Save</p></td>
-<td><p>save current book which equals to click ![center](/assets/images/dev-ref/Zss-essentials-zssapp-saveBook.png) on the toolbar</p></td>
+<td><p>save current book which equals to click the Save Book icon on the toolbar</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -93,7 +94,7 @@ Each menu item and its function description are:
 </tr>
 <tr class="even">
 <td><p>Export PDF</p></td>
-<td><p>export current book as a PDF file which equals to click ![center](/assets/images/dev-ref/Zss-essentials-zssapp-exportPdf.png) on the toolbar</p></td>
+<td><p>export current book as a PDF file which equals to click the Export PDF icon on the toolbar</p></td>
 <td><p>yes</p></td>
 </tr>
 </tbody>
@@ -193,8 +194,9 @@ Each menu item and its function description are:
 
 The screenshot below shows a result after selecting "Freeze Rows &
 Columns" when selection box stays in B2. It freezes the row above and
-the column left to current selection: ![
-center](/assets/images/dev-ref/zss-essentials-zssapp-freeze.png " center")
+the column left to current selection:
+
+![center](/assets/images/dev-ref/Zss-essentials-zssapp-freeze.png)
 
 # Configuration
 
