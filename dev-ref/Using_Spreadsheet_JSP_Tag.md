@@ -51,8 +51,7 @@ library. You have to declare a tag library with `<%@taglib %>` first and
 write Spreadsheet JSP tag with a specified prefix.
 
 **app4l.jsp**
-``` html
-{% highlight java linenos %}
+{% highlight java linenos %} html
 <%@page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <%@taglib prefix="zssjsp" uri="http://www.zkoss.org/jsp/zss"%> http://www.zkoss.org/jsp/zss"%>
@@ -77,7 +76,6 @@ write Spreadsheet JSP tag with a specified prefix.
     ...
 </body>
 {% endhighlight %}
-```
 
   - Line 3, 10: Basic steps to use spreadsheet JSP tag.
   - Line 14: A special attribute of spreadsheet JSP tag which should be
