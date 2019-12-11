@@ -160,7 +160,7 @@ function postAjax(action){
   - Line 17,18 : Use Javascript object `zssjsp` provided by Spreadsheet
     to get desktop ID and spreadsheet's UUID with spreadsheet's
     component ID, "myzss".
-  - Line 25: You can refer to ![jQueryAPI](http://api.jquery.com/category/ajax/) for
+  - Line 25: You can refer to [jQueryAPI](http://api.jquery.com/category/ajax/) for
     details.
 
 # Handle AJAX Request and Response
