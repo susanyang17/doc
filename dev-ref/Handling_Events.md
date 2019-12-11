@@ -1,3 +1,6 @@
+---
+title: 'Handling Events'
+---
 When a user interacts with Spreadsheet like clicking or editing, these
 actions trigger events being sent to the server. We can implement our
 business logic in a event listener, a method in a controller, to listen
@@ -21,13 +24,13 @@ which provides a quite simple way to listen a event, just apply
 `@Listen` on a method and specify listening event names and target
 components. (For complete explanation, please refer to [ZK Developer%27s
 Reference/MVC/Controller/Wire Event
-Listeners](ZK_Developer%27s_Reference/MVC/Controller/Wire_Event_Listeners "wikilink")).
+Listeners](https://www.zkoss.org/wiki/ZK_Developer%27s_Reference/MVC/Controller/Wire_Event_Listeners)).
 In a event listener, you can access book model with Spreadsheet provided
 API or use your service classes to implement business logic.
 
 A typical sample of defining an event listener is like:
 
-``` java
+{% highlight java linenos %}
 public class EventsComposer extends SelectorComposer<Component>{
     //other codes...
 
@@ -36,11 +39,10 @@ public class EventsComposer extends SelectorComposer<Component>{
         //access book model or perform your business logic
     }
 }
-```
+{% endhighlight %}
 
   - Line 4: In `@Listen`, "onCellFocus" is the event name we want to
-    listen (All event name can be found in
-    <javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>.)
+    listen (All event name can be found in `io.keikai.ui.event.Events`)
     and "\#ss" is the component selector. (`SelectorComposer` supports
     various selector syntax that let you select components easily.
     Please refer to [ZK Developer's Reference/MVC/Controller/Wire
@@ -50,5 +52,4 @@ public class EventsComposer extends SelectorComposer<Component>{
     event it listens. You can get event related data like row or column
     for further processing.
 
-All Keikai events you can listen are listed in
-<javadoc directory="keikai">io.keikai.ui.event.Events</javadoc>
+All Keikai events you can listen are listed in `io.keikai.ui.event.Events`
