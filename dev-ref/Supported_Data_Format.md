@@ -1,3 +1,6 @@
+---
+title: 'Supported Date Format'
+---
 # Built-in Format
 
 <table>
@@ -405,9 +408,8 @@
 
 # Syntax for Custom Number Format
 
-To create a custom number format, you can start from one of the built-in
-number formats as a starting point. You can change it to create your own
-custom number format.
+To create a custom number format, you can start based on one of the built-in
+number formats and customize on top of it.
 
 A number format can have up to 2 sections, separated by semicolons.
 These symbol sections define the format for positive numbers (including
@@ -420,13 +422,13 @@ For example, you can create the following custom format:
 `[Blue]#,##0.00_);[Red](#,##0.00)`
 
 You do not have to include all symbol sections in your custom number
-format. If you specify only one code section, it is used for all
+format. If you specify only one code section, it will be applied to all
 numbers.
 
-## For Including Text
+## Including Text in custom Number format
 
 To display both text and numbers in a cell, enclose the text characters
-in double quotation (" "). For example, type the format $0.00"
+in double quotes (" "). For example, input the format $0.00"
 Surplus";$-0.00" Shortage" to display a positive amount as "$125.74
 Surplus" and a negative amount as "$-125.74 Shortage." Note that there
 is one space character before both "Surplus" and "Shortage" in each
@@ -473,7 +475,7 @@ The color code must be the first item in the section.
 
 ### Specify Conditions
 
-To specify number formats that will be applied only if a number meets a
+To define number formats that will be applied only if a number meets a
 condition that you specify, enclose the condition in square brackets.
 The condition consists of a comparison operator and a value. For
 example, the following format displays numbers that are less than or
@@ -482,7 +484,7 @@ blue font.
 
 `[Red][<=100];[Blue][>100]`
 
-## For percentages, and scientific notation format
+## For percentages and scientific notation format
 
 ### Display percentages
 
