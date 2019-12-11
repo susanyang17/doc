@@ -1,10 +1,10 @@
-\_\_TOC\_\_
+---
+title: 'Get Spreadsheet Up and Running in JSP'
+---
 
-# Quick Start Keikai JSP Demo Project
-
-Suggest you to run Keikai spreadsheet JSP demo project in your local site
-without coding, just <https://github.com/zkoss/zssjspdemo> and execute
-the command below (require to install <https://maven.apache.org/>)
+# Quick Start - Keikai JSP Demo Project
+***TBD*** need to discuss with Hawk to see if we will have it in the first release. or if we make it coming soon.
+To get started, I suggest you to run Keikai spreadsheet JSP demo project in your local. Just visit the [demo project](https://github.com/zkoss/zssjspdemo) and execute the command below (require to install <https://maven.apache.org/>)
 
 `mvn jetty:run`
 
