@@ -305,7 +305,7 @@ Keikai supports **number filter**, **color filter**, **date filter**, and
 
 ![center](/assets/images/dev-ref/zss-essentials-colorFilter.png)
 
-![ center](/assets/images/dev-ref/zss-essentials-dateFilter.png)
+![center](/assets/images/dev-ref/zss-essentials-dateFilter.png)
 
 ## Data Validation
 
