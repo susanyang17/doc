@@ -1,4 +1,7 @@
-Here we list all Keikai spreadsheet supported functions in OSE and EE:
+---
+title: 'Supported Formula Functions'
+---
+Here we list all built-in functions in Keikai OSE and EE:
 
 # Date & Time
 
@@ -1716,8 +1719,6 @@ Here we list all Keikai spreadsheet supported functions in OSE and EE:
 
 ## SUMPRODUCT
 
-` since 3.7.0`
-
 You can specify a condition for an array formula to just calculate
 partial cells in a given range. For example,
 
@@ -2240,8 +2241,8 @@ or simpler
 </tbody>
 </table>
 
-  - <https://support.office.com/en-us/article/What-s-New-Changes-made-to-Excel-functions-355d08c8-8358-4ecb-b6eb-e2e443e98aac?ui=en-US&rs=en-US&ad=US&fromAR=1#bm2>,
-    Keikai supports both function names listed above.
+Note: Keikai supports both function names [listed here](https://support.office.com/en-us/article/What-s-New-Changes-made-to-Excel-functions-355d08c8-8358-4ecb-b6eb-e2e443e98aac?ui=en-US&rs=en-US&ad=US&fromAR=1#bm2).
+    .
 
 # Text
 
@@ -2460,9 +2461,6 @@ or simpler
 </tbody>
 </table>
 
-# Not Supported Functions
+# Unsupported Functions
 
 Keikai doesn't support Cube, Database, and Web functions.
-
-For current open issues that supported functions have, please refer to
-<http://tracker.zkoss.org/secure/IssueNavigator.jspa?mode=hide&requestId=12600>.
